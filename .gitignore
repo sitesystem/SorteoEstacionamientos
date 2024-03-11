@@ -1,7 +1,7 @@
-/SorteoEstacionamiento/SorteoEstacionamiento/.vs
-/SorteoEstacionamiento/Client/bin/
-/SorteoEstacionamiento/SorteoEstacionamiento/Client/obj/
-/SorteoEstacionamiento/SorteoEstacionamiento/Server/bin/
-/SorteoEstacionamiento/SorteoEstacionamiento/Server/obj/
-/SorteoEstacionamiento/SorteoEstacionamiento/Shared/bin/
-/SorteoEstacionamiento/SorteoEstacionamiento/Shared/obj/
+/.vs
+/SorteoEstacionamiento/Client/bin
+/SorteoEstacionamiento/Client/obj
+/SorteoEstacionamiento/Server/bin
+/SorteoEstacionamiento/Server/obj
+/SorteoEstacionamiento/Shared/bin
+/SorteoEstacionamiento/Shared/obj
