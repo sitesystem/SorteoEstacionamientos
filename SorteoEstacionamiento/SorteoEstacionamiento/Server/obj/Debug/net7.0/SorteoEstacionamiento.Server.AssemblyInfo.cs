@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SorteoEstacionamiento.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90dd2a3664b2cfea22dbf691c0f255367e9e4c64")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+856d7261724b45c0ada2fc1ab8fe3e51d42b389f")]
 [assembly: System.Reflection.AssemblyProductAttribute("SorteoEstacionamiento.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SorteoEstacionamiento.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
