@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SorteoEstacionamiento.Shared;
 
-namespace SorteoEstacionamiento.Server.Controllers
+namespace SorteoEstacionamiento.Server.CapaDataAccess.Controllers
 {
     [ApiController]
     [Route("[controller]")]
