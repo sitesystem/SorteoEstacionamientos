@@ -96,12 +96,5 @@ namespace SorteoEstacionamiento.Server.CapaDataAccess.Controllers
         }
 
 
-
-
-
-        
-
-
-
     }
 }
