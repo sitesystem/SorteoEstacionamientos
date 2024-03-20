@@ -11,7 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CapaEntities\" />
+    <Folder Include="CapaServices_BusinessLogic\" />
+    <Folder Include="CapaTools\" />
     <Folder Include="CapaServices_BusinessLogic\" />
     <Folder Include="CapaTools\" />
   </ItemGroup>
