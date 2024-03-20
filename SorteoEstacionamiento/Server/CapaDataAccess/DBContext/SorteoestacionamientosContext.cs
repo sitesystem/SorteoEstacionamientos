@@ -7,13 +7,15 @@ namespace SorteoEstacionamiento.Server.CapaDataAccess.DBContext;
 
 public partial class SorteoestacionamientosContext : DbContext
 {
+    private readonly IConfiguration? _config; //Linea agregada
     public SorteoestacionamientosContext()
     {
     }
 
-    public SorteoestacionamientosContext(DbContextOptions<SorteoestacionamientosContext> options)
+    public SorteoestacionamientosContext(DbContextOptions<SorteoestacionamientosContext> options, IConfiguration config)
         : base(options)
     {
+        _config = config;
     }
 
     public virtual DbSet<Catcarrera> Catcarreras { get; set; }
