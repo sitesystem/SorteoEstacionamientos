@@ -3,10 +3,8 @@ using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SorteoEstacionamiento.Server.CapaDataAccess.DBContext;
+
 using SorteoEstacionamiento.Shared.CapaEntities.Request;
-
-
-//using SorteoEstacionamiento.Shared.CapaEntities.Request;
 using SorteoEstacionamiento.Shared.CapaEntities.Response;
 
 namespace SorteoEstacionamiento.Server.CapaDataAccess.Controllers
