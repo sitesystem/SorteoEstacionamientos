@@ -1,83 +1,91 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SorteoEstacionamiento.Server.CapaDataAccess.DBContext;
+
+using SorteoEstacionamiento.Shared.CapaEntities.Request;
+using SorteoEstacionamiento.Shared.CapaEntities.Response;
 
 namespace SorteoEstacionamiento.Server.CapaDataAccess.Controllers
 {
-    public class SemestresController : Controller
+    public class SemestresController(SorteoestacionamientosContext db) : ControllerBase
     {
-        // GET: SemestresController
-        public ActionResult Index()
-        {
-            return View();
-        }
+        private readonly SorteoestacionamientosContext _db = db;
 
-        // GET: SemestresController/Details/5
-        public ActionResult Details(int id)
+        //Metodo para obtener la infromacion mediante id
+        [HttpGet("filterById/{id}")]
+        public async Task<IActionResult> GetDataById(int id)
         {
-            return View();
-        }
+            Response<Catsemestre> oResponse = new();
 
-        // GET: SemestresController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: SemestresController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var item = await _db.Catsemestres.FindAsync(id);
+                oResponse.Success = 1;
+                oResponse.Data = item;
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                oResponse.Message = ex.Message;
             }
+
+            return Ok(oResponse);
         }
 
-        // GET: SemestresController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: SemestresController/Edit/5
+        //Metodo para agregar un valor 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<IActionResult> AddData(RequestViewModel_Semestre model)
         {
+            Response<object> oResponse = new();
+
             try
             {
-                return RedirectToAction(nameof(Index));
+                Catsemestre oSemestre = new()
+                {
+                    IdSemestre = model.IdSemestre,
+                    Semestre = model.Semestre
+                };
+
+                await _db.Catsemestres.AddAsync(oSemestre);
+                await _db.SaveChangesAsync();
+
+                oResponse.Success = 1;
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                oResponse.Message = ex.Message;
             }
+
+            Ok(oResponse);
         }
 
-        // GET: SemestresController/Delete/5
-        public ActionResult Delete(int id)
+        //Metodo para editar valores
+        [HttpPut]
+        public async Task<IActionResult> EditData(RequestViewModel_Semestre model)
         {
-            return View();
-        }
+            Response<object> oResponse = new();
 
-        // POST: SemestresController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
             try
             {
-                return RedirectToAction(nameof(Index));
+                Catsemestre? oSemestre = await _db.Catsemestres.FindAsync(model.IdSemestre);
+            
+                if(oSemestre != null)
+                {
+                    oSemestre.Semestre = model.Semestre;
+
+                    _db.Entry(oSemestre).State = EntityState.Modified;
+                    await _db.SaveChangesAsync();
+                }
+
+                oResponse.Success = 1;
             }
-            catch
+            catch(Exception ex)
             {
-                return View();
+                oResponse.Message = ex.Message;
             }
+
+            Ok(oResponse);  
         }
+
     }
 }

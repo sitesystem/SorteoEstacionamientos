@@ -1,83 +1,93 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SorteoEstacionamiento.Server.CapaDataAccess.DBContext;
+
+using SorteoEstacionamiento.Shared.CapaEntities.Request;
+using SorteoEstacionamiento.Shared.CapaEntities.Response;
 
 namespace SorteoEstacionamiento.Server.CapaDataAccess.Controllers
 {
-    public class EstadosController : Controller
+    public class EstadosController(SorteoestacionamientosContext db) : ControllerBase
     {
-        // GET: EstadosController
-        public ActionResult Index()
-        {
-            return View();
-        }
 
-        // GET: EstadosController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
+        private readonly SorteoestacionamientosContext _db = db;
 
-        // GET: EstadosController/Create
-        public ActionResult Create()
+        //Metodo para obtener la informacion mediante el Id
+        [HttpGet("filterById/{id}")]
+        public async Task<IActionResult> GetDataById(int id)
         {
-            return View();
-        }
+            Response<Catestado> oResponse = new();
 
-        // POST: EstadosController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var item = await _db.Catestados.FindAsync(id);
+                oResponse.Success = 1;
+                oResponse.Data = item;
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                oResponse.Message = ex.Message;
             }
+
+            return Ok(oResponse);
         }
 
-        // GET: EstadosController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: EstadosController/Edit/5
+        //Metodo para agregar valor
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<IActionResult> AddData(RequestViewModel_Estado model)
         {
+            Response<object> oResponse = new();
+
             try
             {
-                return RedirectToAction(nameof(Index));
+                Catestado oEstado = new()
+                {
+                    IdEstado = model.IdEstado,
+                    EdoNombre = model.EdoNombre
+                };
+
+                await _db.Catestados.AddAsync(oEstado);
+                await _db.SaveChangesAsync();
+
+                oResponse.Success = 1;
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                oResponse.Message = ex.Message;
             }
+
+            return Ok(oResponse);
         }
 
-        // GET: EstadosController/Delete/5
-        public ActionResult Delete(int id)
+        //Metodo para editar valores
+        [HttpPut]
+        public async Task<IActionResult> EditData(RequestViewModel_Estado model)
         {
-            return View();
-        }
+            Response<object> oResponse = new();
 
-        // POST: EstadosController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
             try
             {
-                return RedirectToAction(nameof(Index));
+                Catestado? oEstado = await _db.Catestados.FindAsync(model.IdEstado);
+
+                if (oEstado != null)
+                {
+                    oEstado.EdoNombre = model.EdoNombre;
+
+                    _db.Entry(oEstado).State = EntityState.Modified;
+                    await _db.SaveChangesAsync();
+                }
+
+                oResponse.Success = 1;
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                oResponse.Message = ex.Message;
             }
+
+            return Ok(oResponse);
         }
+
+
     }
 }

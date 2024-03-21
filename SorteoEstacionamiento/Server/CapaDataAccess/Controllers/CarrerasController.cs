@@ -12,8 +12,14 @@ namespace SorteoEstacionamiento.Server.CapaDataAccess.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class CarrerasController(SorteoestacionamientosContext db) : ControllerBase
+    //public class CarrerasController : ControllerBase
     {
         private readonly SorteoestacionamientosContext _db = db;
+
+        /*public CarrerasController(SorteoestacionamientosContext db)
+        {
+            _db = db;
+        }*/
 
 
         //Metodo para obtener la informacion mediante el Id
@@ -37,7 +43,7 @@ namespace SorteoEstacionamiento.Server.CapaDataAccess.Controllers
         }
 
 
-        //Metido para agregar un valor 
+        //Metodo para agregar un valor 
         [HttpPost]
         public async Task<IActionResult> AddData(RequestViewModel_Carrera model)
         {
