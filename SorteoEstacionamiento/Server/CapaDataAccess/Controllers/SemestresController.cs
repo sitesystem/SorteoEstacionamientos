@@ -56,7 +56,7 @@ namespace SorteoEstacionamiento.Server.CapaDataAccess.Controllers
                 oResponse.Message = ex.Message;
             }
 
-            Ok(oResponse);
+            return Ok(oResponse);
         }
 
         //Metodo para editar valores
@@ -84,7 +84,7 @@ namespace SorteoEstacionamiento.Server.CapaDataAccess.Controllers
                 oResponse.Message = ex.Message;
             }
 
-            Ok(oResponse);  
+            return Ok(oResponse);  
         }
 
     }
