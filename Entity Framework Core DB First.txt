@@ -1,0 +1,23 @@
+-- Mapear Base de Datos MySQL con Entity Framework y Pomelo
+
+-> Scaffold-DBContext "Server=148.204.211.135;Initial Catalog=db_CorreosInstitucionales_UPIICSA;User ID=correos_institucionales;Password=correos_institucionales_05;Trusted_Connection=False;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir CapaDataAccess/DBContext -DataAnnotations -Force
+-> Scaffold-DBContext "Server=www.developers.upiicsa.ipn.mx;Database=db_CorreosInstitucionales_UPIICSA;User ID=correos_institucionales;Password=correos_institucionales_05;Trusted_Connection=False;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir CapaDataAccess/DBContext -DataAnnotations -Force
+
+-> Scaffold-DBContext "Server=bx7pfciqeiqwnvwcwt0i-mysql.services.clever-cloud.com;Port=3306;Database=bx7pfciqeiqwnvwcwt0i;User ID=ukvy0nrg59q303kl;Password=Xu7Ky8B5uHXLsoRbShEg" Pomelo.EntityFrameworkCore.MySql -OutputDir CapaDataAccess/DBContext -Context DBSorteoParkingContext -DataAnnotations -Force
+
+DBContext
+private readonly IConfiguration? _config;
+
+public DBSorteoParkingContext()
+{
+}
+
+public DBSorteoParkingContext(DbContextOptions<DBSorteoParkingContext> options, IConfiguration config)
+    : base(options)
+{
+    _config = config;
+}
+
+//=> optionsBuilder.UseMySql("server=bx7pfciqeiqwnvwcwt0i-mysql.services.clever-cloud.com;port=3306;database=bx7pfciqeiqwnvwcwt0i;user id=ukvy0nrg59q303kl;password=Xu7Ky8B5uHXLsoRbShEg", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.22-mysql"));
+=> optionsBuilder.UseMySql(_config?.GetConnectionString("MySQLConnection"), Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.22-mysql"));
+//=> optionsBuilder.UseMySql(_config.GetSection("ConnectionStrings:MySQLConnection").Value, Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.22-mysql"));
