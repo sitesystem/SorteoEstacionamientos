@@ -1,6 +1,6 @@
 {
-  "name": "SorteoEstacionamientos",
-  "short_name": "SorteoEstacionamientos",
+  "name": "SSOE APP",
+  "short_name": "SSOE APP",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",

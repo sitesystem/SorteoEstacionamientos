@@ -68,8 +68,8 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddAuthorization(options =>
 {
-    //options.AddPolicy("[Rol] Developer", policy => policy.RequireClaim("Rol", "1", "2"));
-    //options.AddPolicy("RequireManagerRole", policy => policy.RequireRole("Manager"));
+    // options.AddPolicy("[Rol] Developer", policy => policy.RequireClaim("Rol", "1", "2"));
+    // options.AddPolicy("RequireManagerRole", policy => policy.RequireRole("Manager"));
 });
 
 // JWT (Jason Web Token)
@@ -77,7 +77,7 @@ var appSettingsSection = builder.Configuration.GetSection("AppSettings");
 builder.Services.Configure<AppSettings>(appSettingsSection);
 
 var appSettings = appSettingsSection.Get<AppSettings>();
-//var key = Encoding.ASCII.GetBytes(appSettings.Secreto);
+// var key = Encoding.ASCII.GetBytes(appSettings.Secreto);
 var key = Encoding.UTF8.GetBytes(appSettings?.Secreto ?? string.Empty);
 
 builder.Services.AddAuthentication(auth =>
@@ -95,9 +95,9 @@ builder.Services.AddAuthentication(auth =>
         ValidateIssuer = false, // Emisor
         ValidateAudience = false, // Resource Server
 
-        //ValidAudience = builder.Configuration["AuthSettings:Audince"],
-        //ValidIssuer = builder.Configuration["AuthSettings:Issuer"],
-        //RequireExpirationTime = true,
+        // ValidAudience = builder.Configuration["AuthSettings:Audince"],
+        // ValidIssuer = builder.Configuration["AuthSettings:Issuer"],
+        // RequireExpirationTime = true,
         ValidateLifetime = true,
         ClockSkew = TimeSpan.Zero,
 
