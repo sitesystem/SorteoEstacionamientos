@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
 using SorteoEstacionamientos.Shared.CapaEntities.Request;
 using SorteoEstacionamientos.Shared.CapaEntities.Response;
 
@@ -9,12 +8,13 @@ namespace SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatál
 {
     [Route("api/[controller]")]
     [ApiController]
+    // [Authorize]
     public class EscuelasController(DBSorteoParkingContext db) : ControllerBase
     {
         private readonly DBSorteoParkingContext _db = db;
 
         [HttpGet("filterByStatus/{filterByStatus}")]
-        public async Task<IActionResult> GetAllDataByStatus(short filterByStatus) 
+        public async Task<IActionResult> GetAllDataByStatus(short filterByStatus)
         {
             Response<List<McCatEscuela>> oResponse = new();
 
@@ -37,11 +37,11 @@ namespace SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatál
             {
                 oResponse.Message = ex.Message;
             }
-            
+
             return Ok(oResponse);
         }
 
-        [HttpGet("filterById/{Id}")]
+        [HttpGet("filterById/{id}")]
         public async Task<IActionResult> GetDataById(int id)
         {
             Response<McCatEscuela> oResponse = new();
@@ -95,7 +95,7 @@ namespace SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatál
         [HttpPut]
         public async Task<IActionResult> EditData(RequestViewModel_Escuela model)
         {
-            Response<object> oResponse = new();
+            Response<object> oRespuesta = new();
 
             try
             {
@@ -103,7 +103,6 @@ namespace SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatál
 
                 if (oEscuela != null)
                 {
-                    oEscuela.IdEscuela = model.IdEscuela;
                     oEscuela.EscLogo = model.EscLogo;
                     oEscuela.EscNoEscuela = model.EscNoEscuela;
                     oEscuela.EscNombreLargo = model.EscNombreLargo;
@@ -111,33 +110,7 @@ namespace SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatál
                     oEscuela.EscFileNameAvisoPrivacidad = model.EscFileNameAvisoPrivacidad;
                     oEscuela.EscFechaFundacion = model.EscFechaFundacion;
                     oEscuela.EscStatus = model.EscStatus;
-                    
-                    _db.Entry(oEscuela).State = EntityState.Modified;
-                    await _db.SaveChangesAsync();
-                }
 
-                oResponse.Success = 1;
-            }
-            catch (Exception ex)
-            {
-                oResponse.Message = ex.Message;
-            }
-
-            return Ok(oResponse);
-        }
-
-        [HttpPut("editByIdStatus/{id}/{isActivate}")]
-        public async Task<IActionResult> EnableDisableDataById(int id, sbyte isActivate)
-        {
-            Response<object> oRespuesta = new();
-
-            try
-            {
-                McCatEscuela? oEscuela = await _db.McCatEscuelas.FindAsync(id);
-
-                if (oEscuela != null)
-                {
-                    oEscuela.EscStatus = isActivate;
                     _db.Entry(oEscuela).State = EntityState.Modified;
                     await _db.SaveChangesAsync();
                 }
@@ -152,6 +125,31 @@ namespace SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatál
             return Ok(oRespuesta);
         }
 
+        [HttpPut("editByIdStatus/{id}/{isActivate}")]
+        public async Task<IActionResult> EnableDisableDataById(int id, sbyte isActivate)
+        {
+            Response<object> oRespuesta = new();
 
+            try
+            {
+                McCatCarrera? oCarrera = await _db.McCatCarreras.FindAsync(id);
+
+                //db.Remove(oPersona);
+                if (oCarrera != null)
+                {
+                    oCarrera.CarrStatus = isActivate;
+                    _db.Entry(oCarrera).State = EntityState.Modified;
+                    await _db.SaveChangesAsync();
+                }
+
+                oRespuesta.Success = 1;
+            }
+            catch (Exception ex)
+            {
+                oRespuesta.Message = ex.Message;
+            }
+
+            return Ok(oRespuesta);
+        }
     }
 }
