@@ -30,7 +30,7 @@ namespace SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatál
 
                 if (list == null)
                     return BadRequest(oResponse);
-
+                    
                 oResponse.Success = 1;
                 oResponse.Data = list;
             }
