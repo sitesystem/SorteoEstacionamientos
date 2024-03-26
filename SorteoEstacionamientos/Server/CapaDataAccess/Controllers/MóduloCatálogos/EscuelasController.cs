@@ -60,7 +60,7 @@ namespace SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatál
             return Ok(oResponse);
         }
 
-        [HttpPost]
+        [HttpPost]  
         public async Task<IActionResult> AddData(RequestViewModel_Escuela model)
         {
             Response<object> oResponse = new();
