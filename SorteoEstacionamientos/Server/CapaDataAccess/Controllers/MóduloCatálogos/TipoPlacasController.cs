@@ -8,7 +8,7 @@ namespace SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatál
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PlacasController(DBSorteoParkingContext db) : ControllerBase
+    public class TipoPlacasController(DBSorteoParkingContext db) : ControllerBase
     {
         private readonly DBSorteoParkingContext _db = db;
 
