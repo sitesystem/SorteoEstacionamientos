@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
+using System.Text.Json;
 
 using SorteoEstacionamientos.Shared.CapaEntities.Request;
 using SorteoEstacionamientos.Shared.CapaEntities.Response;
@@ -10,9 +12,10 @@ namespace SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatál
     [Route("api/[controller]")]
     [ApiController]
     //[Authorize]
-    public class CarrerasController(DBSorteoParkingContext db) : ControllerBase
+    public class CarrerasController(DBSorteoParkingContext db, ILogger<CarrerasController> logger) : ControllerBase
     {
         private readonly DBSorteoParkingContext _db = db;
+        private readonly ILogger<CarrerasController> _logger = logger;
 
         [HttpGet("filterByStatus/{filterByStatus}")]
         public async Task<IActionResult> GetAllDataByStatus(short filterByStatus)
@@ -29,14 +32,20 @@ namespace SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatál
                     list = await _db.McCatCarreras.ToListAsync();
 
                 if (list == null)
+                {
+                    _logger.LogWarning("No existen registros de Carreras.");
                     return BadRequest(oResponse);
-                    
+                }
+
+                _logger.LogInformation("Consulta de todos los registros de Carreras.");
+
                 oResponse.Success = 1;
                 oResponse.Data = list;
             }
             catch (Exception ex)
             {
                 oResponse.Message = ex.Message;
+                _logger.LogError(ex, "ERROR");
             }
 
             return Ok(oResponse);

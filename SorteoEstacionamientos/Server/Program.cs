@@ -7,6 +7,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 
+using Serilog;
+
 using SorteoEstacionamientos.Shared.CapaEntities.Common;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,7 +19,22 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<DBSorteoParkingContext>(optionsBuilder =>
-    optionsBuilder.UseMySql(builder.Configuration.GetConnectionString("MySQL_Connection"), Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.22-mysql")));
+{
+    optionsBuilder.UseMySql(builder.Configuration.GetConnectionString("MySQL_Connection"),
+    ServerVersion.Parse("8.0.22-mysql"), mySqlOptionsAction: null);
+});
+
+// LogReg (Archivo de Registros de Eventos)
+// Log.Logger = new LoggerConfiguration().MinimumLevel.Verbose()
+//    .WriteTo.Console()
+//    .WriteTo.File("wwwroot/Repositorio/Logs/log-.log", rollingInterval: RollingInterval.Day, outputTemplate: "{Timestamp:dd-MM-yyyy HH:mm:ss}")
+//    .CreateLogger();
+// Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration).CreateLogger();
+builder.Host.UseSerilog((hostingContext, loggerConfig) =>
+{
+    loggerConfig.ReadFrom.Configuration(hostingContext.Configuration);
+});
+// builder.Logging.AddConsole();
 
 // Habilitar Swagger
 builder.Services.AddEndpointsApiExplorer();
@@ -125,6 +142,8 @@ else
 }
 
 app.UseCors(cors);
+
+app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
 
