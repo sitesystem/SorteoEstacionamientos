@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 namespace SorteoEstacionamientos.Server.CapaDataAccess.DBContext;
 
 [Table("MC_catEstadosRepMexicana")]
+[MySqlCharSet("utf8mb3")]
+[MySqlCollation("utf8mb3_general_ci")]
 public partial class McCatEstadosRepMexicana
 {
     /// <summary>

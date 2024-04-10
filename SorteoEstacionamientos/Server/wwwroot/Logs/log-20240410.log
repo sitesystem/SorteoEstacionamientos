@@ -1,0 +1,720 @@
+10/04/2024 11:40:02.481 -06:00  [DBG]  Initializing Razor view compiler with compiled view: '/Pages/Error.cshtml'.
+10/04/2024 11:40:02.569 -06:00  [DBG]  Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+10/04/2024 11:40:02.692 -06:00  [INF]  User profile is available. Using 'C:\Users\Win10\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+10/04/2024 11:40:02.906 -06:00  [DBG]  Hosting starting
+10/04/2024 11:41:58.717 -06:00  [DBG]  Initializing Razor view compiler with compiled view: '/Pages/Error.cshtml'.
+10/04/2024 11:41:58.774 -06:00  [DBG]  Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+10/04/2024 11:41:58.859 -06:00  [INF]  User profile is available. Using 'C:\Users\Win10\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+10/04/2024 11:41:58.987 -06:00  [DBG]  Hosting starting
+10/04/2024 11:41:58.994 -06:00  [DBG]  Reading data from file 'C:\Users\Win10\AppData\Local\ASP.NET\DataProtection-Keys\key-171c9502-7e90-4926-acc4-0fab07089029.xml'.
+10/04/2024 11:41:59.011 -06:00  [DBG]  Reading data from file 'C:\Users\Win10\AppData\Local\ASP.NET\DataProtection-Keys\key-5b52cb21-89ce-496c-b9cb-f9ce34fd4f5d.xml'.
+10/04/2024 11:41:59.013 -06:00  [DBG]  Reading data from file 'C:\Users\Win10\AppData\Local\ASP.NET\DataProtection-Keys\key-a8ba45d5-794a-4765-943e-54fbc722d074.xml'.
+10/04/2024 11:41:59.021 -06:00  [DBG]  Found key {171c9502-7e90-4926-acc4-0fab07089029}.
+10/04/2024 11:41:59.032 -06:00  [DBG]  Found key {5b52cb21-89ce-496c-b9cb-f9ce34fd4f5d}.
+10/04/2024 11:41:59.033 -06:00  [DBG]  Found key {a8ba45d5-794a-4765-943e-54fbc722d074}.
+10/04/2024 11:41:59.038 -06:00  [DBG]  Considering key {5b52cb21-89ce-496c-b9cb-f9ce34fd4f5d} with expiration date 2024-05-17 19:53:56Z as default key.
+10/04/2024 11:41:59.045 -06:00  [DBG]  Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+10/04/2024 11:41:59.050 -06:00  [DBG]  Decrypting secret element using Windows DPAPI.
+10/04/2024 11:41:59.052 -06:00  [DBG]  Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+10/04/2024 11:41:59.057 -06:00  [DBG]  Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+10/04/2024 11:41:59.059 -06:00  [DBG]  Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+10/04/2024 11:41:59.062 -06:00  [DBG]  Using key {5b52cb21-89ce-496c-b9cb-f9ce34fd4f5d} as the default key.
+10/04/2024 11:41:59.064 -06:00  [DBG]  Key ring with default key {5b52cb21-89ce-496c-b9cb-f9ce34fd4f5d} was loaded during application startup.
+10/04/2024 11:41:59.325 -06:00  [INF]  Now listening on: https://localhost:7173
+10/04/2024 11:41:59.332 -06:00  [INF]  Now listening on: http://localhost:5062
+10/04/2024 11:41:59.334 -06:00  [DBG]  Loaded hosting startup assembly SorteoEstacionamientos.Server
+10/04/2024 11:41:59.335 -06:00  [DBG]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+10/04/2024 11:41:59.336 -06:00  [DBG]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+10/04/2024 11:41:59.338 -06:00  [INF]  Application started. Press Ctrl+C to shut down.
+10/04/2024 11:41:59.341 -06:00  [INF]  Hosting environment: Development
+10/04/2024 11:41:59.347 -06:00  [INF]  Content root path: C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Server
+10/04/2024 11:41:59.348 -06:00  [DBG]  Hosting started
+10/04/2024 11:41:59.350 -06:00  [DBG]  Connection id "0HN2PGM301TT9" accepted.
+10/04/2024 11:41:59.352 -06:00  [DBG]  Connection id "0HN2PGM301TT9" started.
+10/04/2024 11:41:59.378 -06:00  [DBG]  Connection id "0HN2PGM301TT9" received FIN.
+10/04/2024 11:41:59.395 -06:00  [DBG]  Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+10/04/2024 11:41:59.448 -06:00  [DBG]  Connection id "0HN2PGM301TT9" stopped.
+10/04/2024 11:41:59.454 -06:00  [DBG]  Connection id "0HN2PGM301TT9" sending FIN because: "The Socket transport's send loop completed gracefully."
+10/04/2024 11:42:00.320 -06:00  [DBG]  Connection id "0HN2PGM301TTA" accepted.
+10/04/2024 11:42:00.565 -06:00  [DBG]  Connection id "0HN2PGM301TTA" started.
+10/04/2024 11:42:00.566 -06:00  [DBG]  Connection id "0HN2PGM301TTB" accepted.
+10/04/2024 11:42:00.571 -06:00  [DBG]  Connection id "0HN2PGM301TTC" accepted.
+10/04/2024 11:42:00.571 -06:00  [DBG]  Connection id "0HN2PGM301TTB" started.
+10/04/2024 11:42:00.573 -06:00  [DBG]  Connection id "0HN2PGM301TTC" started.
+10/04/2024 11:42:00.635 -06:00  [DBG]  Connection 0HN2PGM301TTB established using the following protocol: "Tls12"
+10/04/2024 11:42:00.635 -06:00  [DBG]  Connection 0HN2PGM301TTA established using the following protocol: "Tls12"
+10/04/2024 11:42:00.637 -06:00  [DBG]  Connection 0HN2PGM301TTC established using the following protocol: "Tls12"
+10/04/2024 11:42:00.739 -06:00  [VRB]  Connection id "0HN2PGM301TTC" sending "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE".
+10/04/2024 11:42:00.739 -06:00  [VRB]  Connection id "0HN2PGM301TTB" sending "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE".
+10/04/2024 11:42:00.739 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE".
+10/04/2024 11:42:00.743 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+10/04/2024 11:42:00.743 -06:00  [VRB]  Connection id "0HN2PGM301TTC" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+10/04/2024 11:42:00.744 -06:00  [VRB]  Connection id "0HN2PGM301TTC" received "SETTINGS" frame for stream ID 0 with length 18 and flags "NONE".
+10/04/2024 11:42:00.744 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "SETTINGS" frame for stream ID 0 with length 18 and flags "NONE".
+10/04/2024 11:42:00.744 -06:00  [VRB]  Connection id "0HN2PGM301TTC" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+10/04/2024 11:42:00.744 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+10/04/2024 11:42:00.745 -06:00  [VRB]  Connection id "0HN2PGM301TTC" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+10/04/2024 11:42:00.745 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+10/04/2024 11:42:00.745 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "PRIORITY" frame for stream ID 3 with length 5 and flags 0x0.
+10/04/2024 11:42:00.745 -06:00  [VRB]  Connection id "0HN2PGM301TTC" received "PRIORITY" frame for stream ID 3 with length 5 and flags 0x0.
+10/04/2024 11:42:00.745 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "PRIORITY" frame for stream ID 5 with length 5 and flags 0x0.
+10/04/2024 11:42:00.745 -06:00  [VRB]  Connection id "0HN2PGM301TTC" received "PRIORITY" frame for stream ID 5 with length 5 and flags 0x0.
+10/04/2024 11:42:00.745 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "PRIORITY" frame for stream ID 7 with length 5 and flags 0x0.
+10/04/2024 11:42:00.745 -06:00  [VRB]  Connection id "0HN2PGM301TTC" received "PRIORITY" frame for stream ID 7 with length 5 and flags 0x0.
+10/04/2024 11:42:00.745 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "PRIORITY" frame for stream ID 9 with length 5 and flags 0x0.
+10/04/2024 11:42:00.745 -06:00  [VRB]  Connection id "0HN2PGM301TTC" received "PRIORITY" frame for stream ID 9 with length 5 and flags 0x0.
+10/04/2024 11:42:00.745 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "PRIORITY" frame for stream ID 11 with length 5 and flags 0x0.
+10/04/2024 11:42:00.745 -06:00  [VRB]  Connection id "0HN2PGM301TTC" received "PRIORITY" frame for stream ID 11 with length 5 and flags 0x0.
+10/04/2024 11:42:00.746 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "PRIORITY" frame for stream ID 13 with length 5 and flags 0x0.
+10/04/2024 11:42:00.746 -06:00  [VRB]  Connection id "0HN2PGM301TTC" received "PRIORITY" frame for stream ID 13 with length 5 and flags 0x0.
+10/04/2024 11:42:00.746 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 15 with length 337 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:00.746 -06:00  [VRB]  Connection id "0HN2PGM301TTC" received "GOAWAY" frame for stream ID 0 with length 8 and flags 0x0.
+10/04/2024 11:42:00.751 -06:00  [VRB]  Connection id "0HN2PGM301TTB" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+10/04/2024 11:42:00.752 -06:00  [VRB]  Connection id "0HN2PGM301TTB" received "SETTINGS" frame for stream ID 0 with length 18 and flags "NONE".
+10/04/2024 11:42:00.752 -06:00  [VRB]  Connection id "0HN2PGM301TTB" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+10/04/2024 11:42:00.752 -06:00  [VRB]  Connection id "0HN2PGM301TTB" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+10/04/2024 11:42:00.752 -06:00  [VRB]  Connection id "0HN2PGM301TTB" received "PRIORITY" frame for stream ID 3 with length 5 and flags 0x0.
+10/04/2024 11:42:00.753 -06:00  [VRB]  Connection id "0HN2PGM301TTB" received "PRIORITY" frame for stream ID 5 with length 5 and flags 0x0.
+10/04/2024 11:42:00.753 -06:00  [VRB]  Connection id "0HN2PGM301TTB" received "PRIORITY" frame for stream ID 7 with length 5 and flags 0x0.
+10/04/2024 11:42:00.753 -06:00  [VRB]  Connection id "0HN2PGM301TTB" received "PRIORITY" frame for stream ID 9 with length 5 and flags 0x0.
+10/04/2024 11:42:00.753 -06:00  [VRB]  Connection id "0HN2PGM301TTB" received "PRIORITY" frame for stream ID 11 with length 5 and flags 0x0.
+10/04/2024 11:42:00.753 -06:00  [VRB]  Connection id "0HN2PGM301TTB" received "PRIORITY" frame for stream ID 13 with length 5 and flags 0x0.
+10/04/2024 11:42:00.753 -06:00  [VRB]  Connection id "0HN2PGM301TTB" received "GOAWAY" frame for stream ID 0 with length 8 and flags 0x0.
+10/04/2024 11:42:00.752 -06:00  [DBG]  Connection id "0HN2PGM301TTC" is closing.
+10/04/2024 11:42:00.752 -06:00  [DBG]  Connection id "0HN2PGM301TTB" received FIN.
+10/04/2024 11:42:00.753 -06:00  [DBG]  Connection id "0HN2PGM301TTB" is closing.
+10/04/2024 11:42:00.756 -06:00  [DBG]  Connection id "0HN2PGM301TTC" received FIN.
+10/04/2024 11:42:00.769 -06:00  [DBG]  The connection queue processing loop for 0HN2PGM301TTB completed.
+10/04/2024 11:42:00.772 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 15 with length 4 and flags 0x0.
+10/04/2024 11:42:00.772 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+10/04/2024 11:42:00.766 -06:00  [DBG]  Connection id "0HN2PGM301TTC" is closed. The last processed stream ID was 0.
+10/04/2024 11:42:00.766 -06:00  [DBG]  Connection id "0HN2PGM301TTB" is closed. The last processed stream ID was 0.
+10/04/2024 11:42:00.776 -06:00  [DBG]  Connection id "0HN2PGM301TTB" sending FIN because: "The Socket transport's send loop completed gracefully."
+10/04/2024 11:42:00.770 -06:00  [DBG]  Connection id "0HN2PGM301TTC" sending FIN because: "The Socket transport's send loop completed gracefully."
+10/04/2024 11:42:00.787 -06:00  [DBG]  The connection queue processing loop for 0HN2PGM301TTC completed.
+10/04/2024 11:42:00.788 -06:00  [DBG]  Connection id "0HN2PGM301TTB" stopped.
+10/04/2024 11:42:00.791 -06:00  [DBG]  Connection id "0HN2PGM301TTC" stopped.
+10/04/2024 11:42:00.837 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/ - null null
+10/04/2024 11:42:01.149 -06:00  [DBG]  Wildcard detected, all requests with hosts will be allowed.
+10/04/2024 11:42:01.221 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:01.250 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:01.254 -06:00  [DBG]  The request path / does not match a supported file type
+10/04/2024 11:42:01.319 -06:00  [DBG]  1 candidate(s) found for the request path '/'
+10/04/2024 11:42:01.356 -06:00  [DBG]  Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/'
+10/04/2024 11:42:01.361 -06:00  [DBG]  Request matched endpoint 'Fallback {*path:nonfile}'
+10/04/2024 11:42:01.364 -06:00  [DBG]  Matched endpoint 'Fallback {*path:nonfile}' is a fallback endpoint.
+10/04/2024 11:42:01.367 -06:00  [VRB]  The endpoint does not specify the IRequestSizeLimitMetadata.
+10/04/2024 11:42:01.590 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 17 with length 107 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:01.591 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 17 with length 4 and flags 0x0.
+10/04/2024 11:42:01.591 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/service-worker.js - null null
+10/04/2024 11:42:01.674 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:01.675 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:01.722 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:01.728 -06:00  [DBG]  AuthenticationScheme: Bearer was not authenticated.
+10/04/2024 11:42:01.734 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 17 with length 121 and flags "END_HEADERS".
+10/04/2024 11:42:01.734 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 17 with length 303 and flags "NONE".
+10/04/2024 11:42:01.731 -06:00  [INF]  Executing endpoint 'Fallback {*path:nonfile}'
+10/04/2024 11:42:01.736 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:01.733 -06:00  [INF]  Sending file. Request path: '/service-worker.js'. Physical path: 'C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\obj\Debug\net8.0\service-worker\service-worker.js'
+10/04/2024 11:42:01.736 -06:00  [INF]  The file /index.html was not modified
+10/04/2024 11:42:01.739 -06:00  [DBG]  Handled. Status code: 304 File: /index.html
+10/04/2024 11:42:01.741 -06:00  [INF]  HTTP GET /service-worker.js responded 200 in 20.2902 ms
+10/04/2024 11:42:01.748 -06:00  [INF]  Executed endpoint 'Fallback {*path:nonfile}'
+10/04/2024 11:42:01.752 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 17 with length 0 and flags "END_STREAM".
+10/04/2024 11:42:01.751 -06:00  [INF]  HTTP GET /index.html responded 304 in 498.4408 ms
+10/04/2024 11:42:01.755 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 15 with length 65 and flags "END_STREAM, END_HEADERS".
+10/04/2024 11:42:01.754 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/service-worker.js - 200 303 text/javascript 161.799ms
+10/04/2024 11:42:01.754 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/index.html - 304 null text/html 925.2134ms
+10/04/2024 11:42:01.900 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 19 with length 94 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:01.902 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 19 with length 4 and flags 0x0.
+10/04/2024 11:42:01.902 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 21 with length 92 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:01.903 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 21 with length 4 and flags 0x0.
+10/04/2024 11:42:01.913 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 23 with length 46 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:01.914 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 23 with length 4 and flags 0x0.
+10/04/2024 11:42:01.914 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 25 with length 68 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:01.914 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 25 with length 4 and flags 0x0.
+10/04/2024 11:42:01.935 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 27 with length 92 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:01.935 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 27 with length 4 and flags 0x0.
+10/04/2024 11:42:01.935 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 29 with length 31 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:01.938 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 29 with length 4 and flags 0x0.
+10/04/2024 11:42:01.938 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 31 with length 49 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:01.938 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 31 with length 4 and flags 0x0.
+10/04/2024 11:42:01.938 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 33 with length 91 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:01.938 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 33 with length 4 and flags 0x0.
+10/04/2024 11:42:01.904 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/SorteoEstacionamientos.Client.styles.css - null null
+10/04/2024 11:42:01.973 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:01.904 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_content/Radzen.Blazor/css/default-base.css - null null
+10/04/2024 11:42:01.980 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:01.922 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/css/app.css - null null
+10/04/2024 11:42:01.985 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:01.923 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_content/Radzen.Blazor/css/default-wcag.css - null null
+10/04/2024 11:42:01.988 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:01.958 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/blazor.webassembly.js - null null
+10/04/2024 11:42:01.991 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:01.974 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:01.995 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:01.981 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:02.001 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:01.985 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:02.002 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:01.988 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:02.004 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:01.993 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:02.001 -06:00  [INF]  The file /_content/Radzen.Blazor/css/default-base.css was not modified
+10/04/2024 11:42:02.002 -06:00  [INF]  Sending file. Request path: '/SorteoEstacionamientos.Client.styles.css'. Physical path: 'C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\obj\Debug\net8.0\scopedcss\bundle\SorteoEstacionamientos.Client.styles.css'
+10/04/2024 11:42:02.003 -06:00  [INF]  The file /css/app.css was not modified
+10/04/2024 11:42:02.004 -06:00  [INF]  The file /_content/Radzen.Blazor/css/default-wcag.css was not modified
+10/04/2024 11:42:02.016 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:02.006 -06:00  [DBG]  Handled. Status code: 304 File: /_content/Radzen.Blazor/css/default-base.css
+10/04/2024 11:42:02.013 -06:00  [INF]  HTTP GET /SorteoEstacionamientos.Client.styles.css responded 200 in 18.2638 ms
+10/04/2024 11:42:02.015 -06:00  [DBG]  Handled. Status code: 304 File: /css/app.css
+10/04/2024 11:42:02.016 -06:00  [DBG]  Handled. Status code: 304 File: /_content/Radzen.Blazor/css/default-wcag.css
+10/04/2024 11:42:02.016 -06:00  [INF]  The file /_framework/blazor.webassembly.js.gz was not modified
+10/04/2024 11:42:02.017 -06:00  [INF]  HTTP GET /_content/Radzen.Blazor/css/default-base.css responded 304 in 18.9096 ms
+10/04/2024 11:42:02.020 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/SorteoEstacionamientos.Client.styles.css - 200 3259 text/css 115.6664ms
+10/04/2024 11:42:02.021 -06:00  [INF]  HTTP GET /css/app.css responded 304 in 18.5199 ms
+10/04/2024 11:42:02.022 -06:00  [INF]  HTTP GET /_content/Radzen.Blazor/css/default-wcag.css responded 304 in 18.6993 ms
+10/04/2024 11:42:02.023 -06:00  [DBG]  Handled. Status code: 304 File: /_framework/blazor.webassembly.js.gz
+10/04/2024 11:42:02.030 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_content/Radzen.Blazor/css/default-base.css - 304 null text/css 125.4532ms
+10/04/2024 11:42:02.034 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_vs/browserLink - null null
+10/04/2024 11:42:02.035 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/css/app.css - 304 null text/css 115.315ms
+10/04/2024 11:42:02.037 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_content/Radzen.Blazor/css/default-wcag.css - 304 null text/css 114.46ms
+10/04/2024 11:42:02.079 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 19 with length 71 and flags "END_HEADERS".
+10/04/2024 11:42:02.079 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 19 with length 3259 and flags "END_STREAM".
+10/04/2024 11:42:02.079 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 21 with length 55 and flags "END_STREAM, END_HEADERS".
+10/04/2024 11:42:02.079 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 23 with length 25 and flags "END_STREAM, END_HEADERS".
+10/04/2024 11:42:02.080 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 25 with length 25 and flags "END_STREAM, END_HEADERS".
+10/04/2024 11:42:02.047 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/aspnetcore-browser-refresh.js - null null
+10/04/2024 11:42:02.053 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_content/Radzen.Blazor/Radzen.Blazor.js - null null
+10/04/2024 11:42:02.122 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:02.039 -06:00  [INF]  HTTP GET /_framework/blazor.webassembly.js.gz responded 304 in 33.9686 ms
+10/04/2024 11:42:02.123 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:02.132 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:02.132 -06:00  [INF]  The file /_content/Radzen.Blazor/Radzen.Blazor.js was not modified
+10/04/2024 11:42:02.135 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 27 with length 158 and flags "END_STREAM, END_HEADERS".
+10/04/2024 11:42:02.135 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 31 with length 60 and flags "END_HEADERS".
+10/04/2024 11:42:02.135 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 31 with length 13794 and flags "NONE".
+10/04/2024 11:42:02.135 -06:00  [DBG]  Handled. Status code: 304 File: /_content/Radzen.Blazor/Radzen.Blazor.js
+10/04/2024 11:42:02.137 -06:00  [INF]  HTTP GET /_content/Radzen.Blazor/Radzen.Blazor.js responded 304 in 5.2957 ms
+10/04/2024 11:42:02.125 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/blazor.webassembly.js.gz - 304 null text/javascript 166.4376ms
+10/04/2024 11:42:02.149 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 35 with length 83 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:02.150 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 35 with length 4 and flags 0x0.
+10/04/2024 11:42:02.150 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 31 with length 0 and flags "END_STREAM".
+10/04/2024 11:42:02.151 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 33 with length 55 and flags "END_STREAM, END_HEADERS".
+10/04/2024 11:42:02.138 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/aspnetcore-browser-refresh.js - 200 13794 application/javascript; charset=utf-8 91.3617ms
+10/04/2024 11:42:02.141 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_content/Radzen.Blazor/Radzen.Blazor.js - 304 null text/javascript 87.4632ms
+10/04/2024 11:42:02.151 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/css/open-iconic/font/css/open-iconic-bootstrap.min.css - null null
+10/04/2024 11:42:02.178 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:02.178 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:02.180 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:02.186 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 35 with length 62 and flags "END_HEADERS".
+10/04/2024 11:42:02.186 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 35 with length 9395 and flags "NONE".
+10/04/2024 11:42:02.186 -06:00  [INF]  Sending file. Request path: '/css/open-iconic/font/css/open-iconic-bootstrap.min.css'. Physical path: 'C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\wwwroot\css\open-iconic\font\css\open-iconic-bootstrap.min.css'
+10/04/2024 11:42:02.189 -06:00  [INF]  HTTP GET /css/open-iconic/font/css/open-iconic-bootstrap.min.css responded 200 in 9.5626 ms
+10/04/2024 11:42:02.191 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 35 with length 0 and flags "END_STREAM".
+10/04/2024 11:42:02.191 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/css/open-iconic/font/css/open-iconic-bootstrap.min.css - 200 9395 text/css 40.3795ms
+10/04/2024 11:42:02.217 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 37 with length 54 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:02.218 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 37 with length 4 and flags 0x0.
+10/04/2024 11:42:02.218 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 39 with length 124 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:02.218 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 39 with length 4 and flags 0x0.
+10/04/2024 11:42:02.221 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/fondo.jpg - null null
+10/04/2024 11:42:02.229 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:02.221 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/dotnet.js - null null
+10/04/2024 11:42:02.231 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:02.229 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:02.232 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:02.231 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:02.234 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:02.248 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 39 with length 69 and flags "END_HEADERS".
+10/04/2024 11:42:02.248 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 39 with length 11456 and flags "NONE".
+10/04/2024 11:42:02.248 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 37 with length 44 and flags "END_HEADERS".
+10/04/2024 11:42:02.248 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 37 with length 16384 and flags "NONE".
+10/04/2024 11:42:02.250 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 37 with length 7412 and flags "NONE".
+10/04/2024 11:42:02.249 -06:00  [INF]  Sending file. Request path: '/_framework/dotnet.js.gz'. Physical path: 'C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.gz'
+10/04/2024 11:42:02.251 -06:00  [INF]  Sending file. Request path: '/fondo.jpg'. Physical path: 'C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\wwwroot\fondo.jpg'
+10/04/2024 11:42:02.251 -06:00  [INF]  HTTP GET /_framework/dotnet.js.gz responded 200 in 17.5053 ms
+10/04/2024 11:42:02.255 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 39 with length 0 and flags "END_STREAM".
+10/04/2024 11:42:02.253 -06:00  [INF]  HTTP GET /fondo.jpg responded 200 in 20.6357 ms
+10/04/2024 11:42:02.256 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 37 with length 0 and flags "END_STREAM".
+10/04/2024 11:42:02.255 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/dotnet.js.gz - 200 11456 text/javascript 33.1776ms
+10/04/2024 11:42:02.256 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/fondo.jpg - 200 23796 image/jpeg 35.1667ms
+10/04/2024 11:42:02.287 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 29 with length 149 and flags "END_HEADERS".
+10/04/2024 11:42:02.287 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 9986 and flags "NONE".
+10/04/2024 11:42:02.300 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 10240 and flags "NONE".
+10/04/2024 11:42:02.323 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 10240 and flags "NONE".
+10/04/2024 11:42:02.350 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 10240 and flags "NONE".
+10/04/2024 11:42:02.369 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 10240 and flags "NONE".
+10/04/2024 11:42:02.372 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 10240 and flags "NONE".
+10/04/2024 11:42:02.580 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 10240 and flags "NONE".
+10/04/2024 11:42:02.583 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 10240 and flags "NONE".
+10/04/2024 11:42:02.590 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 10240 and flags "NONE".
+10/04/2024 11:42:02.594 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 10240 and flags "NONE".
+10/04/2024 11:42:02.594 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 41 with length 73 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:02.595 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 10240 and flags "NONE".
+10/04/2024 11:42:02.595 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 41 with length 4 and flags 0x0.
+10/04/2024 11:42:02.596 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 10240 and flags "NONE".
+10/04/2024 11:42:02.596 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 10240 and flags "NONE".
+10/04/2024 11:42:02.597 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 10240 and flags "NONE".
+10/04/2024 11:42:02.597 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 10240 and flags "NONE".
+10/04/2024 11:42:02.598 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 160 and flags "NONE".
+10/04/2024 11:42:02.598 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 29 with length 0 and flags "END_STREAM".
+10/04/2024 11:42:02.595 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/blazor.boot.json - null null
+10/04/2024 11:42:02.603 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:02.598 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_vs/browserLink - 200 null text/javascript; charset=UTF-8 564.7734ms
+10/04/2024 11:42:02.603 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:02.612 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:02.616 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 41 with length 55 and flags "END_HEADERS".
+10/04/2024 11:42:02.617 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 41 with length 9099 and flags "NONE".
+10/04/2024 11:42:02.617 -06:00  [INF]  Sending file. Request path: '/_framework/blazor.boot.json.gz'. Physical path: 'C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json.gz'
+10/04/2024 11:42:02.681 -06:00  [INF]  HTTP GET /_framework/blazor.boot.json.gz responded 200 in 69.6262 ms
+10/04/2024 11:42:02.686 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 41 with length 0 and flags "END_STREAM".
+10/04/2024 11:42:02.705 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 43 with length 86 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:02.705 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 43 with length 4 and flags 0x0.
+10/04/2024 11:42:02.705 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 45 with length 52 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:02.705 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 45 with length 4 and flags 0x0.
+10/04/2024 11:42:02.686 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/blazor.boot.json.gz - 200 9099 application/json 90.8471ms
+10/04/2024 11:42:02.705 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/dotnet.runtime.8.0.4.ld1umxefo5.js - null null
+10/04/2024 11:42:02.749 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:02.749 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:02.751 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:03.029 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 43 with length 39 and flags "END_HEADERS".
+10/04/2024 11:42:03.029 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 47 with length 41 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:03.030 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 43 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.030 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 47 with length 4 and flags 0x0.
+10/04/2024 11:42:03.030 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 49 with length 52 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:03.030 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 49 with length 4 and flags 0x0.
+10/04/2024 11:42:03.030 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 51 with length 52 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:03.030 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 51 with length 4 and flags 0x0.
+10/04/2024 11:42:03.030 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 53 with length 51 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:03.030 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 53 with length 4 and flags 0x0.
+10/04/2024 11:42:03.030 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 55 with length 51 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:03.030 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 55 with length 4 and flags 0x0.
+10/04/2024 11:42:03.030 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 57 with length 74 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:03.030 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 57 with length 4 and flags 0x0.
+10/04/2024 11:42:02.705 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/dotnet.native.8.0.4.7cum2f8t4w.js - null null
+10/04/2024 11:42:03.134 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:03.203 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 43 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.031 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/SorteoEstacionamientos.Client.wasm - null null
+10/04/2024 11:42:03.230 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:03.030 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/SorteoEstacionamientos.Shared.wasm - null null
+10/04/2024 11:42:03.232 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:03.234 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 43 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.238 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 43 with length 15425 and flags "NONE".
+10/04/2024 11:42:03.030 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/dotnet.native.wasm - null null
+10/04/2024 11:42:03.239 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:03.230 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:03.241 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:03.232 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:03.248 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 51 with length 56 and flags "END_HEADERS".
+10/04/2024 11:42:03.248 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 51 with length 10355 and flags "NONE".
+10/04/2024 11:42:03.249 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:03.239 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:03.253 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:03.253 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 49 with length 39 and flags "END_HEADERS".
+10/04/2024 11:42:03.253 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 49 with length 11260 and flags "NONE".
+10/04/2024 11:42:03.134 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:03.258 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 47 with length 41 and flags "END_HEADERS".
+10/04/2024 11:42:03.258 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.258 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:03.264 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.271 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 45 with length 39 and flags "END_HEADERS".
+10/04/2024 11:42:03.272 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 45 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.318 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.251 -06:00  [INF]  Sending file. Request path: '/_framework/SorteoEstacionamientos.Client.wasm.gz'. Physical path: 'C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\bin\Debug\net8.0\wwwroot\_framework\SorteoEstacionamientos.Client.wasm.gz'
+10/04/2024 11:42:03.339 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.340 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 45 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.257 -06:00  [INF]  Sending file. Request path: '/_framework/SorteoEstacionamientos.Shared.wasm.gz'. Physical path: 'C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\bin\Debug\net8.0\wwwroot\_framework\SorteoEstacionamientos.Shared.wasm.gz'
+10/04/2024 11:42:03.378 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 45 with length 3391 and flags "NONE".
+10/04/2024 11:42:03.416 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.418 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.339 -06:00  [INF]  HTTP GET /_framework/SorteoEstacionamientos.Client.wasm.gz responded 200 in 98.4367 ms
+10/04/2024 11:42:03.419 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 51 with length 0 and flags "END_STREAM".
+10/04/2024 11:42:03.347 -06:00  [INF]  HTTP GET /_framework/SorteoEstacionamientos.Shared.wasm.gz responded 200 in 99.7272 ms
+10/04/2024 11:42:03.422 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.422 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 49 with length 0 and flags "END_STREAM".
+10/04/2024 11:42:03.418 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/SorteoEstacionamientos.Client.wasm.gz - 200 10355 application/wasm 387.7054ms
+10/04/2024 11:42:03.429 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.436 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.422 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/SorteoEstacionamientos.Shared.wasm.gz - 200 11260 application/wasm 391.8574ms
+10/04/2024 11:42:03.441 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.449 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.097 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/SorteoEstacionamientos.Shared.pdb - null null
+10/04/2024 11:42:03.450 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:03.450 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:03.454 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:03.455 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 53 with length 64 and flags "END_HEADERS".
+10/04/2024 11:42:03.455 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 53 with length 10538 and flags "NONE".
+10/04/2024 11:42:03.456 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.135 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/service-worker.js - null null
+10/04/2024 11:42:03.456 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:03.458 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.106 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/SorteoEstacionamientos.Client.pdb - null null
+10/04/2024 11:42:03.460 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:03.456 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:03.461 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:03.239 -06:00  [INF]  Sending file. Request path: '/_framework/dotnet.runtime.8.0.4.ld1umxefo5.js.gz'. Physical path: 'C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.8.0.4.ld1umxefo5.js.gz'
+10/04/2024 11:42:03.379 -06:00  [INF]  Sending file. Request path: '/_framework/dotnet.native.8.0.4.7cum2f8t4w.js.gz'. Physical path: 'C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.8.0.4.7cum2f8t4w.js.gz'
+10/04/2024 11:42:03.456 -06:00  [INF]  Sending file. Request path: '/_framework/SorteoEstacionamientos.Shared.pdb.gz'. Physical path: 'C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\bin\Debug\net8.0\wwwroot\_framework\SorteoEstacionamientos.Shared.pdb.gz'
+10/04/2024 11:42:03.460 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:03.471 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:03.461 -06:00  [INF]  The file /service-worker.js was not modified
+10/04/2024 11:42:03.465 -06:00  [INF]  HTTP GET /_framework/dotnet.runtime.8.0.4.ld1umxefo5.js.gz responded 200 in 715.2829 ms
+10/04/2024 11:42:03.468 -06:00  [INF]  HTTP GET /_framework/dotnet.native.8.0.4.7cum2f8t4w.js.gz responded 200 in 210.8720 ms
+10/04/2024 11:42:03.470 -06:00  [INF]  HTTP GET /_framework/SorteoEstacionamientos.Shared.pdb.gz responded 200 in 17.5664 ms
+10/04/2024 11:42:03.472 -06:00  [DBG]  Handled. Status code: 304 File: /service-worker.js
+10/04/2024 11:42:03.475 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/dotnet.runtime.8.0.4.ld1umxefo5.js.gz - 200 64577 text/javascript 769.7381ms
+10/04/2024 11:42:03.488 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 43 with length 0 and flags "END_STREAM".
+10/04/2024 11:42:03.488 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 45 with length 0 and flags "END_STREAM".
+10/04/2024 11:42:03.488 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 53 with length 0 and flags "END_STREAM".
+10/04/2024 11:42:03.488 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 55 with length 39 and flags "END_HEADERS".
+10/04/2024 11:42:03.488 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 55 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.489 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.481 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/dotnet.native.8.0.4.7cum2f8t4w.js.gz - 200 36159 text/javascript 776.109ms
+10/04/2024 11:42:03.484 -06:00  [INF]  HTTP GET /service-worker.js responded 304 in 23.9326 ms
+10/04/2024 11:42:03.507 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 57 with length 7 and flags "END_STREAM, END_HEADERS".
+10/04/2024 11:42:03.507 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.483 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/SorteoEstacionamientos.Shared.pdb.gz - 200 10538 application/octet-stream 416.5148ms
+10/04/2024 11:42:03.520 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 55 with length 4274 and flags "NONE".
+10/04/2024 11:42:03.505 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/service-worker.js - 304 null text/javascript 370.7917ms
+10/04/2024 11:42:03.520 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.522 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.523 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.524 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.525 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.529 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.530 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.531 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.532 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.521 -06:00  [INF]  Sending file. Request path: '/_framework/SorteoEstacionamientos.Client.pdb.gz'. Physical path: 'C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\bin\Debug\net8.0\wwwroot\_framework\SorteoEstacionamientos.Client.pdb.gz'
+10/04/2024 11:42:03.534 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.535 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.536 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.537 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.538 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.539 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.539 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.540 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.541 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.546 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.548 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.550 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.552 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.553 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.555 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.534 -06:00  [INF]  HTTP GET /_framework/SorteoEstacionamientos.Client.pdb.gz responded 200 in 63.2392 ms
+10/04/2024 11:42:03.556 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 55 with length 0 and flags "END_STREAM".
+10/04/2024 11:42:03.558 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.563 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.565 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.566 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.568 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.569 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.570 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.571 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.572 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.573 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.575 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.581 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.582 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.583 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.586 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.597 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.598 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.599 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.601 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.602 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.603 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.556 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/SorteoEstacionamientos.Client.pdb.gz - 200 20658 application/octet-stream 456.068ms
+10/04/2024 11:42:03.603 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.604 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.607 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.609 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.611 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.612 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.613 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.614 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.615 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.616 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 16384 and flags "NONE".
+10/04/2024 11:42:03.616 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 6393 and flags "NONE".
+10/04/2024 11:42:03.617 -06:00  [INF]  Sending file. Request path: '/_framework/dotnet.native.wasm.gz'. Physical path: 'C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.wasm.gz'
+10/04/2024 11:42:03.618 -06:00  [INF]  HTTP GET /_framework/dotnet.native.wasm.gz responded 200 in 369.6053 ms
+10/04/2024 11:42:03.620 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 47 with length 0 and flags "END_STREAM".
+10/04/2024 11:42:03.620 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/dotnet.native.wasm.gz - 200 1153273 application/wasm 590.3656ms
+10/04/2024 11:42:03.750 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 59 with length 29 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:03.751 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 59 with length 4 and flags 0x0.
+10/04/2024 11:42:03.751 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 61 with length 28 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:03.751 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 61 with length 4 and flags 0x0.
+10/04/2024 11:42:03.751 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "RST_STREAM" frame for stream ID 61 with length 4 and flags 0x0.
+10/04/2024 11:42:03.751 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "RST_STREAM" frame for stream ID 59 with length 4 and flags 0x0.
+10/04/2024 11:42:04.184 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 63 with length 93 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:04.185 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 63 with length 4 and flags 0x0.
+10/04/2024 11:42:03.880 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/icon-512.png - null null
+10/04/2024 11:42:04.629 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:03.891 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/favicon.png - null null
+10/04/2024 11:42:04.630 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:04.234 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/blazor-hotreload.js - null null
+10/04/2024 11:42:04.629 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:04.635 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:04.635 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 63 with length 41 and flags "END_HEADERS".
+10/04/2024 11:42:04.636 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 63 with length 574 and flags "END_STREAM".
+10/04/2024 11:42:04.631 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:04.636 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:04.634 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/blazor-hotreload.js - 200 574 application/javascript; charset=utf-8 399.9302ms
+10/04/2024 11:42:04.640 -06:00  [DBG]  The file transmission was cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Microsoft.AspNetCore.Http.SendFileFallback.SendFileAsync(Stream destination, String filePath, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, String fileName, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.SendAsync()
+10/04/2024 11:42:04.657 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 65 with length 40 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:04.657 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 65 with length 4 and flags 0x0.
+10/04/2024 11:42:04.647 -06:00  [DBG]  The file transmission was cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Microsoft.AspNetCore.Http.SendFileFallback.SendFileAsync(Stream destination, String filePath, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, String fileName, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.SendAsync()
+10/04/2024 11:42:04.655 -06:00  [INF]  Sending file. Request path: '/favicon.png'. Physical path: 'C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\wwwroot\favicon.png'
+10/04/2024 11:42:04.658 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/blazor-hotreload - null null
+10/04/2024 11:42:04.671 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 65 with length 3 and flags "END_STREAM, END_HEADERS".
+10/04/2024 11:42:04.665 -06:00  [INF]  Sending file. Request path: '/icon-512.png'. Physical path: 'C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\wwwroot\icon-512.png'
+10/04/2024 11:42:04.667 -06:00  [INF]  HTTP GET /favicon.png responded 200 in 30.5449 ms
+10/04/2024 11:42:04.671 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/blazor-hotreload - 204 null null 12.7361ms
+10/04/2024 11:42:04.672 -06:00  [INF]  HTTP GET /icon-512.png responded 200 in 36.9649 ms
+10/04/2024 11:42:04.674 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/favicon.png - 499 1148 image/png 782.4643ms
+10/04/2024 11:42:04.682 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/icon-512.png - 499 6311 image/png 802.7164ms
+10/04/2024 11:42:05.056 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 67 with length 169 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:42:05.056 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 67 with length 4 and flags 0x0.
+10/04/2024 11:42:05.068 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/css/open-iconic/font/fonts/open-iconic.woff - null null
+10/04/2024 11:42:05.071 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:42:05.071 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:42:05.073 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:42:05.082 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 67 with length 55 and flags "END_HEADERS".
+10/04/2024 11:42:05.083 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 67 with length 14984 and flags "NONE".
+10/04/2024 11:42:05.083 -06:00  [INF]  Sending file. Request path: '/css/open-iconic/font/fonts/open-iconic.woff'. Physical path: 'C:\Users\Win10\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\wwwroot\css\open-iconic\font\fonts\open-iconic.woff'
+10/04/2024 11:42:05.087 -06:00  [INF]  HTTP GET /css/open-iconic/font/fonts/open-iconic.woff responded 200 in 14.9205 ms
+10/04/2024 11:42:05.090 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 67 with length 0 and flags "END_STREAM".
+10/04/2024 11:42:05.090 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/css/open-iconic/font/fonts/open-iconic.woff - 200 14984 application/font-woff 22.7555ms
+10/04/2024 11:43:03.945 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "PING" frame for stream ID 0 with length 8 and flags "NONE".
+10/04/2024 11:43:03.950 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "PING" frame for stream ID 0 with length 8 and flags "ACK".
+10/04/2024 11:43:39.604 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 69 with length 34 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:43:39.605 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 69 with length 4 and flags 0x0.
+10/04/2024 11:43:39.605 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/swagger/index.html - null null
+10/04/2024 11:43:39.617 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:43:39.674 -06:00  [DBG]  Response markup is scheduled to include Browser Link script injection.
+10/04/2024 11:43:39.677 -06:00  [DBG]  Response markup is scheduled to include browser refresh script injection.
+10/04/2024 11:43:39.679 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 69 with length 58 and flags "END_HEADERS".
+10/04/2024 11:43:39.683 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 69 with length 4096 and flags "NONE".
+10/04/2024 11:43:39.688 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 69 with length 1078 and flags "NONE".
+10/04/2024 11:43:39.690 -06:00  [DBG]  Response markup was updated to include Browser Link script injection.
+10/04/2024 11:43:39.704 -06:00  [DBG]  Response markup was updated to include browser refresh script injection.
+10/04/2024 11:43:39.706 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 69 with length 0 and flags "END_STREAM".
+10/04/2024 11:43:39.705 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/swagger/index.html - 200 null text/html;charset=utf-8 99.4245ms
+10/04/2024 11:43:39.779 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 71 with length 88 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:43:39.780 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 71 with length 4 and flags 0x0.
+10/04/2024 11:43:39.780 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 73 with length 49 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:43:39.780 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 73 with length 4 and flags 0x0.
+10/04/2024 11:43:39.780 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 75 with length 77 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:43:39.780 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 75 with length 4 and flags 0x0.
+10/04/2024 11:43:39.786 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 77 with length 57 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:43:39.786 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 77 with length 4 and flags 0x0.
+10/04/2024 11:43:39.780 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_vs/browserLink - null null
+10/04/2024 11:43:39.797 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 79 with length 65 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:43:39.798 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 79 with length 4 and flags 0x0.
+10/04/2024 11:43:39.781 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/swagger/swagger-ui.css - null null
+10/04/2024 11:43:39.799 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:43:39.837 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:43:39.837 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 71 with length 66 and flags "END_HEADERS".
+10/04/2024 11:43:39.837 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 9986 and flags "NONE".
+10/04/2024 11:43:39.838 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 10240 and flags "NONE".
+10/04/2024 11:43:39.840 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 10240 and flags "NONE".
+10/04/2024 11:43:39.780 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/aspnetcore-browser-refresh.js - null null
+10/04/2024 11:43:39.837 -06:00  [INF]  The file /swagger-ui.css was not modified
+10/04/2024 11:43:39.848 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 10240 and flags "NONE".
+10/04/2024 11:43:39.850 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 73 with length 13 and flags "END_HEADERS".
+10/04/2024 11:43:39.850 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 73 with length 13794 and flags "NONE".
+10/04/2024 11:43:39.850 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 73 with length 0 and flags "END_STREAM".
+10/04/2024 11:43:39.850 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 10240 and flags "NONE".
+10/04/2024 11:43:39.851 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 10240 and flags "NONE".
+10/04/2024 11:43:39.852 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 10240 and flags "NONE".
+10/04/2024 11:43:39.788 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/swagger/swagger-ui-bundle.js - null null
+10/04/2024 11:43:39.852 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:43:39.853 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:43:39.854 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 10240 and flags "NONE".
+10/04/2024 11:43:39.854 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 10240 and flags "NONE".
+10/04/2024 11:43:39.855 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 10240 and flags "NONE".
+10/04/2024 11:43:39.855 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 10240 and flags "NONE".
+10/04/2024 11:43:39.856 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 10240 and flags "NONE".
+10/04/2024 11:43:39.856 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 10240 and flags "NONE".
+10/04/2024 11:43:39.850 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/aspnetcore-browser-refresh.js - 200 13794 application/javascript; charset=utf-8 69.6207ms
+10/04/2024 11:43:39.857 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 10240 and flags "NONE".
+10/04/2024 11:43:39.858 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 10240 and flags "NONE".
+10/04/2024 11:43:39.858 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 160 and flags "NONE".
+10/04/2024 11:43:39.849 -06:00  [DBG]  Handled. Status code: 304 File: /swagger-ui.css
+10/04/2024 11:43:39.858 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 71 with length 0 and flags "END_STREAM".
+10/04/2024 11:43:39.859 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 75 with length 55 and flags "END_STREAM, END_HEADERS".
+10/04/2024 11:43:39.858 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/swagger/swagger-ui.css - 304 null text/css 77.1ms
+10/04/2024 11:43:39.853 -06:00  [INF]  The file /swagger-ui-bundle.js was not modified
+10/04/2024 11:43:39.798 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/swagger/swagger-ui-standalone-preset.js - null null
+10/04/2024 11:43:39.871 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:43:39.871 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:43:39.858 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_vs/browserLink - 200 null text/javascript; charset=UTF-8 77.933ms
+10/04/2024 11:43:39.868 -06:00  [DBG]  Handled. Status code: 304 File: /swagger-ui-bundle.js
+10/04/2024 11:43:39.878 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 77 with length 25 and flags "END_STREAM, END_HEADERS".
+10/04/2024 11:43:39.877 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/swagger/swagger-ui-bundle.js - 304 null text/javascript 89.9013ms
+10/04/2024 11:43:39.871 -06:00  [INF]  The file /swagger-ui-standalone-preset.js was not modified
+10/04/2024 11:43:39.883 -06:00  [DBG]  Handled. Status code: 304 File: /swagger-ui-standalone-preset.js
+10/04/2024 11:43:39.885 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 79 with length 25 and flags "END_STREAM, END_HEADERS".
+10/04/2024 11:43:39.885 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 86.7261ms
+10/04/2024 11:43:40.129 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 81 with length 38 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:43:40.130 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 81 with length 4 and flags 0x0.
+10/04/2024 11:43:40.130 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "RST_STREAM" frame for stream ID 81 with length 4 and flags 0x0.
+10/04/2024 11:43:40.133 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/swagger/favicon-16x16.png - null null
+10/04/2024 11:43:40.147 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:43:40.147 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:43:40.148 -06:00  [DBG]  The file transmission was cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.SendAsync()
+10/04/2024 11:43:40.158 -06:00  [INF]  Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+10/04/2024 11:43:40.159 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/swagger/favicon-16x16.png - 499 665 image/png 25.9635ms
+10/04/2024 11:43:40.203 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 83 with length 54 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:43:40.203 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 83 with length 4 and flags 0x0.
+10/04/2024 11:43:40.206 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/swagger/v1/swagger.json - null null
+10/04/2024 11:43:40.220 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:43:40.336 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 83 with length 35 and flags "END_HEADERS".
+10/04/2024 11:43:40.336 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 83 with length 16384 and flags "NONE".
+10/04/2024 11:43:40.336 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 83 with length 16384 and flags "NONE".
+10/04/2024 11:43:40.336 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 83 with length 10456 and flags "NONE".
+10/04/2024 11:43:40.339 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 83 with length 0 and flags "END_STREAM".
+10/04/2024 11:43:40.339 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 133.4426ms
+10/04/2024 11:43:40.610 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 85 with length 35 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:43:40.611 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 85 with length 4 and flags 0x0.
+10/04/2024 11:43:40.664 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/service-worker.js - null null
+10/04/2024 11:43:40.715 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:43:40.715 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:43:40.717 -06:00  [VRB]  Range header's value is empty.
+10/04/2024 11:43:40.717 -06:00  [INF]  The file /service-worker.js was not modified
+10/04/2024 11:43:40.719 -06:00  [DBG]  Handled. Status code: 304 File: /service-worker.js
+10/04/2024 11:43:40.720 -06:00  [INF]  HTTP GET /service-worker.js responded 304 in 4.5052 ms
+10/04/2024 11:43:40.723 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 85 with length 37 and flags "END_STREAM, END_HEADERS".
+10/04/2024 11:43:40.722 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/service-worker.js - 304 null text/javascript 58.297ms
+10/04/2024 11:43:53.354 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "HEADERS" frame for stream ID 87 with length 41 and flags "END_STREAM, END_HEADERS, PRIORITY".
+10/04/2024 11:43:53.354 -06:00  [VRB]  Connection id "0HN2PGM301TTA" received "WINDOW_UPDATE" frame for stream ID 87 with length 4 and flags 0x0.
+10/04/2024 11:43:53.355 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/api/Carreras/filterByStatus/0 - null null
+10/04/2024 11:43:53.358 -06:00  [VRB]  All hosts are allowed.
+10/04/2024 11:43:53.358 -06:00  [DBG]  The request path  does not match the path filter
+10/04/2024 11:43:53.359 -06:00  [DBG]  The request path /api/Carreras/filterByStatus/0 does not match a supported file type
+10/04/2024 11:43:53.367 -06:00  [DBG]  2 candidate(s) found for the request path '/api/Carreras/filterByStatus/0'
+10/04/2024 11:43:53.370 -06:00  [DBG]  Endpoint 'SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.CarrerasController.GetAllDataByStatus (SorteoEstacionamientos.Server)' with route pattern 'api/Carreras/filterByStatus/{filterByStatus}' is valid for the request path '/api/Carreras/filterByStatus/0'
+10/04/2024 11:43:53.373 -06:00  [DBG]  Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/api/Carreras/filterByStatus/0'
+10/04/2024 11:43:53.374 -06:00  [DBG]  Request matched endpoint 'SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.CarrerasController.GetAllDataByStatus (SorteoEstacionamientos.Server)'
+10/04/2024 11:43:53.377 -06:00  [VRB]  The endpoint does not specify the IRequestSizeLimitMetadata.
+10/04/2024 11:43:53.378 -06:00  [DBG]  AuthenticationScheme: Bearer was not authenticated.
+10/04/2024 11:43:53.379 -06:00  [INF]  Executing endpoint 'SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.CarrerasController.GetAllDataByStatus (SorteoEstacionamientos.Server)'
+10/04/2024 11:43:53.414 -06:00  [INF]  Route matched with {action = "GetAllDataByStatus", controller = "Carreras", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllDataByStatus(Int16) on controller SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.CarrerasController (SorteoEstacionamientos.Server).
+10/04/2024 11:43:53.418 -06:00  [DBG]  Execution plan of authorization filters (in the following order): ["None"]
+10/04/2024 11:43:53.419 -06:00  [DBG]  Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+10/04/2024 11:43:53.421 -06:00  [DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+10/04/2024 11:43:53.424 -06:00  [DBG]  Execution plan of exception filters (in the following order): ["None"]
+10/04/2024 11:43:53.426 -06:00  [DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter","Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+10/04/2024 11:43:53.430 -06:00  [VRB]  Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+10/04/2024 11:43:53.431 -06:00  [VRB]  Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+10/04/2024 11:43:53.432 -06:00  [DBG]  Executing controller factory for controller SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.CarrerasController (SorteoEstacionamientos.Server)
+10/04/2024 11:43:53.616 -06:00  [DBG]  An 'IServiceProvider' was created for internal use by Entity Framework.
+10/04/2024 11:43:53.638 -06:00  [DBG]  Executed controller factory for controller SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.CarrerasController (SorteoEstacionamientos.Server)
+10/04/2024 11:43:53.661 -06:00  [DBG]  Attempting to bind parameter 'filterByStatus' of type 'System.Int16' ...
+10/04/2024 11:43:53.664 -06:00  [DBG]  Attempting to bind parameter 'filterByStatus' of type 'System.Int16' using the name 'filterByStatus' in request data ...
+10/04/2024 11:43:53.667 -06:00  [DBG]  Done attempting to bind parameter 'filterByStatus' of type 'System.Int16'.
+10/04/2024 11:43:53.668 -06:00  [DBG]  Done attempting to bind parameter 'filterByStatus' of type 'System.Int16'.
+10/04/2024 11:43:53.669 -06:00  [DBG]  Attempting to validate the bound parameter 'filterByStatus' of type 'System.Int16' ...
+10/04/2024 11:43:53.672 -06:00  [DBG]  Done attempting to validate the bound parameter 'filterByStatus' of type 'System.Int16'.
+10/04/2024 11:43:53.674 -06:00  [VRB]  Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+10/04/2024 11:43:53.675 -06:00  [VRB]  Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+10/04/2024 11:43:53.675 -06:00  [VRB]  Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+10/04/2024 11:43:53.675 -06:00  [VRB]  Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+10/04/2024 11:43:53.679 -06:00  [INF]  Executing action method SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.CarrerasController.GetAllDataByStatus (SorteoEstacionamientos.Server) - Validation state: "Valid"
+10/04/2024 11:43:53.681 -06:00  [VRB]  Executing action method SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.CarrerasController.GetAllDataByStatus (SorteoEstacionamientos.Server) with arguments (["0"])
+10/04/2024 11:43:54.438 -06:00  [DBG]  Entity Framework Core 8.0.3 initialized 'DBSorteoParkingContext' using provider 'Pomelo.EntityFrameworkCore.MySql:8.0.2' with options: ServerVersion=8.0.22-mysql 
+10/04/2024 11:43:54.457 -06:00  [DBG]  Compiling query expression: 
+'DbSet<McCatCarrera>()'
+10/04/2024 11:43:54.623 -06:00  [DBG]  Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<McCatCarrera>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: McCatCarrera.IdCarrera (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: McCatCarrera.CarrClave (string) ValueGenerated.OnAdd MaxLength(20), 1], [Property: McCatCarrera.CarrNombre (string) Required MaxLength(300), 2], [Property: McCatCarrera.CarrStatus (sbyte) Required ValueGenerated.OnAdd, 3] }
+        SELECT m.IdCarrera, m.carrClave, m.carrNombre, m.carrStatus
+        FROM MC_catCarreras AS m), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, McCatCarrera>, 
+    SorteoEstacionamientos.Server.CapaDataAccess.DBContext.DBSorteoParkingContext, 
+    False, 
+    False, 
+    True
+)'
+10/04/2024 11:43:54.661 -06:00  [DBG]  Creating DbConnection.
+10/04/2024 11:43:54.668 -06:00  [DBG]  Created DbConnection. (8ms).
+10/04/2024 11:43:54.678 -06:00  [DBG]  Opening connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186'.
+10/04/2024 11:43:54.776 -06:00  [DBG]  Opened connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186'.
+10/04/2024 11:43:54.781 -06:00  [DBG]  Creating DbCommand for 'ExecuteReader'.
+10/04/2024 11:43:54.787 -06:00  [DBG]  Created DbCommand for 'ExecuteReader' (5ms).
+10/04/2024 11:43:54.790 -06:00  [DBG]  Initialized DbCommand for 'ExecuteReader' (9ms).
+10/04/2024 11:43:54.797 -06:00  [DBG]  Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`IdCarrera`, `m`.`carrClave`, `m`.`carrNombre`, `m`.`carrStatus`
+FROM `MC_catCarreras` AS `m`
+10/04/2024 11:43:54.823 -06:00  [INF]  Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`IdCarrera`, `m`.`carrClave`, `m`.`carrNombre`, `m`.`carrStatus`
+FROM `MC_catCarreras` AS `m`
+10/04/2024 11:43:54.863 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatCarrera' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10/04/2024 11:43:54.882 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatCarrera' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10/04/2024 11:43:54.887 -06:00  [DBG]  Closing data reader to 'db_SorteoEstacionamientos' on server '148.204.211.186'.
+10/04/2024 11:43:54.897 -06:00  [DBG]  A data reader for 'db_SorteoEstacionamientos' on server '148.204.211.186' is being disposed after spending 66ms reading results.
+10/04/2024 11:43:54.902 -06:00  [DBG]  Closing connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186'.
+10/04/2024 11:43:54.906 -06:00  [DBG]  Closed connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186' (4ms).
+10/04/2024 11:43:54.909 -06:00  [INF]  Consulta de todos los registros de Carreras.
+10/04/2024 11:43:54.914 -06:00  [INF]  Executed action method SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.CarrerasController.GetAllDataByStatus (SorteoEstacionamientos.Server), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1230.0883ms.
+10/04/2024 11:43:54.917 -06:00  [VRB]  Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+10/04/2024 11:43:54.917 -06:00  [VRB]  Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+10/04/2024 11:43:54.917 -06:00  [VRB]  Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+10/04/2024 11:43:54.917 -06:00  [VRB]  Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+10/04/2024 11:43:54.918 -06:00  [VRB]  Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+10/04/2024 11:43:54.918 -06:00  [VRB]  Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+10/04/2024 11:43:54.918 -06:00  [VRB]  Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+10/04/2024 11:43:54.918 -06:00  [VRB]  Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+10/04/2024 11:43:54.919 -06:00  [VRB]  Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+10/04/2024 11:43:54.920 -06:00  [DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+10/04/2024 11:43:54.924 -06:00  [DBG]  No information found on request to perform content negotiation.
+10/04/2024 11:43:54.926 -06:00  [DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+10/04/2024 11:43:54.928 -06:00  [DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+10/04/2024 11:43:54.930 -06:00  [DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+10/04/2024 11:43:54.931 -06:00  [INF]  Executing OkObjectResult, writing value of type 'SorteoEstacionamientos.Shared.CapaEntities.Response.Response`1[[System.Collections.Generic.List`1[[SorteoEstacionamientos.Server.CapaDataAccess.DBContext.McCatCarrera, SorteoEstacionamientos.Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+10/04/2024 11:43:54.944 -06:00  [VRB]  After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+10/04/2024 11:43:54.944 -06:00  [VRB]  Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+10/04/2024 11:43:54.944 -06:00  [VRB]  Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+10/04/2024 11:43:54.944 -06:00  [VRB]  Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+10/04/2024 11:43:54.944 -06:00  [VRB]  Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+10/04/2024 11:43:54.944 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "HEADERS" frame for stream ID 87 with length 66 and flags "END_HEADERS".
+10/04/2024 11:43:54.945 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 87 with length 210 and flags "NONE".
+10/04/2024 11:43:54.945 -06:00  [VRB]  Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+10/04/2024 11:43:54.945 -06:00  [VRB]  Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+10/04/2024 11:43:54.949 -06:00  [INF]  Executed action SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.CarrerasController.GetAllDataByStatus (SorteoEstacionamientos.Server) in 1516.6182ms
+10/04/2024 11:43:54.951 -06:00  [INF]  Executed endpoint 'SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.CarrerasController.GetAllDataByStatus (SorteoEstacionamientos.Server)'
+10/04/2024 11:43:54.953 -06:00  [INF]  HTTP GET /api/Carreras/filterByStatus/0 responded 200 in 1593.7468 ms
+10/04/2024 11:43:54.954 -06:00  [VRB]  Connection id "0HN2PGM301TTA" sending "DATA" frame for stream ID 87 with length 0 and flags "END_STREAM".
+10/04/2024 11:43:54.956 -06:00  [DBG]  'DBSorteoParkingContext' disposed.
+10/04/2024 11:43:54.962 -06:00  [DBG]  Disposing connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186'.
+10/04/2024 11:43:54.968 -06:00  [DBG]  Disposed connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186' (5ms).
+10/04/2024 11:43:54.970 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/api/Carreras/filterByStatus/0 - 200 null application/json; charset=utf-8 1615.7028ms

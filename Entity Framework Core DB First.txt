@@ -3,7 +3,7 @@
 -> Scaffold-DBContext "Server=148.204.211.135;Initial Catalog=db_CorreosInstitucionales_UPIICSA;User ID=correos_institucionales;Password=correos_institucionales_05;Trusted_Connection=False;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir CapaDataAccess/DBContext -DataAnnotations -Force
 -> Scaffold-DBContext "Server=www.developers.upiicsa.ipn.mx;Database=db_CorreosInstitucionales_UPIICSA;User ID=correos_institucionales;Password=correos_institucionales_05;Trusted_Connection=False;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir CapaDataAccess/DBContext -DataAnnotations -Force
 
--> Scaffold-DBContext "Server=bx7pfciqeiqwnvwcwt0i-mysql.services.clever-cloud.com;Port=3306;Database=bx7pfciqeiqwnvwcwt0i;User ID=ukvy0nrg59q303kl;Password=Xu7Ky8B5uHXLsoRbShEg" Pomelo.EntityFrameworkCore.MySql -OutputDir CapaDataAccess/DBContext -Context DBSorteoParkingContext -DataAnnotations -Force
+-> Scaffold-DBContext "Server=148.204.211.186;Port=3306;Database=db_SorteoEstacionamientos;User ID=root;Password=123123" Pomelo.EntityFrameworkCore.MySql -OutputDir CapaDataAccess/DBContext -Context DBSorteoParkingContext -DataAnnotations -Force
 
 DBContext
 private readonly IConfiguration? _config;
