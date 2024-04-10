@@ -36,7 +36,6 @@
 
   <ItemGroup>
     <Folder Include="CapaDataAccess\Controllers\LoginAuth\" />
-    <Folder Include="CapaDataAccess\Controllers\MóduloSorteo\" />
     <Folder Include="CapaDataAccess\Controllers\MóduloRegistros\" />
     <Folder Include="CapaDataAccess\DBContext\" />
     <Folder Include="wwwroot\Repositorio\" />
