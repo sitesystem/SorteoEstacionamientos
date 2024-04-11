@@ -17,7 +17,7 @@ namespace SorteoEstacionamientos.Shared.CapaServices_BusinessLogic
         private readonly JsonSerializerOptions _options = new() { PropertyNameCaseInsensitive = true };
         const string url = "/api/Escuelas";
 
-        public async Task<Response<List<RequestViewModel_Escuela>>?> GetAllDataByStatusAsync(bool filterByStatus)
+        public async Task<Response<List<RequestViewModel_Escuela>>?> GetAllDataByStatusAsync(short filterByStatus)
         {
             var response = await _httpClient.GetAsync($"{url}/filterByStatus/{filterByStatus}");
             var content = await response.Content.ReadAsStringAsync();
@@ -49,7 +49,7 @@ namespace SorteoEstacionamientos.Shared.CapaServices_BusinessLogic
             return response;
         }
 
-        public async Task<HttpResponseMessage> EnableDisableDataByIdAsync(int id, bool isActivate)
+        public async Task<HttpResponseMessage> EnableDisableDataByIdAsync(int id, short isActivate)
         {
             var response = await _httpClient.PutAsJsonAsync($"{url}/editByIdStatus/{id}/{isActivate}",
                 new JsonSerializerOptions()

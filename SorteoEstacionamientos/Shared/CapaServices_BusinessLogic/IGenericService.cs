@@ -10,10 +10,10 @@ namespace SorteoEstacionamientos.Shared.CapaServices_BusinessLogic
 {
     public interface IGenericService<T>
     {
-        public Task<Response<List<T>>?> GetAllDataByStatusAsync(bool filterByStatus);
+        public Task<Response<List<T>>?> GetAllDataByStatusAsync(short filterByStatus);
         public Task<Response<T>?> GetDataByIdAsync(int? id);
         public Task<HttpResponseMessage> AddDataAsync(T oObject);
         public Task<HttpResponseMessage> EditDataAsync(T oObject);
-        public Task<HttpResponseMessage> EnableDisableDataByIdAsync(int id, bool isActivate);
+        public Task<HttpResponseMessage> EnableDisableDataByIdAsync(int id, short isActivate);
     }
 }
