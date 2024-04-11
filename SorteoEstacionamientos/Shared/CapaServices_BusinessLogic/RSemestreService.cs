@@ -31,7 +31,7 @@ namespace SorteoEstacionamientos.Shared.CapaServices_BusinessLogic
         }
         public async Task<HttpResponseMessage> AddDataAsync(RequestViewModel_Semestre oSemestre)
         {
-            //var json = JsonSerializer.Serialize(oCarrera);
+            //var json = JsonSerializer.Serialize(oSemestre);
             //var content = new StringContent(json, Encoding.UTF8, "application/json");
             //var response = await _httpClient.PostAsync(url, content);
             var response = await _httpClient.PostAsJsonAsync(url, oSemestre, options: _options);
@@ -40,7 +40,7 @@ namespace SorteoEstacionamientos.Shared.CapaServices_BusinessLogic
 
         public async Task<HttpResponseMessage> EditDataAsync(RequestViewModel_Semestre oSemestre)
         {
-            //var json = JsonSerializer.Serialize(oCarrera);
+            //var json = JsonSerializer.Serialize(oSemestre);
             //var content = new StringContent(json, Encoding.UTF8, "application/json");
             //var response = await _httpClient.PutAsync(url, content);
             var response = await _httpClient.PutAsJsonAsync(url, oSemestre, options: _options);

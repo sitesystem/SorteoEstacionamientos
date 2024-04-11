@@ -39,7 +39,7 @@ namespace SorteoEstacionamientos.Shared.CapaServices_BusinessLogic
 
         public async Task<HttpResponseMessage> AddDataAsync(RequestDTO_Ganador oGanador)
         {
-            // var json = JsonSerializer.Serialize(oUsuario);
+            // var json = JsonSerializer.Serialize(oGanador);
             // var content = new StringContent(json, Encoding.UTF8, "application/json");
             // var response = await _httpClient.PostAsync(url, content);
             var response = await _httpClient.PostAsJsonAsync(url, oGanador, options: _options);
@@ -48,7 +48,7 @@ namespace SorteoEstacionamientos.Shared.CapaServices_BusinessLogic
 
         public async Task<HttpResponseMessage> EditDataAsync(RequestDTO_Ganador oGanador)
         {
-            // var json = JsonSerializer.Serialize(oUsuario);
+            // var json = JsonSerializer.Serialize(oGanador);
             // var content = new StringContent(json, Encoding.UTF8, "application/json");
             // var response = await _httpClient.PutAsync(url, content);
             var response = await _httpClient.PutAsJsonAsync(url, oGanador, options: _options);
