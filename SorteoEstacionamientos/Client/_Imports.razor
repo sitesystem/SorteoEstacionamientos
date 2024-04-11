@@ -20,6 +20,10 @@
 
 @using SorteoEstacionamientos.Client
 @using SorteoEstacionamientos.Client.Shared
+@using SorteoEstacionamientos.Shared.CapaServices_BusinessLogic
+@using SorteoEstacionamientos.Shared.CapaEntities.Request
+@using SorteoEstacionamientos.Shared.CapaEntities.Response
+
 
 @* Inyectar Interfaz de los Servicios *@
 @* @inject AuthenticationStateProvider servicioAuthenticationStateProvider *@
@@ -44,3 +48,4 @@
 @* Módulo de Sorteo de Estacionamientos *@
 
 @* Módulo de Catálogos *@
+@inject RColorService servicioColores

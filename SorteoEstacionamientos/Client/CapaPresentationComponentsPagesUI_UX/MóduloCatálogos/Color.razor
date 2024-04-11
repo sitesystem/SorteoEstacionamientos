@@ -1,0 +1,24 @@
+﻿<h3>Color</h3>
+
+@if (oResponse is not null && oResponse.Data != null)
+{
+	@foreach (var color in oResponse.Data)
+	{
+		<div>
+			@color.ColorNombre
+		</div>
+	}
+
+}
+else
+{
+	<spam> Cargando... </spam> 
+}
+@code {
+	Response<List<RequestViewModel_Color>> oResponse = new();
+	protected override async Task OnInitializedAsync()
+	{
+		oResponse = await servicioColores.GetAllDataByStatusAsync(0);
+	}
+
+}
