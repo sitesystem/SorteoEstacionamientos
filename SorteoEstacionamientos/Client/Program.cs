@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Radzen;
 
 using SorteoEstacionamientos.Client;
+using SorteoEstacionamientos.Shared.CapaServices_BusinessLogic;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -21,7 +22,7 @@ builder.Services.AddRadzenComponents();
 // builder.Services.AddScoped<DialogService>();
 // builder.Services.AddScoped<NotificationService>();
 // builder.Services.AddScoped<TooltipService>();
-
+builder.Services.AddScoped<RColorService>();
 builder.Services.AddLogging();
 
 await builder.Build().RunAsync();
