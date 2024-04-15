@@ -24,5 +24,7 @@ builder.Services.AddRadzenComponents();
 // builder.Services.AddScoped<TooltipService>();
 builder.Services.AddScoped<RColorService>();
 builder.Services.AddLogging();
+builder.Services.AddScoped<RCarreraService>();
+
 
 await builder.Build().RunAsync();
