@@ -12250,3 +12250,194 @@ System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport 
 15/04/2024 13:34:51.522 -06:00  [DBG]  The connection queue processing loop for 0HN2TGCB3N980 completed.
 15/04/2024 13:34:51.532 -06:00  [DBG]  Connection id "0HN2TGCB3N980" sending FIN because: "The Socket transport's send loop completed gracefully."
 15/04/2024 13:34:51.556 -06:00  [DBG]  Connection id "0HN2TGCB3N980" stopped.
+15/04/2024 13:39:41.035 -06:00  [DBG]  Initializing Razor view compiler with compiled view: '/Pages/Error.cshtml'.
+15/04/2024 13:39:41.134 -06:00  [DBG]  Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+15/04/2024 13:39:41.202 -06:00  [INF]  User profile is available. Using 'C:\Users\Eduardo Carrasco\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+15/04/2024 13:39:41.420 -06:00  [DBG]  Hosting starting
+15/04/2024 13:39:41.429 -06:00  [DBG]  Reading data from file 'C:\Users\Eduardo Carrasco\AppData\Local\ASP.NET\DataProtection-Keys\key-83f56eed-94f4-43c3-8935-0621c50afbcd.xml'.
+15/04/2024 13:39:41.436 -06:00  [DBG]  Reading data from file 'C:\Users\Eduardo Carrasco\AppData\Local\ASP.NET\DataProtection-Keys\key-b3f85ec5-cbc2-4d81-ac9e-c4ec18ce7b33.xml'.
+15/04/2024 13:39:41.438 -06:00  [DBG]  Reading data from file 'C:\Users\Eduardo Carrasco\AppData\Local\ASP.NET\DataProtection-Keys\key-d6684c2f-60ce-478e-81b1-66537fd8280e.xml'.
+15/04/2024 13:39:41.445 -06:00  [DBG]  Found key {83f56eed-94f4-43c3-8935-0621c50afbcd}.
+15/04/2024 13:39:41.451 -06:00  [DBG]  Found key {b3f85ec5-cbc2-4d81-ac9e-c4ec18ce7b33}.
+15/04/2024 13:39:41.453 -06:00  [DBG]  Found key {d6684c2f-60ce-478e-81b1-66537fd8280e}.
+15/04/2024 13:39:41.461 -06:00  [DBG]  Considering key {d6684c2f-60ce-478e-81b1-66537fd8280e} with expiration date 2024-07-14 17:30:53Z as default key.
+15/04/2024 13:39:41.466 -06:00  [DBG]  Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+15/04/2024 13:39:41.471 -06:00  [DBG]  Decrypting secret element using Windows DPAPI.
+15/04/2024 13:39:41.474 -06:00  [DBG]  Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+15/04/2024 13:39:41.479 -06:00  [DBG]  Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+15/04/2024 13:39:41.483 -06:00  [DBG]  Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+15/04/2024 13:39:41.486 -06:00  [DBG]  Using key {d6684c2f-60ce-478e-81b1-66537fd8280e} as the default key.
+15/04/2024 13:39:41.489 -06:00  [DBG]  Key ring with default key {d6684c2f-60ce-478e-81b1-66537fd8280e} was loaded during application startup.
+15/04/2024 13:39:41.630 -06:00  [INF]  Now listening on: https://localhost:7173
+15/04/2024 13:39:41.633 -06:00  [INF]  Now listening on: http://localhost:5062
+15/04/2024 13:39:41.635 -06:00  [DBG]  Loaded hosting startup assembly SorteoEstacionamientos.Server
+15/04/2024 13:39:41.637 -06:00  [DBG]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+15/04/2024 13:39:41.639 -06:00  [DBG]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+15/04/2024 13:39:41.640 -06:00  [INF]  Application started. Press Ctrl+C to shut down.
+15/04/2024 13:39:41.642 -06:00  [INF]  Hosting environment: Development
+15/04/2024 13:39:41.644 -06:00  [INF]  Content root path: C:\Users\Eduardo Carrasco\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Server
+15/04/2024 13:39:41.646 -06:00  [DBG]  Hosting started
+15/04/2024 13:39:41.863 -06:00  [DBG]  Connection id "0HN2TGF5QF7RM" accepted.
+15/04/2024 13:39:41.864 -06:00  [DBG]  Connection id "0HN2TGF5QF7RM" received FIN.
+15/04/2024 13:39:41.864 -06:00  [DBG]  Connection id "0HN2TGF5QF7RN" received FIN.
+15/04/2024 13:39:41.867 -06:00  [DBG]  Connection id "0HN2TGF5QF7RM" started.
+15/04/2024 13:39:41.871 -06:00  [DBG]  Connection id "0HN2TGF5QF7RN" accepted.
+15/04/2024 13:39:41.875 -06:00  [DBG]  Connection id "0HN2TGF5QF7RN" started.
+15/04/2024 13:39:41.887 -06:00  [DBG]  Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+15/04/2024 13:39:41.887 -06:00  [DBG]  Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+15/04/2024 13:39:41.910 -06:00  [DBG]  Connection id "0HN2TGF5QF7RN" stopped.
+15/04/2024 13:39:41.910 -06:00  [DBG]  Connection id "0HN2TGF5QF7RM" stopped.
+15/04/2024 13:39:41.916 -06:00  [DBG]  Connection id "0HN2TGF5QF7RN" sending FIN because: "The Socket transport's send loop completed gracefully."
+15/04/2024 13:39:41.916 -06:00  [DBG]  Connection id "0HN2TGF5QF7RM" sending FIN because: "The Socket transport's send loop completed gracefully."
+15/04/2024 13:39:42.201 -06:00  [DBG]  Connection id "0HN2TGF5QF7RO" accepted.
+15/04/2024 13:39:42.408 -06:00  [DBG]  Connection id "0HN2TGF5QF7RO" started.
+15/04/2024 13:39:42.509 -06:00  [DBG]  Connection 0HN2TGF5QF7RO established using the following protocol: "Tls12"
+15/04/2024 13:39:42.554 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE".
+15/04/2024 13:39:42.565 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+15/04/2024 13:39:42.566 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" received "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE".
+15/04/2024 13:39:42.567 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+15/04/2024 13:39:42.568 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+15/04/2024 13:39:42.568 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" received "HEADERS" frame for stream ID 1 with length 383 and flags "END_STREAM, END_HEADERS, PRIORITY".
+15/04/2024 13:39:42.641 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" received "HEADERS" frame for stream ID 3 with length 86 and flags "END_STREAM, END_HEADERS, PRIORITY".
+15/04/2024 13:39:42.641 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" received "HEADERS" frame for stream ID 5 with length 57 and flags "END_STREAM, END_HEADERS, PRIORITY".
+15/04/2024 13:39:42.643 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+15/04/2024 13:39:42.658 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_vs/browserLink - null null
+15/04/2024 13:39:42.658 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/blazor.webassembly.js - null null
+15/04/2024 13:39:42.658 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/aspnetcore-browser-refresh.js - null null
+15/04/2024 13:39:42.678 -06:00  [DBG]  Wildcard detected, all requests with hosts will be allowed.
+15/04/2024 13:39:42.681 -06:00  [VRB]  All hosts are allowed.
+15/04/2024 13:39:42.693 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "HEADERS" frame for stream ID 1 with length 98 and flags "END_HEADERS".
+15/04/2024 13:39:42.694 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 1 with length 13794 and flags "NONE".
+15/04/2024 13:39:42.706 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 1 with length 0 and flags "END_STREAM".
+15/04/2024 13:39:42.703 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/aspnetcore-browser-refresh.js - 200 13794 application/javascript; charset=utf-8 46.4661ms
+15/04/2024 13:39:42.720 -06:00  [DBG]  The request path  does not match the path filter
+15/04/2024 13:39:42.754 -06:00  [VRB]  Range header's value is empty.
+15/04/2024 13:39:42.754 -06:00  [INF]  The file /_framework/blazor.webassembly.js.gz was not modified
+15/04/2024 13:39:42.769 -06:00  [DBG]  Handled. Status code: 304 File: /_framework/blazor.webassembly.js.gz
+15/04/2024 13:39:42.776 -06:00  [INF]  HTTP GET /_framework/blazor.webassembly.js.gz responded 304 in 37.1272 ms
+15/04/2024 13:39:42.787 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "HEADERS" frame for stream ID 3 with length 210 and flags "END_STREAM, END_HEADERS".
+15/04/2024 13:39:42.819 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" received "HEADERS" frame for stream ID 7 with length 146 and flags "END_STREAM, END_HEADERS, PRIORITY".
+15/04/2024 13:39:42.785 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/blazor.webassembly.js.gz - 304 null text/javascript 130.4745ms
+15/04/2024 13:39:42.820 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/dotnet.js - null null
+15/04/2024 13:39:42.839 -06:00  [VRB]  All hosts are allowed.
+15/04/2024 13:39:42.841 -06:00  [DBG]  The request path  does not match the path filter
+15/04/2024 13:39:42.845 -06:00  [DBG]  The request has an origin header: 'https://localhost:7173'.
+15/04/2024 13:39:42.878 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "HEADERS" frame for stream ID 5 with length 119 and flags "END_HEADERS".
+15/04/2024 13:39:42.879 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 5 with length 9986 and flags "NONE".
+15/04/2024 13:39:42.882 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+15/04/2024 13:39:42.883 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+15/04/2024 13:39:42.883 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+15/04/2024 13:39:42.884 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+15/04/2024 13:39:42.885 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+15/04/2024 13:39:42.885 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+15/04/2024 13:39:42.886 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+15/04/2024 13:39:42.886 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+15/04/2024 13:39:42.887 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+15/04/2024 13:39:42.887 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+15/04/2024 13:39:42.888 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+15/04/2024 13:39:42.888 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 5 with length 8192 and flags "NONE".
+15/04/2024 13:39:42.915 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+15/04/2024 13:39:42.916 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 5 with length 10240 and flags "NONE".
+15/04/2024 13:39:42.921 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 5 with length 2208 and flags "END_STREAM".
+15/04/2024 13:39:42.850 -06:00  [INF]  CORS policy execution successful.
+15/04/2024 13:39:43.005 -06:00  [VRB]  Range header's value is empty.
+15/04/2024 13:39:42.919 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_vs/browserLink - 200 null text/javascript; charset=UTF-8 264.0289ms
+15/04/2024 13:39:43.006 -06:00  [INF]  The file /_framework/dotnet.js.gz was not modified
+15/04/2024 13:39:43.015 -06:00  [DBG]  Handled. Status code: 304 File: /_framework/dotnet.js.gz
+15/04/2024 13:39:43.017 -06:00  [INF]  HTTP GET /_framework/dotnet.js.gz responded 304 in 13.0528 ms
+15/04/2024 13:39:43.023 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "HEADERS" frame for stream ID 7 with length 64 and flags "END_STREAM, END_HEADERS".
+15/04/2024 13:39:43.023 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/dotnet.js.gz - 304 null text/javascript 203.4378ms
+15/04/2024 13:39:43.041 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" received "HEADERS" frame for stream ID 9 with length 96 and flags "END_STREAM, END_HEADERS, PRIORITY".
+15/04/2024 13:39:43.042 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/blazor.boot.json - null null
+15/04/2024 13:39:43.050 -06:00  [VRB]  All hosts are allowed.
+15/04/2024 13:39:43.052 -06:00  [DBG]  The request path  does not match the path filter
+15/04/2024 13:39:43.055 -06:00  [VRB]  Range header's value is empty.
+15/04/2024 13:39:43.073 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "HEADERS" frame for stream ID 9 with length 85 and flags "END_HEADERS".
+15/04/2024 13:39:43.073 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 9 with length 9097 and flags "NONE".
+15/04/2024 13:39:43.082 -06:00  [INF]  Sending file. Request path: '/_framework/blazor.boot.json.gz'. Physical path: 'C:\Users\Eduardo Carrasco\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json.gz'
+15/04/2024 13:39:43.088 -06:00  [INF]  HTTP GET /_framework/blazor.boot.json.gz responded 200 in 34.0362 ms
+15/04/2024 13:39:43.097 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 9 with length 0 and flags "END_STREAM".
+15/04/2024 13:39:43.110 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" received "HEADERS" frame for stream ID 11 with length 127 and flags "END_STREAM, END_HEADERS, PRIORITY".
+15/04/2024 13:39:43.110 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" received "HEADERS" frame for stream ID 13 with length 72 and flags "END_STREAM, END_HEADERS, PRIORITY".
+15/04/2024 13:39:43.096 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/blazor.boot.json.gz - 200 9097 application/json 53.9036ms
+15/04/2024 13:39:43.110 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/dotnet.runtime.8.0.4.si2gv1sw6z.js - null null
+15/04/2024 13:39:43.121 -06:00  [VRB]  All hosts are allowed.
+15/04/2024 13:39:43.110 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/dotnet.native.8.0.4.8r26oe7u96.js - null null
+15/04/2024 13:39:43.126 -06:00  [VRB]  All hosts are allowed.
+15/04/2024 13:39:43.121 -06:00  [DBG]  The request path  does not match the path filter
+15/04/2024 13:39:43.126 -06:00  [DBG]  The request path  does not match the path filter
+15/04/2024 13:39:43.129 -06:00  [DBG]  The request has an origin header: 'https://localhost:7173'.
+15/04/2024 13:39:43.131 -06:00  [DBG]  The request has an origin header: 'https://localhost:7173'.
+15/04/2024 13:39:43.133 -06:00  [INF]  CORS policy execution successful.
+15/04/2024 13:39:43.138 -06:00  [VRB]  Range header's value is empty.
+15/04/2024 13:39:43.135 -06:00  [INF]  CORS policy execution successful.
+15/04/2024 13:39:43.139 -06:00  [VRB]  Range header's value is empty.
+15/04/2024 13:39:43.138 -06:00  [INF]  The file /_framework/dotnet.runtime.8.0.4.si2gv1sw6z.js.gz was not modified
+15/04/2024 13:39:43.139 -06:00  [INF]  The file /_framework/dotnet.native.8.0.4.8r26oe7u96.js.gz was not modified
+15/04/2024 13:39:43.141 -06:00  [DBG]  Handled. Status code: 304 File: /_framework/dotnet.runtime.8.0.4.si2gv1sw6z.js.gz
+15/04/2024 13:39:43.147 -06:00  [DBG]  Handled. Status code: 304 File: /_framework/dotnet.native.8.0.4.8r26oe7u96.js.gz
+15/04/2024 13:39:43.157 -06:00  [INF]  HTTP GET /_framework/dotnet.runtime.8.0.4.si2gv1sw6z.js.gz responded 304 in 19.4502 ms
+15/04/2024 13:39:43.168 -06:00  [INF]  HTTP GET /_framework/dotnet.native.8.0.4.8r26oe7u96.js.gz responded 304 in 29.7963 ms
+15/04/2024 13:39:43.202 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "HEADERS" frame for stream ID 11 with length 62 and flags "END_STREAM, END_HEADERS".
+15/04/2024 13:39:43.203 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "HEADERS" frame for stream ID 13 with length 32 and flags "END_STREAM, END_HEADERS".
+15/04/2024 13:39:43.186 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/dotnet.runtime.8.0.4.si2gv1sw6z.js.gz - 304 null text/javascript 75.6875ms
+15/04/2024 13:39:43.201 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/dotnet.native.8.0.4.8r26oe7u96.js.gz - 304 null text/javascript 90.3656ms
+15/04/2024 13:39:43.307 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" received "HEADERS" frame for stream ID 15 with length 71 and flags "END_STREAM, END_HEADERS, PRIORITY".
+15/04/2024 13:39:43.307 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" received "HEADERS" frame for stream ID 17 with length 70 and flags "END_STREAM, END_HEADERS, PRIORITY".
+15/04/2024 13:39:43.308 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/SorteoEstacionamientos.Client.wasm - null null
+15/04/2024 13:39:43.494 -06:00  [VRB]  All hosts are allowed.
+15/04/2024 13:39:43.308 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/SorteoEstacionamientos.Client.pdb - null null
+15/04/2024 13:39:43.517 -06:00  [VRB]  All hosts are allowed.
+15/04/2024 13:39:43.495 -06:00  [DBG]  The request path  does not match the path filter
+15/04/2024 13:39:43.520 -06:00  [VRB]  Range header's value is empty.
+15/04/2024 13:39:43.518 -06:00  [DBG]  The request path  does not match the path filter
+15/04/2024 13:39:43.522 -06:00  [VRB]  Range header's value is empty.
+15/04/2024 13:39:43.536 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "HEADERS" frame for stream ID 17 with length 64 and flags "END_HEADERS".
+15/04/2024 13:39:43.536 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 17 with length 16384 and flags "NONE".
+15/04/2024 13:39:43.538 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 17 with length 13705 and flags "NONE".
+15/04/2024 13:39:43.539 -06:00  [INF]  Sending file. Request path: '/_framework/SorteoEstacionamientos.Client.pdb.gz'. Physical path: 'C:\Users\Eduardo Carrasco\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\bin\Debug\net8.0\wwwroot\_framework\SorteoEstacionamientos.Client.pdb.gz'
+15/04/2024 13:39:43.549 -06:00  [INF]  HTTP GET /_framework/SorteoEstacionamientos.Client.pdb.gz responded 200 in 27.3304 ms
+15/04/2024 13:39:43.561 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 17 with length 0 and flags "END_STREAM".
+15/04/2024 13:39:43.554 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/SorteoEstacionamientos.Client.pdb.gz - 200 30089 application/octet-stream 246.2525ms
+15/04/2024 13:39:43.572 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "HEADERS" frame for stream ID 15 with length 56 and flags "END_HEADERS".
+15/04/2024 13:39:43.573 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 15 with length 16384 and flags "NONE".
+15/04/2024 13:39:43.575 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 15 with length 2877 and flags "NONE".
+15/04/2024 13:39:43.574 -06:00  [INF]  Sending file. Request path: '/_framework/SorteoEstacionamientos.Client.wasm.gz'. Physical path: 'C:\Users\Eduardo Carrasco\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\bin\Debug\net8.0\wwwroot\_framework\SorteoEstacionamientos.Client.wasm.gz'
+15/04/2024 13:39:43.588 -06:00  [INF]  HTTP GET /_framework/SorteoEstacionamientos.Client.wasm.gz responded 200 in 68.0753 ms
+15/04/2024 13:39:43.593 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 15 with length 0 and flags "END_STREAM".
+15/04/2024 13:39:43.593 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/SorteoEstacionamientos.Client.wasm.gz - 200 19261 application/wasm 285.3291ms
+15/04/2024 13:39:44.486 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" received "HEADERS" frame for stream ID 19 with length 95 and flags "END_STREAM, END_HEADERS, PRIORITY".
+15/04/2024 13:39:44.487 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/blazor-hotreload.js - null null
+15/04/2024 13:39:44.492 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "HEADERS" frame for stream ID 19 with length 41 and flags "END_HEADERS".
+15/04/2024 13:39:44.492 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 19 with length 574 and flags "END_STREAM".
+15/04/2024 13:39:44.492 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/blazor-hotreload.js - 200 574 application/javascript; charset=utf-8 5.5475ms
+15/04/2024 13:39:44.509 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" received "HEADERS" frame for stream ID 21 with length 42 and flags "END_STREAM, END_HEADERS, PRIORITY".
+15/04/2024 13:39:44.510 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/blazor-hotreload - null null
+15/04/2024 13:39:44.519 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "HEADERS" frame for stream ID 21 with length 3 and flags "END_STREAM, END_HEADERS".
+15/04/2024 13:39:44.519 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/blazor-hotreload - 204 null null 8.9993ms
+15/04/2024 13:39:46.823 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" received "HEADERS" frame for stream ID 23 with length 141 and flags "END_STREAM, END_HEADERS, PRIORITY".
+15/04/2024 13:39:46.824 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/service-worker.js - null null
+15/04/2024 13:39:46.838 -06:00  [VRB]  All hosts are allowed.
+15/04/2024 13:39:46.838 -06:00  [DBG]  The request path  does not match the path filter
+15/04/2024 13:39:46.845 -06:00  [VRB]  Range header's value is empty.
+15/04/2024 13:39:46.875 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "HEADERS" frame for stream ID 23 with length 91 and flags "END_HEADERS".
+15/04/2024 13:39:46.875 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 23 with length 303 and flags "NONE".
+15/04/2024 13:39:46.875 -06:00  [INF]  Sending file. Request path: '/service-worker.js'. Physical path: 'C:\Users\Eduardo Carrasco\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\obj\Debug\net8.0\service-worker\service-worker.js'
+15/04/2024 13:39:46.879 -06:00  [INF]  HTTP GET /service-worker.js responded 200 in 36.4740 ms
+15/04/2024 13:39:46.884 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "DATA" frame for stream ID 23 with length 0 and flags "END_STREAM".
+15/04/2024 13:39:46.884 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/service-worker.js - 200 303 text/javascript 60.0181ms
+15/04/2024 13:41:59.240 -06:00  [DBG]  Connection id "0HN2TGF5QF7RO" is closing.
+15/04/2024 13:41:59.265 -06:00  [DBG]  Connection id "0HN2TGF5QF7RO" is closed. The last processed stream ID was 23.
+15/04/2024 13:41:59.276 -06:00  [VRB]  Connection id "0HN2TGF5QF7RO" sending "GOAWAY" frame for stream ID 0 with length 8 and flags 0x0.
+15/04/2024 13:41:59.280 -06:00  [DBG]  Connection id "0HN2TGF5QF7RO" received FIN.
+15/04/2024 13:41:59.289 -06:00  [DBG]  Connection id "0HN2TGF5QF7RO" sending FIN because: "The Socket transport's send loop completed gracefully."
+15/04/2024 13:41:59.293 -06:00  [DBG]  The connection queue processing loop for 0HN2TGF5QF7RO completed.
+15/04/2024 13:41:59.314 -06:00  [DBG]  Connection id "0HN2TGF5QF7RO" stopped.
