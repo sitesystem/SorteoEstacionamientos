@@ -1,0 +1,32 @@
+﻿@page "/carrera"
+<PageTitle>Catalogo Carreras</PageTitle>
+
+<h3>Carrera</h3>
+
+ <div class="p-4 rounded-1 bg-white shadow">
+    <RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" 
+                FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" 
+                PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
+                Data="@items" TItem="RequestViewModel_Carrera" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or" 
+                SelectionMode="DataGridSelectionMode.Single" >
+    <Columns>
+        <RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="IdCarrera" Filterable="false" Title="ID" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+
+        <RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="CarrClave" Filterable="false" Title="Clave Carrera" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+
+        <RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="CarrNombre" Filterable="false" Title="Carrera" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+
+    </Columns>
+</RadzenDataGrid>
+ </div>
+
+
+
+@code {
+    Response<List<RequestViewModel_Carrera>> oResponse = new();
+    private List<RequestViewModel_Carrera> items = new List<RequestViewModel_Carrera>();
+    protected override async Task OnInitializedAsync()
+    {
+        oResponse = await servicioCarrera.GetAllDataByStatusAsync(0);
+    }
+}
