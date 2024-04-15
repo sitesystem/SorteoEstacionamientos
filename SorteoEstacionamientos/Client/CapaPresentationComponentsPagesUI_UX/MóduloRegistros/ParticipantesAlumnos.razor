@@ -1,29 +1,5 @@
-﻿@page "/ParticipantesAlumnos"
-
-<PageTitle>SEO | Refistro Participantes Alumnos</PageTitle>
-
-@attribute [AllowAnonymous]
-
-
-<style type="text/css">
-</style>
-
-@if (oResponse is not null && oResponse.Data != null)
-{
-	//<EditForm Model="@oUsuario" OnValidSubmit="@OnValidHandled_Registrar" OnInvalidSubmit="@OnInvalidHandled_ScrollToTop">
-
-	//</EditForm>
-
-}else
-{
-	<spam> Cargando... </spam>
-}
+﻿<h3>ParticipantesAlumnos</h3>
 
 @code {
-	Response<List<RequestViewModel_Color>> oResponse = new();
-	protected override async Task OnInitializedAsync()
-	{
-		oResponse = await servicioColores.GetAllDataByStatusAsync(1);
-	}
 
 }
