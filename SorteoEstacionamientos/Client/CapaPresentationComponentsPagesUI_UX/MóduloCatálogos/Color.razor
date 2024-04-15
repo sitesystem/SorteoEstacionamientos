@@ -1,13 +1,30 @@
-﻿@page "/colores"
+﻿
+<!--CODIGO HTML-->
+@page "/colores"
 <PageTitle>Catálogo Colores</PageTitle>
 
 
 
 @if (oResponse is not null && oResponse.Data != null)
 {
+	<div class="p-4 rounded-1 bg-white shadow">
+		<RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false"
+						FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true"
+						PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
+						TItem="RequestViewModel_Carrera" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or"
+						SelectionMode="DataGridSelectionMode.Single">
+			<Columns>
+				<RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="IdColor" Filterable="false" Title="ID" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+
+				<RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="ColorNombre" Filterable="false" Title="Clave Carrera" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+
+			</Columns>
+		</RadzenDataGrid>
+	</div>
 	@foreach (var color in oResponse.Data)
 	{
 		<div>
+			@color.IdColor
 			@color.ColorNombre
 		</div>
 	}
@@ -17,11 +34,19 @@ else
 {
 	<spam> Cargando... </spam> 
 }
+
+
+
+
+
+
+<!--CODIGO C#-->
 @code {
 	Response<List<RequestViewModel_Color>> oResponse = new();
 	protected override async Task OnInitializedAsync()
 	{
 		oResponse = await servicioColores.GetAllDataByStatusAsync(0);
 	}
+
 
 }
