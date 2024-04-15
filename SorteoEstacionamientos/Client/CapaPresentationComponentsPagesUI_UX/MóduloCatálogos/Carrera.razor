@@ -7,7 +7,7 @@
     <RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" 
                 FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" 
                 PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
-                Data="@items" TItem="RequestViewModel_Carrera" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or" 
+                 TItem="RequestViewModel_Carrera" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or" 
                 SelectionMode="DataGridSelectionMode.Single" >
     <Columns>
         <RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="IdCarrera" Filterable="false" Title="ID" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
@@ -23,19 +23,5 @@
 
 
 @code {
-    Response<List<RequestViewModel_Carrera>> items = new();
-    private IList<RequestViewModel_Carrera> selectedItems = new List<RequestViewModel_Carrera>();
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender)
-        {
-            await CargarLista();
-
-        }
-    }
-
-    private async Task CargarLista(int? seleccionar_id = null)
-    {
-        items = await servicioCarrera.GetAllDataByStatusAsync(0);
-    }
+    
 }
