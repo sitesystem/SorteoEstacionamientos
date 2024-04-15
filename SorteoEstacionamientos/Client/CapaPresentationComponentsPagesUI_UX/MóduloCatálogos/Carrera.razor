@@ -23,10 +23,19 @@
 
 
 @code {
-    Response<List<RequestViewModel_Carrera>> oResponse = new();
-    private List<RequestViewModel_Carrera> items = new List<RequestViewModel_Carrera>();
-    protected override async Task OnInitializedAsync()
+    Response<List<RequestViewModel_Carrera>> items = new();
+    private IList<RequestViewModel_Carrera> selectedItems = new List<RequestViewModel_Carrera>();
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        oResponse = await servicioCarrera.GetAllDataByStatusAsync(0);
+        if (firstRender)
+        {
+            await CargarLista();
+
+        }
+    }
+
+    private async Task CargarLista(int? seleccionar_id = null)
+    {
+        items = await servicioCarrera.GetAllDataByStatusAsync(0);
     }
 }
