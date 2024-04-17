@@ -18,7 +18,7 @@
     <RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" 
                 FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" 
                 PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
-                 TItem="RequestViewModel_Carrera" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or" 
+                Data="oResponse.Data" TItem="RequestViewModel_Carrera" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or" 
                 SelectionMode="DataGridSelectionMode.Single" >
     <Columns>
         <RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="IdCarrera" Title="ID" Frozen="true" Width="20%" TextAlign="TextAlign.Left" />
@@ -26,13 +26,15 @@
         <RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="CarrClave" Filterable="false" Title="Clave Carrera" Frozen="true" Width="40%" TextAlign="TextAlign.Left" />
 
         <RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="CarrNombre" Filterable="false" Title="Carrera" Frozen="true" Width="40px" TextAlign="TextAlign.Left" />
-
+    
     </Columns>
 </RadzenDataGrid>
  </div>
 
-
-
 @code {
-    
+    Response<List<RequestViewModel_Carrera>> oResponse = new();
+    protected override async Task OnInitializedAsync()
+    {
+        oResponse = await servicioCarrera.GetAllDataByStatusAsync(0);
+    }
 }
