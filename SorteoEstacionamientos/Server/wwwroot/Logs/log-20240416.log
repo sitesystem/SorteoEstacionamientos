@@ -1,0 +1,633 @@
+16/04/2024 11:30:04.354 -06:00  [DBG]  Initializing Razor view compiler with compiled view: '/Pages/Error.cshtml'.
+16/04/2024 11:30:04.445 -06:00  [DBG]  Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+16/04/2024 11:30:04.812 -06:00  [INF]  User profile is available. Using 'C:\Users\Eduardo Carrasco\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+16/04/2024 11:30:05.495 -06:00  [DBG]  Hosting starting
+16/04/2024 11:30:05.512 -06:00  [DBG]  Reading data from file 'C:\Users\Eduardo Carrasco\AppData\Local\ASP.NET\DataProtection-Keys\key-83f56eed-94f4-43c3-8935-0621c50afbcd.xml'.
+16/04/2024 11:30:05.572 -06:00  [DBG]  Reading data from file 'C:\Users\Eduardo Carrasco\AppData\Local\ASP.NET\DataProtection-Keys\key-b3f85ec5-cbc2-4d81-ac9e-c4ec18ce7b33.xml'.
+16/04/2024 11:30:05.598 -06:00  [DBG]  Reading data from file 'C:\Users\Eduardo Carrasco\AppData\Local\ASP.NET\DataProtection-Keys\key-d6684c2f-60ce-478e-81b1-66537fd8280e.xml'.
+16/04/2024 11:30:05.630 -06:00  [DBG]  Found key {83f56eed-94f4-43c3-8935-0621c50afbcd}.
+16/04/2024 11:30:05.642 -06:00  [DBG]  Found key {b3f85ec5-cbc2-4d81-ac9e-c4ec18ce7b33}.
+16/04/2024 11:30:05.644 -06:00  [DBG]  Found key {d6684c2f-60ce-478e-81b1-66537fd8280e}.
+16/04/2024 11:30:05.655 -06:00  [DBG]  Considering key {d6684c2f-60ce-478e-81b1-66537fd8280e} with expiration date 2024-07-14 17:30:53Z as default key.
+16/04/2024 11:30:05.660 -06:00  [DBG]  Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+16/04/2024 11:30:05.667 -06:00  [DBG]  Decrypting secret element using Windows DPAPI.
+16/04/2024 11:30:05.670 -06:00  [DBG]  Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+16/04/2024 11:30:05.678 -06:00  [DBG]  Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+16/04/2024 11:30:05.681 -06:00  [DBG]  Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+16/04/2024 11:30:05.685 -06:00  [DBG]  Using key {d6684c2f-60ce-478e-81b1-66537fd8280e} as the default key.
+16/04/2024 11:30:05.687 -06:00  [DBG]  Key ring with default key {d6684c2f-60ce-478e-81b1-66537fd8280e} was loaded during application startup.
+16/04/2024 11:30:06.315 -06:00  [INF]  Now listening on: https://localhost:7173
+16/04/2024 11:30:06.317 -06:00  [INF]  Now listening on: http://localhost:5062
+16/04/2024 11:30:06.320 -06:00  [DBG]  Loaded hosting startup assembly SorteoEstacionamientos.Server
+16/04/2024 11:30:06.322 -06:00  [DBG]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+16/04/2024 11:30:06.323 -06:00  [DBG]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+16/04/2024 11:30:06.325 -06:00  [INF]  Application started. Press Ctrl+C to shut down.
+16/04/2024 11:30:06.327 -06:00  [INF]  Hosting environment: Development
+16/04/2024 11:30:06.328 -06:00  [INF]  Content root path: C:\Users\Eduardo Carrasco\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Server
+16/04/2024 11:30:06.331 -06:00  [DBG]  Hosting started
+16/04/2024 11:30:06.543 -06:00  [DBG]  Connection id "0HN2U7BDPRGIM" accepted.
+16/04/2024 11:30:06.543 -06:00  [DBG]  Connection id "0HN2U7BDPRGIN" accepted.
+16/04/2024 11:30:06.553 -06:00  [DBG]  Connection id "0HN2U7BDPRGIM" started.
+16/04/2024 11:30:06.558 -06:00  [DBG]  Connection id "0HN2U7BDPRGIN" started.
+16/04/2024 11:30:06.634 -06:00  [DBG]  Connection id "0HN2U7BDPRGIN" received FIN.
+16/04/2024 11:30:06.634 -06:00  [DBG]  Connection id "0HN2U7BDPRGIM" received FIN.
+16/04/2024 11:30:06.660 -06:00  [DBG]  Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+16/04/2024 11:30:06.664 -06:00  [DBG]  Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+16/04/2024 11:30:06.748 -06:00  [DBG]  Connection id "0HN2U7BDPRGIM" stopped.
+16/04/2024 11:30:06.748 -06:00  [DBG]  Connection id "0HN2U7BDPRGIN" stopped.
+16/04/2024 11:30:06.757 -06:00  [DBG]  Connection id "0HN2U7BDPRGIN" sending FIN because: "The Socket transport's send loop completed gracefully."
+16/04/2024 11:30:06.757 -06:00  [DBG]  Connection id "0HN2U7BDPRGIM" sending FIN because: "The Socket transport's send loop completed gracefully."
+16/04/2024 11:30:06.889 -06:00  [DBG]  Connection id "0HN2U7BDPRGIO" accepted.
+16/04/2024 11:30:06.955 -06:00  [DBG]  Connection id "0HN2U7BDPRGIO" started.
+16/04/2024 11:30:07.112 -06:00  [DBG]  Connection 0HN2U7BDPRGIO established using the following protocol: "Tls12"
+16/04/2024 11:30:07.220 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE".
+16/04/2024 11:30:07.226 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+16/04/2024 11:30:07.227 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE".
+16/04/2024 11:30:07.229 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+16/04/2024 11:30:07.229 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+16/04/2024 11:30:07.230 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 1 with length 506 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:07.270 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+16/04/2024 11:30:07.352 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/ - null null
+16/04/2024 11:30:07.644 -06:00  [DBG]  Wildcard detected, all requests with hosts will be allowed.
+16/04/2024 11:30:07.646 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:07.673 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:07.678 -06:00  [DBG]  The request path / does not match a supported file type
+16/04/2024 11:30:07.730 -06:00  [DBG]  1 candidate(s) found for the request path '/'
+16/04/2024 11:30:07.736 -06:00  [DBG]  Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/'
+16/04/2024 11:30:07.740 -06:00  [DBG]  Request matched endpoint 'Fallback {*path:nonfile}'
+16/04/2024 11:30:07.742 -06:00  [DBG]  Matched endpoint 'Fallback {*path:nonfile}' is a fallback endpoint.
+16/04/2024 11:30:07.745 -06:00  [VRB]  The endpoint does not specify the IRequestSizeLimitMetadata.
+16/04/2024 11:30:07.817 -06:00  [DBG]  AuthenticationScheme: Bearer was not authenticated.
+16/04/2024 11:30:07.821 -06:00  [INF]  Executing endpoint 'Fallback {*path:nonfile}'
+16/04/2024 11:30:07.826 -06:00  [VRB]  Range header's value is empty.
+16/04/2024 11:30:07.826 -06:00  [INF]  The file /index.html was not modified
+16/04/2024 11:30:07.829 -06:00  [DBG]  Handled. Status code: 304 File: /index.html
+16/04/2024 11:30:07.832 -06:00  [INF]  Executed endpoint 'Fallback {*path:nonfile}'
+16/04/2024 11:30:07.836 -06:00  [INF]  HTTP GET /index.html responded 304 in 157.2467 ms
+16/04/2024 11:30:07.844 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 1 with length 109 and flags "END_STREAM, END_HEADERS".
+16/04/2024 11:30:07.844 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/index.html - 304 null text/html 498.237ms
+16/04/2024 11:30:07.913 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 3 with length 96 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:07.917 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 5 with length 67 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:07.917 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 7 with length 89 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:07.918 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 9 with length 63 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:07.917 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/aspnetcore-browser-refresh.js - null null
+16/04/2024 11:30:07.918 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/css/app.css - null null
+16/04/2024 11:30:07.928 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:07.918 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/SorteoEstacionamientos.Client.styles.css - null null
+16/04/2024 11:30:07.933 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:07.918 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/blazor.webassembly.js - null null
+16/04/2024 11:30:07.938 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:07.930 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:07.940 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 3 with length 60 and flags "END_HEADERS".
+16/04/2024 11:30:07.940 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 3 with length 13794 and flags "NONE".
+16/04/2024 11:30:07.941 -06:00  [VRB]  Range header's value is empty.
+16/04/2024 11:30:07.933 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:07.942 -06:00  [VRB]  Range header's value is empty.
+16/04/2024 11:30:07.938 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:07.941 -06:00  [INF]  The file /css/app.css was not modified
+16/04/2024 11:30:07.942 -06:00  [INF]  The file /SorteoEstacionamientos.Client.styles.css was not modified
+16/04/2024 11:30:07.950 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/aspnetcore-browser-refresh.js - 200 13794 application/javascript; charset=utf-8 32.6489ms
+16/04/2024 11:30:07.959 -06:00  [VRB]  Range header's value is empty.
+16/04/2024 11:30:07.951 -06:00  [DBG]  Handled. Status code: 304 File: /css/app.css
+16/04/2024 11:30:07.962 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 3 with length 0 and flags "END_STREAM".
+16/04/2024 11:30:07.953 -06:00  [DBG]  Handled. Status code: 304 File: /SorteoEstacionamientos.Client.styles.css
+16/04/2024 11:30:07.965 -06:00  [INF]  HTTP GET /SorteoEstacionamientos.Client.styles.css responded 304 in 23.9546 ms
+16/04/2024 11:30:07.969 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 7 with length 64 and flags "END_STREAM, END_HEADERS".
+16/04/2024 11:30:07.962 -06:00  [INF]  HTTP GET /css/app.css responded 304 in 21.7710 ms
+16/04/2024 11:30:07.961 -06:00  [INF]  The file /_framework/blazor.webassembly.js.gz was not modified
+16/04/2024 11:30:07.979 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 5 with length 25 and flags "END_STREAM, END_HEADERS".
+16/04/2024 11:30:07.978 -06:00  [DBG]  Handled. Status code: 304 File: /_framework/blazor.webassembly.js.gz
+16/04/2024 11:30:07.976 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/css/app.css - 304 null text/css 57.5943ms
+16/04/2024 11:30:07.969 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/SorteoEstacionamientos.Client.styles.css - 304 null text/css 51.1693ms
+16/04/2024 11:30:07.983 -06:00  [INF]  HTTP GET /_framework/blazor.webassembly.js.gz responded 304 in 39.4271 ms
+16/04/2024 11:30:08.003 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 9 with length 174 and flags "END_STREAM, END_HEADERS".
+16/04/2024 11:30:08.002 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/blazor.webassembly.js.gz - 304 null text/javascript 83.3786ms
+16/04/2024 11:30:08.019 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 11 with length 57 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:08.020 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_vs/browserLink - null null
+16/04/2024 11:30:08.078 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 13 with length 101 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:08.078 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/css/open-iconic/font/css/open-iconic-bootstrap.min.css - null null
+16/04/2024 11:30:08.086 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:08.087 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:08.090 -06:00  [VRB]  Range header's value is empty.
+16/04/2024 11:30:08.090 -06:00  [INF]  The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+16/04/2024 11:30:08.092 -06:00  [DBG]  Handled. Status code: 304 File: /css/open-iconic/font/css/open-iconic-bootstrap.min.css
+16/04/2024 11:30:08.095 -06:00  [INF]  HTTP GET /css/open-iconic/font/css/open-iconic-bootstrap.min.css responded 304 in 5.7144 ms
+16/04/2024 11:30:08.099 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 13 with length 55 and flags "END_STREAM, END_HEADERS".
+16/04/2024 11:30:08.099 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/css/open-iconic/font/css/open-iconic-bootstrap.min.css - 304 null text/css 20.9127ms
+16/04/2024 11:30:08.110 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 11 with length 119 and flags "END_HEADERS".
+16/04/2024 11:30:08.111 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 9986 and flags "NONE".
+16/04/2024 11:30:08.118 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 15 with length 146 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:08.119 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 10240 and flags "NONE".
+16/04/2024 11:30:08.120 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 10240 and flags "NONE".
+16/04/2024 11:30:08.120 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 10240 and flags "NONE".
+16/04/2024 11:30:08.121 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 10240 and flags "NONE".
+16/04/2024 11:30:08.121 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 10240 and flags "NONE".
+16/04/2024 11:30:08.122 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 10240 and flags "NONE".
+16/04/2024 11:30:08.122 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 10240 and flags "NONE".
+16/04/2024 11:30:08.123 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 10240 and flags "NONE".
+16/04/2024 11:30:08.124 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 10240 and flags "NONE".
+16/04/2024 11:30:08.124 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 10240 and flags "NONE".
+16/04/2024 11:30:08.125 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 10240 and flags "NONE".
+16/04/2024 11:30:08.125 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 10240 and flags "NONE".
+16/04/2024 11:30:08.126 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 10240 and flags "NONE".
+16/04/2024 11:30:08.126 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 10240 and flags "NONE".
+16/04/2024 11:30:08.127 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 160 and flags "NONE".
+16/04/2024 11:30:08.118 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/dotnet.js - null null
+16/04/2024 11:30:08.128 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:08.128 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 11 with length 0 and flags "END_STREAM".
+16/04/2024 11:30:08.128 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:08.140 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 17 with length 102 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:08.128 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_vs/browserLink - 200 null text/javascript; charset=UTF-8 108.1954ms
+16/04/2024 11:30:08.140 -06:00  [DBG]  The request has an origin header: 'https://localhost:7173'.
+16/04/2024 11:30:08.140 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/fondo.jpg - null null
+16/04/2024 11:30:08.151 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:08.145 -06:00  [INF]  CORS policy execution successful.
+16/04/2024 11:30:08.155 -06:00  [VRB]  Range header's value is empty.
+16/04/2024 11:30:08.151 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:08.158 -06:00  [VRB]  Range header's value is empty.
+16/04/2024 11:30:08.156 -06:00  [INF]  The file /_framework/dotnet.js.gz was not modified
+16/04/2024 11:30:08.159 -06:00  [INF]  The file /fondo.jpg was not modified
+16/04/2024 11:30:08.175 -06:00  [DBG]  Handled. Status code: 304 File: /fondo.jpg
+16/04/2024 11:30:08.184 -06:00  [INF]  HTTP GET /fondo.jpg responded 304 in 25.6392 ms
+16/04/2024 11:30:08.188 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 17 with length 36 and flags "END_STREAM, END_HEADERS".
+16/04/2024 11:30:08.161 -06:00  [DBG]  Handled. Status code: 304 File: /_framework/dotnet.js.gz
+16/04/2024 11:30:08.187 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/fondo.jpg - 304 null image/jpeg 46.9089ms
+16/04/2024 11:30:08.190 -06:00  [INF]  HTTP GET /_framework/dotnet.js.gz responded 304 in 35.9709 ms
+16/04/2024 11:30:08.205 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 15 with length 64 and flags "END_STREAM, END_HEADERS".
+16/04/2024 11:30:08.205 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/dotnet.js.gz - 304 null text/javascript 87.0198ms
+16/04/2024 11:30:08.258 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 19 with length 96 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:08.257 -06:00  [DBG]  Connection id "0HN2U7BDPRGIP" accepted.
+16/04/2024 11:30:08.259 -06:00  [DBG]  Connection id "0HN2U7BDPRGIP" started.
+16/04/2024 11:30:08.259 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/blazor.boot.json - null null
+16/04/2024 11:30:08.268 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:08.269 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:08.272 -06:00  [VRB]  Range header's value is empty.
+16/04/2024 11:30:08.272 -06:00  [DBG]  Connection 0HN2U7BDPRGIP established using the following protocol: "Tls12"
+16/04/2024 11:30:08.275 -06:00  [VRB]  Connection id "0HN2U7BDPRGIP" sending "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE".
+16/04/2024 11:30:08.275 -06:00  [VRB]  Connection id "0HN2U7BDPRGIP" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+16/04/2024 11:30:08.275 -06:00  [VRB]  Connection id "0HN2U7BDPRGIP" received "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE".
+16/04/2024 11:30:08.275 -06:00  [VRB]  Connection id "0HN2U7BDPRGIP" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+16/04/2024 11:30:08.276 -06:00  [VRB]  Connection id "0HN2U7BDPRGIP" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+16/04/2024 11:30:08.276 -06:00  [VRB]  Connection id "0HN2U7BDPRGIP" received "HEADERS" frame for stream ID 1 with length 402 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:08.276 -06:00  [VRB]  Connection id "0HN2U7BDPRGIP" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+16/04/2024 11:30:08.276 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/manifest.json - null null
+16/04/2024 11:30:08.283 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:08.283 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:08.285 -06:00  [VRB]  Range header's value is empty.
+16/04/2024 11:30:08.285 -06:00  [INF]  The file /manifest.json was not modified
+16/04/2024 11:30:08.287 -06:00  [DBG]  Handled. Status code: 304 File: /manifest.json
+16/04/2024 11:30:08.290 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 19 with length 85 and flags "END_HEADERS".
+16/04/2024 11:30:08.291 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 19 with length 9097 and flags "NONE".
+16/04/2024 11:30:08.289 -06:00  [INF]  HTTP GET /manifest.json responded 304 in 4.3472 ms
+16/04/2024 11:30:08.300 -06:00  [VRB]  Connection id "0HN2U7BDPRGIP" sending "HEADERS" frame for stream ID 1 with length 116 and flags "END_STREAM, END_HEADERS".
+16/04/2024 11:30:08.299 -06:00  [INF]  Sending file. Request path: '/_framework/blazor.boot.json.gz'. Physical path: 'C:\Users\Eduardo Carrasco\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json.gz'
+16/04/2024 11:30:08.301 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/manifest.json - 304 null application/json 23.9895ms
+16/04/2024 11:30:08.312 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 21 with length 47 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:08.305 -06:00  [INF]  HTTP GET /_framework/blazor.boot.json.gz responded 200 in 33.9047 ms
+16/04/2024 11:30:08.317 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 19 with length 0 and flags "END_STREAM".
+16/04/2024 11:30:08.312 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/icon-192.png - null null
+16/04/2024 11:30:08.319 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:08.317 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/blazor.boot.json.gz - 200 9097 application/json 57.6433ms
+16/04/2024 11:30:08.320 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:08.334 -06:00  [VRB]  Range header's value is empty.
+16/04/2024 11:30:08.334 -06:00  [INF]  The file /icon-192.png was not modified
+16/04/2024 11:30:08.337 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 23 with length 104 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:08.337 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 25 with length 95 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:08.336 -06:00  [DBG]  Handled. Status code: 304 File: /icon-192.png
+16/04/2024 11:30:08.338 -06:00  [INF]  HTTP GET /icon-192.png responded 304 in 4.2175 ms
+16/04/2024 11:30:08.341 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 21 with length 35 and flags "END_STREAM, END_HEADERS".
+16/04/2024 11:30:08.339 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/dotnet.runtime.8.0.4.si2gv1sw6z.js - null null
+16/04/2024 11:30:08.348 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:08.339 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/dotnet.native.8.0.4.8r26oe7u96.js - null null
+16/04/2024 11:30:08.354 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:08.341 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/icon-192.png - 304 null image/png 28.9496ms
+16/04/2024 11:30:08.349 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:08.354 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:08.362 -06:00  [DBG]  The request has an origin header: 'https://localhost:7173'.
+16/04/2024 11:30:08.363 -06:00  [DBG]  The request has an origin header: 'https://localhost:7173'.
+16/04/2024 11:30:08.365 -06:00  [INF]  CORS policy execution successful.
+16/04/2024 11:30:08.384 -06:00  [VRB]  Range header's value is empty.
+16/04/2024 11:30:08.373 -06:00  [INF]  CORS policy execution successful.
+16/04/2024 11:30:08.391 -06:00  [VRB]  Range header's value is empty.
+16/04/2024 11:30:08.385 -06:00  [INF]  The file /_framework/dotnet.runtime.8.0.4.si2gv1sw6z.js.gz was not modified
+16/04/2024 11:30:08.391 -06:00  [INF]  The file /_framework/dotnet.native.8.0.4.8r26oe7u96.js.gz was not modified
+16/04/2024 11:30:08.402 -06:00  [DBG]  Handled. Status code: 304 File: /_framework/dotnet.runtime.8.0.4.si2gv1sw6z.js.gz
+16/04/2024 11:30:08.411 -06:00  [DBG]  Handled. Status code: 304 File: /_framework/dotnet.native.8.0.4.8r26oe7u96.js.gz
+16/04/2024 11:30:08.424 -06:00  [INF]  HTTP GET /_framework/dotnet.runtime.8.0.4.si2gv1sw6z.js.gz responded 304 in 41.2408 ms
+16/04/2024 11:30:08.433 -06:00  [INF]  HTTP GET /_framework/dotnet.native.8.0.4.8r26oe7u96.js.gz responded 304 in 43.9158 ms
+16/04/2024 11:30:08.460 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 25 with length 62 and flags "END_STREAM, END_HEADERS".
+16/04/2024 11:30:08.461 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 23 with length 32 and flags "END_STREAM, END_HEADERS".
+16/04/2024 11:30:08.458 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/dotnet.native.8.0.4.8r26oe7u96.js.gz - 304 null text/javascript 120.4993ms
+16/04/2024 11:30:08.458 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/dotnet.runtime.8.0.4.si2gv1sw6z.js.gz - 304 null text/javascript 119.5894ms
+16/04/2024 11:30:08.513 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 27 with length 70 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:08.515 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 29 with length 72 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:08.517 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/SorteoEstacionamientos.Client.pdb - null null
+16/04/2024 11:30:08.544 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:08.517 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/SorteoEstacionamientos.Client.wasm - null null
+16/04/2024 11:30:08.558 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:08.556 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:08.558 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:08.586 -06:00  [VRB]  Range header's value is empty.
+16/04/2024 11:30:08.587 -06:00  [VRB]  Range header's value is empty.
+16/04/2024 11:30:08.612 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 27 with length 64 and flags "END_HEADERS".
+16/04/2024 11:30:08.612 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 27 with length 16384 and flags "NONE".
+16/04/2024 11:30:08.615 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 27 with length 13703 and flags "NONE".
+16/04/2024 11:30:08.620 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 29 with length 56 and flags "END_HEADERS".
+16/04/2024 11:30:08.620 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 29 with length 16384 and flags "NONE".
+16/04/2024 11:30:08.622 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 29 with length 2893 and flags "NONE".
+16/04/2024 11:30:08.620 -06:00  [INF]  Sending file. Request path: '/_framework/SorteoEstacionamientos.Client.pdb.gz'. Physical path: 'C:\Users\Eduardo Carrasco\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\bin\Debug\net8.0\wwwroot\_framework\SorteoEstacionamientos.Client.pdb.gz'
+16/04/2024 11:30:08.622 -06:00  [INF]  Sending file. Request path: '/_framework/SorteoEstacionamientos.Client.wasm.gz'. Physical path: 'C:\Users\Eduardo Carrasco\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\bin\Debug\net8.0\wwwroot\_framework\SorteoEstacionamientos.Client.wasm.gz'
+16/04/2024 11:30:08.628 -06:00  [INF]  HTTP GET /_framework/SorteoEstacionamientos.Client.pdb.gz responded 200 in 44.5889 ms
+16/04/2024 11:30:08.636 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 27 with length 0 and flags "END_STREAM".
+16/04/2024 11:30:08.632 -06:00  [INF]  HTTP GET /_framework/SorteoEstacionamientos.Client.wasm.gz responded 200 in 45.8829 ms
+16/04/2024 11:30:08.640 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 29 with length 0 and flags "END_STREAM".
+16/04/2024 11:30:08.635 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/SorteoEstacionamientos.Client.pdb.gz - 200 30087 application/octet-stream 119.0113ms
+16/04/2024 11:30:08.639 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/SorteoEstacionamientos.Client.wasm.gz - 200 19277 application/wasm 122.254ms
+16/04/2024 11:30:09.515 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 31 with length 95 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:09.515 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/blazor-hotreload.js - null null
+16/04/2024 11:30:09.521 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 31 with length 41 and flags "END_HEADERS".
+16/04/2024 11:30:09.521 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 31 with length 574 and flags "END_STREAM".
+16/04/2024 11:30:09.521 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/blazor-hotreload.js - 200 574 application/javascript; charset=utf-8 5.7203ms
+16/04/2024 11:30:09.541 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 33 with length 42 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:09.541 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/_framework/blazor-hotreload - null null
+16/04/2024 11:30:09.547 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 33 with length 3 and flags "END_STREAM, END_HEADERS".
+16/04/2024 11:30:09.547 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/_framework/blazor-hotreload - 204 null null 5.716ms
+16/04/2024 11:30:10.195 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 35 with length 128 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:10.195 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/css/open-iconic/font/fonts/open-iconic.woff - null null
+16/04/2024 11:30:10.200 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:10.201 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:10.202 -06:00  [DBG]  The request has an origin header: 'https://localhost:7173'.
+16/04/2024 11:30:10.204 -06:00  [INF]  CORS policy execution successful.
+16/04/2024 11:30:10.206 -06:00  [VRB]  Range header's value is empty.
+16/04/2024 11:30:10.206 -06:00  [INF]  The file /css/open-iconic/font/fonts/open-iconic.woff was not modified
+16/04/2024 11:30:10.207 -06:00  [DBG]  Handled. Status code: 304 File: /css/open-iconic/font/fonts/open-iconic.woff
+16/04/2024 11:30:10.209 -06:00  [INF]  HTTP GET /css/open-iconic/font/fonts/open-iconic.woff responded 304 in 4.0337 ms
+16/04/2024 11:30:10.213 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 35 with length 78 and flags "END_STREAM, END_HEADERS".
+16/04/2024 11:30:10.213 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/css/open-iconic/font/fonts/open-iconic.woff - 304 null application/font-woff 17.6223ms
+16/04/2024 11:30:11.852 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 37 with length 140 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:11.852 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/service-worker.js - null null
+16/04/2024 11:30:11.867 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:11.867 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:11.871 -06:00  [VRB]  Range header's value is empty.
+16/04/2024 11:30:11.894 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 37 with length 91 and flags "END_HEADERS".
+16/04/2024 11:30:11.894 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 37 with length 303 and flags "NONE".
+16/04/2024 11:30:11.894 -06:00  [INF]  Sending file. Request path: '/service-worker.js'. Physical path: 'C:\Users\Eduardo Carrasco\Documents\GitHub\SorteoEstacionamientos\SorteoEstacionamientos\Client\obj\Debug\net8.0\service-worker\service-worker.js'
+16/04/2024 11:30:11.899 -06:00  [INF]  HTTP GET /service-worker.js responded 200 in 29.3113 ms
+16/04/2024 11:30:11.904 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 37 with length 0 and flags "END_STREAM".
+16/04/2024 11:30:11.904 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/service-worker.js - 200 303 text/javascript 51.2125ms
+16/04/2024 11:30:23.538 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 39 with length 64 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:23.538 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "PING" frame for stream ID 0 with length 8 and flags "NONE".
+16/04/2024 11:30:23.539 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "PING" frame for stream ID 0 with length 8 and flags "ACK".
+16/04/2024 11:30:23.539 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/api/Colores/filterByStatus/0 - null null
+16/04/2024 11:30:23.544 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:23.544 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:23.546 -06:00  [DBG]  The request path /api/Colores/filterByStatus/0 does not match a supported file type
+16/04/2024 11:30:23.551 -06:00  [DBG]  2 candidate(s) found for the request path '/api/Colores/filterByStatus/0'
+16/04/2024 11:30:23.554 -06:00  [DBG]  Endpoint 'SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController.GetAllDataByStatus (SorteoEstacionamientos.Server)' with route pattern 'api/Colores/filterByStatus/{filterByStatus}' is valid for the request path '/api/Colores/filterByStatus/0'
+16/04/2024 11:30:23.559 -06:00  [DBG]  Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/api/Colores/filterByStatus/0'
+16/04/2024 11:30:23.564 -06:00  [DBG]  Request matched endpoint 'SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController.GetAllDataByStatus (SorteoEstacionamientos.Server)'
+16/04/2024 11:30:23.566 -06:00  [VRB]  The endpoint does not specify the IRequestSizeLimitMetadata.
+16/04/2024 11:30:23.568 -06:00  [DBG]  AuthenticationScheme: Bearer was not authenticated.
+16/04/2024 11:30:23.579 -06:00  [INF]  Executing endpoint 'SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController.GetAllDataByStatus (SorteoEstacionamientos.Server)'
+16/04/2024 11:30:23.621 -06:00  [INF]  Route matched with {action = "GetAllDataByStatus", controller = "Colores", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllDataByStatus(Int16) on controller SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController (SorteoEstacionamientos.Server).
+16/04/2024 11:30:23.626 -06:00  [DBG]  Execution plan of authorization filters (in the following order): ["None"]
+16/04/2024 11:30:23.629 -06:00  [DBG]  Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+16/04/2024 11:30:23.633 -06:00  [DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+16/04/2024 11:30:23.637 -06:00  [DBG]  Execution plan of exception filters (in the following order): ["None"]
+16/04/2024 11:30:23.639 -06:00  [DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter","Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+16/04/2024 11:30:23.644 -06:00  [VRB]  Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+16/04/2024 11:30:23.644 -06:00  [VRB]  Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+16/04/2024 11:30:23.645 -06:00  [DBG]  Executing controller factory for controller SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController (SorteoEstacionamientos.Server)
+16/04/2024 11:30:24.100 -06:00  [DBG]  An 'IServiceProvider' was created for internal use by Entity Framework.
+16/04/2024 11:30:24.131 -06:00  [DBG]  Executed controller factory for controller SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController (SorteoEstacionamientos.Server)
+16/04/2024 11:30:24.181 -06:00  [DBG]  Attempting to bind parameter 'filterByStatus' of type 'System.Int16' ...
+16/04/2024 11:30:24.185 -06:00  [DBG]  Attempting to bind parameter 'filterByStatus' of type 'System.Int16' using the name 'filterByStatus' in request data ...
+16/04/2024 11:30:24.189 -06:00  [DBG]  Done attempting to bind parameter 'filterByStatus' of type 'System.Int16'.
+16/04/2024 11:30:24.191 -06:00  [DBG]  Done attempting to bind parameter 'filterByStatus' of type 'System.Int16'.
+16/04/2024 11:30:24.193 -06:00  [DBG]  Attempting to validate the bound parameter 'filterByStatus' of type 'System.Int16' ...
+16/04/2024 11:30:24.196 -06:00  [DBG]  Done attempting to validate the bound parameter 'filterByStatus' of type 'System.Int16'.
+16/04/2024 11:30:24.200 -06:00  [VRB]  Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+16/04/2024 11:30:24.200 -06:00  [VRB]  Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+16/04/2024 11:30:24.200 -06:00  [VRB]  Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+16/04/2024 11:30:24.200 -06:00  [VRB]  Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+16/04/2024 11:30:24.204 -06:00  [INF]  Executing action method SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController.GetAllDataByStatus (SorteoEstacionamientos.Server) - Validation state: "Valid"
+16/04/2024 11:30:24.207 -06:00  [VRB]  Executing action method SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController.GetAllDataByStatus (SorteoEstacionamientos.Server) with arguments (["0"])
+16/04/2024 11:30:25.281 -06:00  [DBG]  Entity Framework Core 8.0.3 initialized 'DBSorteoParkingContext' using provider 'Pomelo.EntityFrameworkCore.MySql:8.0.2' with options: ServerVersion=8.0.22-mysql 
+16/04/2024 11:30:25.307 -06:00  [DBG]  Compiling query expression: 
+'DbSet<McCatColore>()'
+16/04/2024 11:30:25.491 -06:00  [DBG]  Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<McCatColore>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: McCatColore.IdColor (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: McCatColore.ColorNombre (string) Required MaxLength(50), 1] }
+        SELECT m.IdColor, m.colorNombre
+        FROM MC_catColores AS m), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, McCatColore>, 
+    SorteoEstacionamientos.Server.CapaDataAccess.DBContext.DBSorteoParkingContext, 
+    False, 
+    False, 
+    True
+)'
+16/04/2024 11:30:25.540 -06:00  [DBG]  Creating DbConnection.
+16/04/2024 11:30:25.551 -06:00  [DBG]  Created DbConnection. (11ms).
+16/04/2024 11:30:25.565 -06:00  [DBG]  Opening connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186'.
+16/04/2024 11:30:25.755 -06:00  [DBG]  Opened connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186'.
+16/04/2024 11:30:25.764 -06:00  [DBG]  Creating DbCommand for 'ExecuteReader'.
+16/04/2024 11:30:25.776 -06:00  [DBG]  Created DbCommand for 'ExecuteReader' (8ms).
+16/04/2024 11:30:25.782 -06:00  [DBG]  Initialized DbCommand for 'ExecuteReader' (17ms).
+16/04/2024 11:30:25.792 -06:00  [DBG]  Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`IdColor`, `m`.`colorNombre`
+FROM `MC_catColores` AS `m`
+16/04/2024 11:30:25.849 -06:00  [INF]  Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`IdColor`, `m`.`colorNombre`
+FROM `MC_catColores` AS `m`
+16/04/2024 11:30:25.896 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.918 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.924 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.927 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.929 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.931 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.933 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.935 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.937 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.939 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.941 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.944 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.946 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.948 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.950 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.952 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.954 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.956 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.959 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.961 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.963 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.965 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.967 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.969 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.971 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.973 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.975 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.977 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.979 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.982 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.984 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.986 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.988 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.990 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.992 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.994 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.996 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:25.998 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.001 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.003 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.005 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.007 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.009 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.011 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.013 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.015 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.017 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.020 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.022 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.024 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.026 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.028 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.030 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.032 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.035 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.037 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.039 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.041 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.043 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.045 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.047 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.049 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.051 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.053 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.055 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.057 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.059 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.062 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.064 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.066 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.069 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:26.083 -06:00  [DBG]  Closing data reader to 'db_SorteoEstacionamientos' on server '148.204.211.186'.
+16/04/2024 11:30:26.097 -06:00  [DBG]  A data reader for 'db_SorteoEstacionamientos' on server '148.204.211.186' is being disposed after spending 235ms reading results.
+16/04/2024 11:30:26.104 -06:00  [DBG]  Closing connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186'.
+16/04/2024 11:30:26.111 -06:00  [DBG]  Closed connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186' (6ms).
+16/04/2024 11:30:26.120 -06:00  [INF]  Executed action method SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController.GetAllDataByStatus (SorteoEstacionamientos.Server), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1908.7003ms.
+16/04/2024 11:30:26.124 -06:00  [VRB]  Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+16/04/2024 11:30:26.124 -06:00  [VRB]  Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+16/04/2024 11:30:26.124 -06:00  [VRB]  Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+16/04/2024 11:30:26.124 -06:00  [VRB]  Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+16/04/2024 11:30:26.125 -06:00  [VRB]  Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+16/04/2024 11:30:26.125 -06:00  [VRB]  Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+16/04/2024 11:30:26.125 -06:00  [VRB]  Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+16/04/2024 11:30:26.125 -06:00  [VRB]  Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+16/04/2024 11:30:26.126 -06:00  [VRB]  Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+16/04/2024 11:30:26.128 -06:00  [DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+16/04/2024 11:30:26.135 -06:00  [DBG]  No information found on request to perform content negotiation.
+16/04/2024 11:30:26.136 -06:00  [DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+16/04/2024 11:30:26.137 -06:00  [DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+16/04/2024 11:30:26.140 -06:00  [DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+16/04/2024 11:30:26.142 -06:00  [INF]  Executing OkObjectResult, writing value of type 'SorteoEstacionamientos.Shared.CapaEntities.Response.Response`1[[System.Collections.Generic.List`1[[SorteoEstacionamientos.Server.CapaDataAccess.DBContext.McCatColore, SorteoEstacionamientos.Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+16/04/2024 11:30:26.169 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 39 with length 66 and flags "END_HEADERS".
+16/04/2024 11:30:26.169 -06:00  [VRB]  After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+16/04/2024 11:30:26.169 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 39 with length 2978 and flags "NONE".
+16/04/2024 11:30:26.169 -06:00  [VRB]  Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+16/04/2024 11:30:26.169 -06:00  [VRB]  Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+16/04/2024 11:30:26.170 -06:00  [VRB]  Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+16/04/2024 11:30:26.170 -06:00  [VRB]  Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+16/04/2024 11:30:26.170 -06:00  [VRB]  Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+16/04/2024 11:30:26.171 -06:00  [VRB]  Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+16/04/2024 11:30:26.172 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+16/04/2024 11:30:26.178 -06:00  [INF]  Executed action SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController.GetAllDataByStatus (SorteoEstacionamientos.Server) in 2529.7876ms
+16/04/2024 11:30:26.181 -06:00  [INF]  Executed endpoint 'SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController.GetAllDataByStatus (SorteoEstacionamientos.Server)'
+16/04/2024 11:30:26.184 -06:00  [INF]  HTTP GET /api/Colores/filterByStatus/0 responded 200 in 2637.9262 ms
+16/04/2024 11:30:26.187 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 39 with length 0 and flags "END_STREAM".
+16/04/2024 11:30:26.191 -06:00  [DBG]  'DBSorteoParkingContext' disposed.
+16/04/2024 11:30:26.197 -06:00  [DBG]  Disposing connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186'.
+16/04/2024 11:30:26.201 -06:00  [DBG]  Disposed connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186' (4ms).
+16/04/2024 11:30:26.204 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/api/Colores/filterByStatus/0 - 200 null application/json; charset=utf-8 2665.3492ms
+16/04/2024 11:30:34.976 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "HEADERS" frame for stream ID 41 with length 42 and flags "END_STREAM, END_HEADERS, PRIORITY".
+16/04/2024 11:30:34.978 -06:00  [INF]  Request starting HTTP/2 GET https://localhost:7173/api/Colores/filterByStatus/0 - null null
+16/04/2024 11:30:34.989 -06:00  [VRB]  All hosts are allowed.
+16/04/2024 11:30:34.989 -06:00  [DBG]  The request path  does not match the path filter
+16/04/2024 11:30:34.990 -06:00  [DBG]  The request path /api/Colores/filterByStatus/0 does not match a supported file type
+16/04/2024 11:30:35.000 -06:00  [DBG]  2 candidate(s) found for the request path '/api/Colores/filterByStatus/0'
+16/04/2024 11:30:35.004 -06:00  [DBG]  Endpoint 'SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController.GetAllDataByStatus (SorteoEstacionamientos.Server)' with route pattern 'api/Colores/filterByStatus/{filterByStatus}' is valid for the request path '/api/Colores/filterByStatus/0'
+16/04/2024 11:30:35.007 -06:00  [DBG]  Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/api/Colores/filterByStatus/0'
+16/04/2024 11:30:35.010 -06:00  [DBG]  Request matched endpoint 'SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController.GetAllDataByStatus (SorteoEstacionamientos.Server)'
+16/04/2024 11:30:35.012 -06:00  [VRB]  The endpoint does not specify the IRequestSizeLimitMetadata.
+16/04/2024 11:30:35.017 -06:00  [DBG]  AuthenticationScheme: Bearer was not authenticated.
+16/04/2024 11:30:35.021 -06:00  [INF]  Executing endpoint 'SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController.GetAllDataByStatus (SorteoEstacionamientos.Server)'
+16/04/2024 11:30:35.023 -06:00  [INF]  Route matched with {action = "GetAllDataByStatus", controller = "Colores", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllDataByStatus(Int16) on controller SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController (SorteoEstacionamientos.Server).
+16/04/2024 11:30:35.027 -06:00  [DBG]  Execution plan of authorization filters (in the following order): ["None"]
+16/04/2024 11:30:35.029 -06:00  [DBG]  Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+16/04/2024 11:30:35.035 -06:00  [DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+16/04/2024 11:30:35.039 -06:00  [DBG]  Execution plan of exception filters (in the following order): ["None"]
+16/04/2024 11:30:35.042 -06:00  [DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter","Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+16/04/2024 11:30:35.045 -06:00  [VRB]  Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+16/04/2024 11:30:35.045 -06:00  [VRB]  Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+16/04/2024 11:30:35.045 -06:00  [DBG]  Executing controller factory for controller SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController (SorteoEstacionamientos.Server)
+16/04/2024 11:30:35.051 -06:00  [DBG]  Executed controller factory for controller SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController (SorteoEstacionamientos.Server)
+16/04/2024 11:30:35.054 -06:00  [DBG]  Attempting to bind parameter 'filterByStatus' of type 'System.Int16' ...
+16/04/2024 11:30:35.057 -06:00  [DBG]  Attempting to bind parameter 'filterByStatus' of type 'System.Int16' using the name 'filterByStatus' in request data ...
+16/04/2024 11:30:35.060 -06:00  [DBG]  Done attempting to bind parameter 'filterByStatus' of type 'System.Int16'.
+16/04/2024 11:30:35.061 -06:00  [DBG]  Done attempting to bind parameter 'filterByStatus' of type 'System.Int16'.
+16/04/2024 11:30:35.067 -06:00  [DBG]  Attempting to validate the bound parameter 'filterByStatus' of type 'System.Int16' ...
+16/04/2024 11:30:35.071 -06:00  [DBG]  Done attempting to validate the bound parameter 'filterByStatus' of type 'System.Int16'.
+16/04/2024 11:30:35.074 -06:00  [VRB]  Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+16/04/2024 11:30:35.074 -06:00  [VRB]  Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+16/04/2024 11:30:35.074 -06:00  [VRB]  Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+16/04/2024 11:30:35.074 -06:00  [VRB]  Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+16/04/2024 11:30:35.075 -06:00  [INF]  Executing action method SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController.GetAllDataByStatus (SorteoEstacionamientos.Server) - Validation state: "Valid"
+16/04/2024 11:30:35.076 -06:00  [VRB]  Executing action method SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController.GetAllDataByStatus (SorteoEstacionamientos.Server) with arguments (["0"])
+16/04/2024 11:30:35.096 -06:00  [DBG]  Entity Framework Core 8.0.3 initialized 'DBSorteoParkingContext' using provider 'Pomelo.EntityFrameworkCore.MySql:8.0.2' with options: ServerVersion=8.0.22-mysql 
+16/04/2024 11:30:35.104 -06:00  [DBG]  Creating DbConnection.
+16/04/2024 11:30:35.106 -06:00  [DBG]  Created DbConnection. (1ms).
+16/04/2024 11:30:35.108 -06:00  [DBG]  Opening connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186'.
+16/04/2024 11:30:35.120 -06:00  [DBG]  Opened connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186'.
+16/04/2024 11:30:35.123 -06:00  [DBG]  Creating DbCommand for 'ExecuteReader'.
+16/04/2024 11:30:35.124 -06:00  [DBG]  Created DbCommand for 'ExecuteReader' (1ms).
+16/04/2024 11:30:35.126 -06:00  [DBG]  Initialized DbCommand for 'ExecuteReader' (3ms).
+16/04/2024 11:30:35.128 -06:00  [DBG]  Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`IdColor`, `m`.`colorNombre`
+FROM `MC_catColores` AS `m`
+16/04/2024 11:30:35.666 -06:00  [INF]  Executed DbCommand (537ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`IdColor`, `m`.`colorNombre`
+FROM `MC_catColores` AS `m`
+16/04/2024 11:30:35.686 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.698 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.708 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.718 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.726 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.730 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.733 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.735 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.738 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.740 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.743 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.745 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.748 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.750 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.753 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.755 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.758 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.760 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.763 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.765 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.767 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.769 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.771 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.773 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.775 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.777 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.780 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.782 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.784 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.786 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.788 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.790 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.792 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.794 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.797 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.799 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.801 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.803 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.805 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.807 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.809 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.811 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.813 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.815 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.817 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.820 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.822 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.824 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.826 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.829 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.832 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.834 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.837 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.839 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.842 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.845 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.847 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.849 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.852 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.854 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.857 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.860 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.862 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.864 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.867 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.869 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.872 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.875 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.877 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.879 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.882 -06:00  [DBG]  Context 'DBSorteoParkingContext' started tracking 'McCatColore' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+16/04/2024 11:30:35.885 -06:00  [DBG]  Closing data reader to 'db_SorteoEstacionamientos' on server '148.204.211.186'.
+16/04/2024 11:30:35.887 -06:00  [DBG]  A data reader for 'db_SorteoEstacionamientos' on server '148.204.211.186' is being disposed after spending 202ms reading results.
+16/04/2024 11:30:35.890 -06:00  [DBG]  Closing connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186'.
+16/04/2024 11:30:35.892 -06:00  [DBG]  Closed connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186' (2ms).
+16/04/2024 11:30:35.895 -06:00  [INF]  Executed action method SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController.GetAllDataByStatus (SorteoEstacionamientos.Server), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 818.6858ms.
+16/04/2024 11:30:35.899 -06:00  [VRB]  Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+16/04/2024 11:30:35.899 -06:00  [VRB]  Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+16/04/2024 11:30:35.899 -06:00  [VRB]  Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+16/04/2024 11:30:35.899 -06:00  [VRB]  Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+16/04/2024 11:30:35.899 -06:00  [VRB]  Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+16/04/2024 11:30:35.899 -06:00  [VRB]  Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+16/04/2024 11:30:35.899 -06:00  [VRB]  Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+16/04/2024 11:30:35.899 -06:00  [VRB]  Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+16/04/2024 11:30:35.899 -06:00  [VRB]  Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+16/04/2024 11:30:35.899 -06:00  [DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+16/04/2024 11:30:35.904 -06:00  [DBG]  No information found on request to perform content negotiation.
+16/04/2024 11:30:35.905 -06:00  [DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+16/04/2024 11:30:35.907 -06:00  [DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+16/04/2024 11:30:35.909 -06:00  [DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+16/04/2024 11:30:35.912 -06:00  [INF]  Executing OkObjectResult, writing value of type 'SorteoEstacionamientos.Shared.CapaEntities.Response.Response`1[[System.Collections.Generic.List`1[[SorteoEstacionamientos.Server.CapaDataAccess.DBContext.McCatColore, SorteoEstacionamientos.Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+16/04/2024 11:30:35.915 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "HEADERS" frame for stream ID 41 with length 34 and flags "END_HEADERS".
+16/04/2024 11:30:35.915 -06:00  [VRB]  After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+16/04/2024 11:30:35.915 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 41 with length 2978 and flags "NONE".
+16/04/2024 11:30:35.915 -06:00  [VRB]  Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+16/04/2024 11:30:35.915 -06:00  [VRB]  Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+16/04/2024 11:30:35.916 -06:00  [VRB]  Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+16/04/2024 11:30:35.916 -06:00  [VRB]  Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+16/04/2024 11:30:35.916 -06:00  [VRB]  Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+16/04/2024 11:30:35.916 -06:00  [VRB]  Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.
+16/04/2024 11:30:35.919 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+16/04/2024 11:30:35.916 -06:00  [INF]  Executed action SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController.GetAllDataByStatus (SorteoEstacionamientos.Server) in 871.2861ms
+16/04/2024 11:30:35.919 -06:00  [INF]  Executed endpoint 'SorteoEstacionamientos.Server.CapaDataAccess.Controllers.MóduloCatálogos.ColoresController.GetAllDataByStatus (SorteoEstacionamientos.Server)'
+16/04/2024 11:30:35.922 -06:00  [INF]  HTTP GET /api/Colores/filterByStatus/0 responded 200 in 931.2904 ms
+16/04/2024 11:30:35.924 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "DATA" frame for stream ID 41 with length 0 and flags "END_STREAM".
+16/04/2024 11:30:35.924 -06:00  [DBG]  'DBSorteoParkingContext' disposed.
+16/04/2024 11:30:35.926 -06:00  [DBG]  Disposing connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186'.
+16/04/2024 11:30:35.929 -06:00  [DBG]  Disposed connection to database 'db_SorteoEstacionamientos' on server '148.204.211.186' (2ms).
+16/04/2024 11:30:35.931 -06:00  [INF]  Request finished HTTP/2 GET https://localhost:7173/api/Colores/filterByStatus/0 - 200 null application/json; charset=utf-8 953.8257ms
+16/04/2024 11:32:20.668 -06:00  [DBG]  Connection id "0HN2U7BDPRGIP" is closing.
+16/04/2024 11:32:20.679 -06:00  [DBG]  Connection id "0HN2U7BDPRGIP" is closed. The last processed stream ID was 1.
+16/04/2024 11:32:20.693 -06:00  [VRB]  Connection id "0HN2U7BDPRGIP" sending "GOAWAY" frame for stream ID 0 with length 8 and flags 0x0.
+16/04/2024 11:32:20.694 -06:00  [DBG]  Connection id "0HN2U7BDPRGIP" received FIN.
+16/04/2024 11:32:20.702 -06:00  [DBG]  Connection id "0HN2U7BDPRGIP" sending FIN because: "The Socket transport's send loop completed gracefully."
+16/04/2024 11:32:20.707 -06:00  [DBG]  The connection queue processing loop for 0HN2U7BDPRGIP completed.
+16/04/2024 11:32:20.726 -06:00  [DBG]  Connection id "0HN2U7BDPRGIP" stopped.
+16/04/2024 11:32:48.083 -06:00  [DBG]  Connection id "0HN2U7BDPRGIO" is closing.
+16/04/2024 11:32:48.094 -06:00  [DBG]  Connection id "0HN2U7BDPRGIO" is closed. The last processed stream ID was 41.
+16/04/2024 11:32:48.106 -06:00  [VRB]  Connection id "0HN2U7BDPRGIO" sending "GOAWAY" frame for stream ID 0 with length 8 and flags 0x0.
+16/04/2024 11:32:48.109 -06:00  [DBG]  Connection id "0HN2U7BDPRGIO" received FIN.
+16/04/2024 11:32:48.109 -06:00  [DBG]  The connection queue processing loop for 0HN2U7BDPRGIO completed.
+16/04/2024 11:32:48.117 -06:00  [DBG]  Connection id "0HN2U7BDPRGIO" sending FIN because: "The Socket transport's send loop completed gracefully."
+16/04/2024 11:32:48.145 -06:00  [DBG]  Connection id "0HN2U7BDPRGIO" stopped.
