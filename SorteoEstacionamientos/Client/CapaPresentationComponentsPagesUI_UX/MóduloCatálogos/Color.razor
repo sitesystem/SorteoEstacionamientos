@@ -4,9 +4,6 @@
 <PageTitle>Catálogo Colores</PageTitle>
 
 
-
-@if (oResponse is not null && oResponse.Data != null)
-{
 	<div class="p-4 rounded-1 bg-white shadow">
 		<RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false"
 						FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true"
@@ -21,20 +18,7 @@
 			</Columns>
 		</RadzenDataGrid>
 	</div>
-	@foreach (var color in oResponse.Data)
-	{
-		<div>
-			@color.IdColor
-			@color.ColorNombre
-		</div>
-	}
-
-}
-else
-{
-	<spam> Cargando... </spam> 
-}
-
+	
 
 
 
