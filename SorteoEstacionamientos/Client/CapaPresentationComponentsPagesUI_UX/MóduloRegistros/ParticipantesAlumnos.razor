@@ -1,5 +1,51 @@
-﻿<h3>ParticipantesAlumnos</h3>
+﻿@page "/ParticipantesAlumnos"
+<PageTitle>SEO | Regristro Participantes</PageTitle>
+
+
+<EditForm Model="@oParticipante" OnValidSubmit="@OnValidHandled" OnInvalidSubmit="@OnInvalidHandled_ScrollToTop">
+
+    <div>
+        <RadzenStack Gap="0" class="rz-py-20 rz-px-12">
+            <RadzenAlert AllowClose="false" AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter">
+                Todos los campos son obligatorios.
+            </RadzenAlert>
+            <RadzenAlert AllowClose="false" AlertStyle="AlertStyle.Warning" Variant="Variant.Flat" Shade="Shade.Dark">
+                ATENCIÓN: En caso de que se detecte que existe duplicidad de datos de un mismo usuario,
+                se le suspenderá el derecho del uso del estacionamiento.
+            </RadzenAlert>
+        </RadzenStack>
+    </div>
+
+    <!-- ******************************************************************* DATOS PERSONALES ******************************************************************* -->
+    <RadzenCard class="mt-3">
+    <RadzenFieldset AllowCollapse="true" ExpandTitle="Datos Personales" CollapseTitle="Datos Personales" ExpandAriaLabel="" CollapseAriaLabel="" Class="rz-border-base-500 rz-border-radius-1 rz-shadow-3">
+        <HeaderTemplate>
+            <span class="d-inline-flex align-items-center align-middle">
+                <RadzenIcon Icon="account_box" class="me-1" /><b>Datos Personales</b>
+            </span>
+        </HeaderTemplate>
+        <ChildContent>
+            
+        </ChildContent>
+        <SummaryTemplate>
+            
+                
+            
+        </SummaryTemplate>
+    </RadzenFieldset>
+    </RadzenCard>
+
+
+</EditForm>
 
 @code {
+    
+    private RequestDTO_Participante? oParticipante = new();
+
+    public async Task OnValidHandled(){}
+
+    public async Task OnInvalidHandled_ScrollToTop(){}
+
+
 
 }

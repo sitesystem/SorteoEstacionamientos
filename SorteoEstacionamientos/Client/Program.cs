@@ -28,6 +28,7 @@ builder.Services.AddScoped<REdoRepMexService>();
 builder.Services.AddScoped<REscuelaService>();
 builder.Services.AddScoped<RGanadorService>();
 builder.Services.AddScoped<RLinkService>();
+builder.Services.AddScoped<RParticipanteService>();
 builder.Services.AddScoped<RPeriodoRegistroService>();
 builder.Services.AddScoped<RRolService>();
 builder.Services.AddScoped<RSemestreService>();
