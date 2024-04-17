@@ -1,8 +1,8 @@
-﻿
-<!--CODIGO HTML-->
+﻿<!------------------------------------------------------CODIGO HTML---------------------------------->
 @page "/colores"
 <PageTitle>Catálogo Colores</PageTitle>
 
+<!--ENCABEZADO-->
 <RadzenCard Variant="Variant.Filled" class="rz-background-color-white rz-shadow-5 rz-border-radius-1 rz-py-2 rz-mb-3">
 	<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Normal" JustifyContent="JustifyContent.SpaceBetween" Wrap="FlexWrap.NoWrap" Gap="10px" Class="w-100">
 		<RadzenText TextStyle="TextStyle.Body1">
@@ -17,6 +17,7 @@
 </RadzenCard>
 
 
+<!--TABLA-->
 
 	<div class="p-4 rounded-1 bg-white shadow">
 		<RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false"
@@ -35,8 +36,7 @@
 	</div>
 	
 
-<!--CODIGO C#-->
-
+<!------------------------------------------------------CODIGO C#---------------------------------->
 @code {
 	Response<List<RequestViewModel_Color>> oResponse = new();
 	protected override async Task OnInitializedAsync()
@@ -44,5 +44,4 @@
 		oResponse = await servicioColores.GetAllDataByStatusAsync(0);
 
 	}
-
 }

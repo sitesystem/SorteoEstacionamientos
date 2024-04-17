@@ -1,7 +1,8 @@
-﻿@page "/escuelas"
+﻿<!------------------------------------------------------CODIGO HTML---------------------------------->
+@page "/escuelas"
 <PageTitle>Catálogo Escuelas</PageTitle>
 
-
+<!--ENCABEZADO-->
 <RadzenCard Variant="Variant.Filled" class="rz-background-color-white rz-shadow-5 rz-border-radius-1 rz-py-2 rz-mb-3">
 	<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Normal" JustifyContent="JustifyContent.SpaceBetween" Wrap="FlexWrap.NoWrap" Gap="10px" Class="w-100">
 		<RadzenText TextStyle="TextStyle.Body1">
@@ -16,23 +17,28 @@
 </RadzenCard>
 
 
-
+<!--TABLA-->
 <div class="p-4 rounded-1 bg-white shadow">
-	<RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true"
-					Data="@oResponse.Data"
-					PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
-					TItem="RequestViewModel_Escuela" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or"
-					SelectionMode="DataGridSelectionMode.Single">
+	<RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true" TItem="RequestViewModel_Escuela" 
+		Data="@oResponse.Data" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or" SelectionMode="DataGridSelectionMode.Single">
 		<Columns>
 			<RadzenDataGridColumn TItem="RequestViewModel_Escuela" Property="IdEscuela" Filterable="false" Title="ID" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
-
 			<RadzenDataGridColumn TItem="RequestViewModel_Escuela" Property="EscLogo" Filterable="false" Title="LOGO" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+			<RadzenDataGridColumn TItem="RequestViewModel_Escuela" Property="EscNoEscuela" Filterable="false" Title="NoESCUELA" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+			<RadzenDataGridColumn TItem="RequestViewModel_Escuela" Property="EscNombreLargo" Filterable="false" Title="NOMBRE L" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+			<RadzenDataGridColumn TItem="RequestViewModel_Escuela" Property="EscNombreCorto" Filterable="false" Title="NOMBRE C" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+			<RadzenDataGridColumn TItem="RequestViewModel_Escuela" Property="EscFileNameAvisoPrivacidad" Filterable="false" Title="AP" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+			<RadzenDataGridColumn TItem="RequestViewModel_Escuela" Property="EscFechaFundacion" Filterable="false" Title="FUNDACION" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+			<RadzenDataGridColumn TItem="RequestViewModel_Escuela" Property="EscStatus" Filterable="false" Title="STATUS" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
 
 		</Columns>
 	</RadzenDataGrid>
 </div>
 
-<!--CODIGO C#-->
+
+
+
+<!------------------------------------------------------CODIGO C#---------------------------------->
 @code {
 	Response<List<RequestViewModel_Escuela>> oResponse = new();
 	protected override async Task OnInitializedAsync()
