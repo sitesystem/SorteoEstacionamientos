@@ -5,6 +5,4 @@
 /SorteoEstacionamientos/Server/obj
 /SorteoEstacionamientos/Shared/bin
 /SorteoEstacionamientos/Shared/obj
-SorteoEstacionamientos/Server/wwwroot/Logs/log-20240415.log
-SorteoEstacionamientos/Server/wwwroot/Logs/log-20240415.log
-SorteoEstacionamientos/Server/wwwroot/Logs/log-20240417.log
+/SorteoEstacionamientos/Server/wwwroot/Logs

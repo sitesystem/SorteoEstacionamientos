@@ -24,11 +24,8 @@
 
   <ItemGroup>
     <Folder Include="CapaPresentationComponentsPagesUI_UX\Login\" />
-<<<<<<< HEAD
     <Folder Include="CapaPresentationComponentsPagesUI_UX\MóduloCatálogos\" />
-=======
     <Folder Include="CapaPresentationComponentsPagesUI_UX\MóduloRegistros\" />
->>>>>>> f8b4993c6c1acea16f75fbb853b0784c1f825c65
     <Folder Include="CapaPresentationComponentsPagesUI_UX\MóduloSorteo\" />
     <Folder Include="CapaPresentationComponentsPagesUI_UX\PantallaInicio\" />
     <Folder Include="wwwroot\banners\" />
