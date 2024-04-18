@@ -30,7 +30,6 @@
 			<RadzenDataGridColumn TItem="RequestViewModel_Escuela" Property="EscFileNameAvisoPrivacidad" Filterable="false" Title="AP" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
 			<RadzenDataGridColumn TItem="RequestViewModel_Escuela" Property="EscFechaFundacion" Filterable="false" Title="FUNDACION" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
 			<RadzenDataGridColumn TItem="RequestViewModel_Escuela" Property="EscStatus" Filterable="false" Title="STATUS" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
-
 		</Columns>
 	</RadzenDataGrid>
 </div>
@@ -44,7 +43,5 @@
 	protected override async Task OnInitializedAsync()
 	{
 		oResponse = await servicioEscuela.GetAllDataByStatusAsync(0);
-
 	}
-
 }
