@@ -1,0 +1,43 @@
+﻿@page "/periodoregistro"
+<PageTitle>Catalogo Periodo Registro</PageTitle>
+
+<RadzenCard Variant="Variant.Filled" class="rz-background-color-white rz-shadow-5 rz-border-radius-1 rz-py-2 rz-mb-3">
+    <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Normal" JustifyContent="JustifyContent.SpaceBetween" Wrap="FlexWrap.NoWrap" Gap="10px" Class="w-100">
+        <RadzenText TextStyle="TextStyle.Body1">
+            <h5 style="font-variant: small-caps;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-fill" viewBox="0 0 16 16">
+                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5" />
+                </svg>&nbsp; Periodo de Registro
+            </h5>
+        </RadzenText>            
+    </RadzenStack>
+</RadzenCard>
+
+ <div class="p-4 rounded-1 bg-white shadow">
+    <RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" 
+                FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" 
+                PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
+                Data="oResponse.Data" TItem="RequestDTO_PeriodoRegistro" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or" 
+                SelectionMode="DataGridSelectionMode.Single" >
+    <Columns>
+            <RadzenDataGridColumn TItem="RequestDTO_PeriodoRegistro" Property="IdPeriodoRegistro" Title="ID" Frozen="true" Width="20%" TextAlign="TextAlign.Left" />
+
+            <RadzenDataGridColumn TItem="RequestDTO_PeriodoRegistro" Property="PerFechaHoraInicio" Filterable="false" Title="Fecha/Hora Inicio" Frozen="true" Width="40%" TextAlign="TextAlign.Left" />
+
+            <RadzenDataGridColumn TItem="RequestDTO_PeriodoRegistro" Property="PerFechaHoraFin" Filterable="false" Title="Fecha/Hora Fin" Frozen="true" Width="40px" TextAlign="TextAlign.Left" />
+
+            <RadzenDataGridColumn TItem="RequestDTO_PeriodoRegistro" Property="PerFileNameConvocatoria" Filterable="false" Title="Archivo" Frozen="true" Width="40px" TextAlign="TextAlign.Left" />
+
+            <RadzenDataGridColumn TItem="RequestDTO_PeriodoRegistro" Property="PerStatus" Filterable="false" Title="Status" Frozen="true" Width="40px" TextAlign="TextAlign.Left" />
+    
+    </Columns>
+</RadzenDataGrid>
+ </div>
+
+@code {
+    Response<List<RequestDTO_PeriodoRegistro>> oResponse = new();
+    protected override async Task OnInitializedAsync()
+    {
+        oResponse = await servicioPeriodoRegistro.GetAllDataByStatusAsync(0);
+    }
+}
