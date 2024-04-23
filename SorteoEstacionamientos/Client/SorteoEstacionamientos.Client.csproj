@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="CapaPresentationComponentsPagesUI_UX\MóduloCatálogos\TipoVehiculo.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="8.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.3" PrivateAssets="all" />
@@ -33,18 +29,6 @@
     <Folder Include="CapaPresentationComponentsPagesUI_UX\PantallaInicio\" />
     <Folder Include="wwwroot\banners\" />
     <Folder Include="wwwroot\documentos\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="CapaPresentationComponentsPagesUI_UX\MóduloCatálogos\TipoVehiculo.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="CapaPresentationComponentsPagesUI_UX\MóduloCatálogos\TipoVehiculo.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="CapaPresentationComponentsPagesUI_UX\MóduloCatálogos\TipoVehiculo.razor" />
   </ItemGroup>
 
 </Project>
