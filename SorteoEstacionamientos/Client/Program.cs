@@ -32,6 +32,7 @@ builder.Services.AddScoped<RParticipanteService>();
 builder.Services.AddScoped<RPeriodoRegistroService>();
 builder.Services.AddScoped<RRolService>();
 builder.Services.AddScoped<RSemestreService>();
+builder.Services.AddScoped<RTipoParticipanteService>();
 builder.Services.AddScoped<RTipoPlacaService>();
 builder.Services.AddScoped<RTipoVehiculoService>();
 builder.Services.AddLogging();
