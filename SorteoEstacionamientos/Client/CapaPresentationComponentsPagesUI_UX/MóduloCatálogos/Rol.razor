@@ -1,0 +1,38 @@
+﻿<!------------------------------------------------------CODIGO HTML---------------------------------->
+@page "/roles"
+<PageTitle>Catálogo Roles</PageTitle>
+
+<!--ENCABEZADO-->
+<RadzenCard Variant="Variant.Filled" class="rz-background-color-white rz-shadow-5 rz-border-radius-1 rz-py-2 rz-mb-3">
+	<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Normal" JustifyContent="JustifyContent.SpaceBetween" Wrap="FlexWrap.NoWrap" Gap="10px" Class="w-100">
+		<RadzenText TextStyle="TextStyle.Body1">
+			<h5 style="font-variant: small-caps;">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+					<path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6m5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1z" />
+				</svg> Roles
+			</h5>
+		</RadzenText>
+	</RadzenStack>
+</RadzenCard>
+
+
+<!--TABLA-->
+<div class="p-4 rounded-1 bg-white shadow">
+	<RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true" TItem="RequestViewModel_Rol"
+					Data="@oResponse.Data" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or" SelectionMode="DataGridSelectionMode.Single">
+		<Columns>
+			<RadzenDataGridColumn TItem="RequestViewModel_Rol" Property="IdRol" Filterable="false" Title="ID" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+			<RadzenDataGridColumn TItem="RequestViewModel_Rol" Property="RolNombre" Filterable="false" Title="NOMBRE" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+			<RadzenDataGridColumn TItem="RequestViewModel_Rol" Property="RolDescripcion" Filterable="false" Title="DESCRIPCION" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+		</Columns>
+	</RadzenDataGrid>
+</div>
+
+<!------------------------------------------------------CODIGO C#---------------------------------->
+@code {
+	Response<List<RequestViewModel_Rol>> oResponse = new();
+	protected override async Task OnInitializedAsync()
+	{
+		oResponse = await servicioRol.GetAllDataByStatusAsync(0);
+	}
+}
