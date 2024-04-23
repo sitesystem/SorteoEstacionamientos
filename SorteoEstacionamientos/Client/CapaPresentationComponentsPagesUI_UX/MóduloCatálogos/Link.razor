@@ -1,0 +1,41 @@
+﻿<!------------------------------------------------------CODIGO HTML---------------------------------->
+@page "/links"
+<PageTitle>Catálogo Link</PageTitle>
+
+<!--ENCABEZADO-->
+<RadzenCard Variant="Variant.Filled" class="rz-background-color-white rz-shadow-5 rz-border-radius-1 rz-py-2 rz-mb-3">
+	<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Normal" JustifyContent="JustifyContent.SpaceBetween" Wrap="FlexWrap.NoWrap" Gap="10px" Class="w-100">
+		<RadzenText TextStyle="TextStyle.Body1">
+			<h5 style="font-variant: small-caps;">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+					<path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+					<path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z" />
+				</svg> Links
+			</h5>
+		</RadzenText>
+	</RadzenStack>
+</RadzenCard>
+
+<!--TABLA-->
+<div class="p-4 rounded-1 bg-white shadow">
+	<RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true" TItem="RequestViewModel_Link"
+					Data="@oResponse.Data" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or" SelectionMode="DataGridSelectionMode.Single">
+		<Columns>
+			<RadzenDataGridColumn TItem="RequestViewModel_Link" Property="IdLink" Filterable="false" Title="ID" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+			<RadzenDataGridColumn TItem="RequestViewModel_Link" Property="LinkNombre" Filterable="false" Title="NOMBRE" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+			<RadzenDataGridColumn TItem="RequestViewModel_Link" Property="LinkEnlace" Filterable="false" Title="ENLACE" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+			<RadzenDataGridColumn TItem="RequestViewModel_Link" Property="LinkStatus" Filterable="false" Title="STATUS" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+		</Columns>
+	</RadzenDataGrid>
+</div>
+
+<!------------------------------------------------------CODIGO C#---------------------------------->
+@code {
+	Response<List<RequestViewModel_Link>> oResponse = new();
+	protected override async Task OnInitializedAsync()
+	{
+		oResponse = await servicioLink.GetAllDataByStatusAsync(0);
+	}
+}
+
+
