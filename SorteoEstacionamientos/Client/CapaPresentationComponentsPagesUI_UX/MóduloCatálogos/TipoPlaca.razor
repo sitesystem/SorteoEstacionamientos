@@ -12,3 +12,26 @@
         </RadzenText>
     </RadzenStack>
 </RadzenCard>
+
+<div class="p-4 rounded-1 bg-white shadow">
+    <RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false"
+                    FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true"
+                    PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
+                    Data="oResponse.Data" TItem="RequestViewModel_TipoPlaca" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or"
+                    SelectionMode="DataGridSelectionMode.Single">
+        <Columns>
+            <RadzenDataGridColumn TItem="RequestViewModel_TipoPlaca" Property="IdTipoPlaca" Title="ID" Frozen="true" Width="20%" TextAlign="TextAlign.Left" />
+
+            <RadzenDataGridColumn TItem="RequestViewModel_TipoPlaca" Property="TipoPlaca" Filterable="false" Title="Tipo de Placa" Frozen="true" Width="40%" TextAlign="TextAlign.Left" />
+
+        </Columns>
+    </RadzenDataGrid>
+</div>
+
+@code {
+    Response<List<RequestViewModel_TipoPlaca>> oResponse = new();
+    protected override async Task OnInitializedAsync()
+    {
+        oResponse = await servicioTipoPlaca.GetAllDataByStatusAsync(0);
+    }
+}
