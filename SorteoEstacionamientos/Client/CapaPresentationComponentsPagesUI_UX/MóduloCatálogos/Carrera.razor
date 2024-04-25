@@ -29,17 +29,18 @@
     <div class="p-4 rounded-1 bg-white shadow">
         <RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false"
                         FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true"
-                        PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
-                        Data="oResponse.Data" TItem="RequestViewModel_Carrera" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or"
+                        PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true" 
+                        Data="oResponse.Data" TItem="RequestViewModel_Carrera" ColumnWidth="300px"
+                        LogicalFilterOperator="LogicalFilterOperator.Or" 
                         SelectionMode="DataGridSelectionMode.Single">
             <Columns>
-                <RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="IdCarrera" Title="ID" Frozen="true" Width="20%" TextAlign="TextAlign.Left" />
+                <RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="IdCarrera" Title="ID" Frozen="true" Width="20%" />
 
-                <RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="CarrClave" Filterable="false" Title="Clave Carrera" Frozen="true" Width="40%" TextAlign="TextAlign.Left" />
+                <RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="CarrClave"  Title="Clave Carrera" Frozen="true" Width="40%" TextAlign="TextAlign.Left" />
 
-                <RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="CarrNombre" Filterable="false" Title="Carrera" Frozen="true" Width="40px" TextAlign="TextAlign.Left" />
+                <RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="CarrNombre" Title="Carrera" Frozen="true" Width="40px" TextAlign="TextAlign.Left" />
 
-                <RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="CarrStatus" Filterable="false" Title="Status" Frozen="true" Width="40px" TextAlign="TextAlign.Left" />
+                <RadzenDataGridColumn TItem="RequestViewModel_Carrera" Property="CarrStatus"  Title="Status" Frozen="true" Width="40px" TextAlign="TextAlign.Left" />
 
             </Columns>
         </RadzenDataGrid>
@@ -51,7 +52,6 @@ else
         <LoadingComponent/>
     </div>
 }
-
 
 @code {
     Response<List<RequestViewModel_Carrera>> oResponse = new();
