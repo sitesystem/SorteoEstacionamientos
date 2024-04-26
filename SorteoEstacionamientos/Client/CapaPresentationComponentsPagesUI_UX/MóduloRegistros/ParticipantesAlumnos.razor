@@ -2,6 +2,8 @@
 <PageTitle>SEO | Regristro Participantes</PageTitle>
 
 
+
+
 <EditForm Model="@oParticipante" OnValidSubmit="@OnValidHandled" OnInvalidSubmit="@OnInvalidHandled_ScrollToTop">
 
     <div>
@@ -59,7 +61,7 @@
                     <RadzenFormField Text="Segundo Apellido" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
                         @* <Start><RadzenIcon Icon="person" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start> *@
                         <ChildContent>
-                            <RadzenTextBox @bind-Value="@oParticipante.PartPrimerApellido" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200" Placeholder="Segundo Apellido"
+                            <RadzenTextBox @bind-Value="@oParticipante.PartSegundoApellido" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200" Placeholder="Segundo Apellido"
                                             @oninput="@((e) => oParticipante.PartSegundoApellido = e.Value.ToString().ToUpper())"
                                             onkeypress="return /^[A-Za-z. ]+$/.test(String.fromCharCode(event.keyCode || event.which));" />
 
@@ -128,7 +130,57 @@
                     <ValidationMessage For="@(() => oParticipante.PartIdTipoParticipante)" />
                 </div>
 
+                <div class="col-md-4 col-lg-4">
+                    <RadzenFormField Text="Carrera" AllowFloatingLabel="false" Variant="Variant.Outlined" Class="w-100 mt-3" Disabled="false">
+                        <Start><RadzenIcon Icon="tag" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
+                        <ChildContent>
+                            <RadzenDropDown @bind-Value="@oParticipante.PartIdCarrera"
+                                            TValue="int"
+                                                ValueProperty="CarrNombre"
+                                                TextProperty="CarrNombre"
+                                            Data="@oCarrera.Data"
+                                            AllowClear="true"
+                                            AllowFiltering="true"
+                                            FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                                            FilterOperator="StringFilterOperator.Contains"
+                                            AllowVirtualization="true"
+                                            Placeholder="Selecciona una opción"
+                                            FilterPlaceholder="Buscar..."
+                                            Multiple="false"
+                                            Chips="true"
+                                            InputAttributes="@(new Dictionary<string,object>(){{ "font-family", "Arial" }})"
+                                            style="border-bottom: 3px solid #026969;" />
+                        </ChildContent>
+                        <Helper><RadzenText TextStyle="TextStyle.Caption" /></Helper>
+                    </RadzenFormField>
+                    <ValidationMessage For="@(() => oParticipante.PartIdCarrera)" />
+                </div>
 
+                <div class="col-md-4 col-lg-4">
+                    <RadzenFormField Text="Semestre" AllowFloatingLabel="false" Variant="Variant.Outlined" Class="w-100 mt-3" Disabled="false">
+                        <Start><RadzenIcon Icon="tag" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
+                        <ChildContent>
+                            <RadzenDropDown @bind-Value="@oParticipante.PartIdSemestre"
+                                            TValue="int"
+                                            ValueProperty="NumSemestre"
+                                            TextProperty="NumSemestre"
+                                            Data="@oSemestre.Data"
+                                            AllowClear="true"
+                                            AllowFiltering="true"
+                                            FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                                            FilterOperator="StringFilterOperator.Contains"
+                                            AllowVirtualization="true"
+                                            Placeholder="Selecciona una opción"
+                                            FilterPlaceholder="Buscar..."
+                                            Multiple="false"
+                                            Chips="true"
+                                            InputAttributes="@(new Dictionary<string,object>(){{ "font-family", "Arial" }})"
+                                            style="border-bottom: 3px solid #026969;" />
+                        </ChildContent>
+                        <Helper><RadzenText TextStyle="TextStyle.Caption" /></Helper>
+                    </RadzenFormField>
+                    <ValidationMessage For="@(() => oParticipante.PartIdSemestre)" />
+                </div>
 
 
 
@@ -144,7 +196,7 @@
 
 
                 <div class="col-md-4 col-lg-4">
-                    <RadzenFormField  AllowFloatingLabel="false" Variant="Variant.Outlined" Class="w-100 mt-3" Disabled="false">
+                        <RadzenFormField Text="Teléfono" AllowFloatingLabel="false" Variant="Variant.Outlined" Class="w-100 mt-3" Disabled="false">
                         <Start><RadzenIcon Icon="phone_iphone" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
                         <ChildContent>
                                 <RadzenMask @bind-Value="@oParticipante.PartNoTelCelular" MinLength="0" MaxLength="20" style="border-bottom: 3px solid #026969;"
@@ -166,7 +218,7 @@
             </div>
 
 
-
+            
 
 
         </ChildContent>
@@ -179,17 +231,22 @@
     </RadzenCard>
 
 
-</EditForm>
+    </EditForm>
+
 
 @code {
 
     private RequestDTO_Participante? oParticipante = new();
     public Response<List<RequestViewModel_TipoParticipante>>? oTipoParticipante = new();
+    public Response<List<RequestViewModel_Carrera>>? oCarrera = new();
+    public Response<List<RequestViewModel_Semestre>>? oSemestre = new();
 
 
     protected override async Task OnInitializedAsync()
     {
         oTipoParticipante = await servicioTipoParticipante.GetAllDataByStatusAsync(0);
+        oCarrera = await servicioCarrera.GetAllDataByStatusAsync(0);
+        oSemestre = await servicioSemestre.GetAllDataByStatusAsync(0);
     }
 
 
