@@ -20,10 +20,10 @@
 
     <!-- ******************************************************************* DATOS PERSONALES ******************************************************************* -->
     <RadzenCard class="mt-3">
-    <RadzenFieldset AllowCollapse="true" ExpandTitle="Datos Personales" CollapseTitle="Datos Personales" ExpandAriaLabel="" CollapseAriaLabel="" Class="rz-border-base-500 rz-border-radius-1 rz-shadow-3">
+    <RadzenFieldset AllowCollapse="true" ExpandTitle="DATOS PERSONALES" CollapseTitle="DATOS PERSONALES" ExpandAriaLabel="" CollapseAriaLabel="" Class="rz-border-base-500 rz-border-radius-1 rz-shadow-3">
         <HeaderTemplate>
             <span class="d-inline-flex align-items-center align-middle">
-                <RadzenIcon Icon="account_box" class="me-1" /><b>Datos Personales</b>
+                <RadzenIcon Icon="account_box" class="me-1" /><b>DATOS PERSONALES</b>
             </span>
         </HeaderTemplate>
         <ChildContent>
@@ -130,7 +130,7 @@
                     <ValidationMessage For="@(() => oParticipante.PartIdTipoParticipante)" />
                 </div>
 
-                <div class="col-md-4 col-lg-4">
+                <div class="col-md-4 col-lg-8">
                     <RadzenFormField Text="Carrera" AllowFloatingLabel="false" Variant="Variant.Outlined" Class="w-100 mt-3" Disabled="false">
                         <Start><RadzenIcon Icon="tag" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
                         <ChildContent>
@@ -182,18 +182,20 @@
                     <ValidationMessage For="@(() => oParticipante.PartIdSemestre)" />
                 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+                <div class="col-md-4 col-lg-8">
+                    <RadzenFormField Text="@($@"{(ActionAddEdit == "agregar" ? "Correo Electrónico Personal" : "Correo Electrónico Personal Actual")}")" AllowFloatingLabel="false" Placeholder="" AllowClear="true" Variant="Variant.Outlined" Class="w-100 mt-3" Disabled="false">
+                        <Start><RadzenIcon Icon="email" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
+                        <ChildContent>
+                                <RadzenTextBox Name="@($@"email_personal_{TipoParticipante}")" @bind-Value="@oParticipante.PartEmail" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="100"
+                                            Disabled="@(ActionAddEdit == "actualizar" ? true : false)" ReadOnly="@(ActionAddEdit == "actualizar" ? true : false)" />
+                        </ChildContent>
+                        <Helper>
+                            <RadzenText TextStyle="TextStyle.Caption" TagName="TagName.Div" TextAlign="TextAlign.Justify" class="alert alert-info my-1 p-2"
+                                        Text="@($@"{( ActionAddEdit == "actualizar" ? "En caso de cambio de Correo Electrónico Personal, levanta una Solicitud (Ticket)." : "En caso de no contar con un Correo Personal, le recomendamos crear uno con dominio válido (gmail, outlook, hotmail, yahoo, msn, live, etc)." )}")" />
+                        </Helper>
+                    </RadzenFormField>
+                    <ValidationMessage For="@(() => oParticipante.PartEmail)" />
+                </div>
 
                 <div class="col-md-4 col-lg-4">
                         <RadzenFormField Text="Teléfono" AllowFloatingLabel="false" Variant="Variant.Outlined" Class="w-100 mt-3" Disabled="false">
@@ -209,32 +211,77 @@
                     <ValidationMessage For="@(() => oParticipante.PartNoTelCelular)" />
                 </div>
 
-
-
-
-
-
-
             </div>
-
-
-            
-
 
         </ChildContent>
         <SummaryTemplate>
-            
-                
             
         </SummaryTemplate>
     </RadzenFieldset>
     </RadzenCard>
 
 
+
+    <!-- ******************************************************************* DATOS DEL VEHÍCULO ******************************************************************* -->
+    <RadzenCard>
+    <RadzenFieldset AllowCollapse="true" ExpandTitle="DATOS DEL VEHÍCULO" CollapseTitle="DATOS DEL VEHÍCULO" ExpandAriaLabel="" CollapseAriaLabel="" Class="rz-border-base-500 rz-border-radius-1 rz-shadow-3">
+        <HeaderTemplate>
+            <span class="d-inline-flex align-items-center align-middle">
+                <RadzenIcon Icon="account_box" class="me-1" /><b>DATOS DEL VEHÍCULO</b>
+            </span>
+        </HeaderTemplate>
+        <ChildContent>
+
+            <div class="row">
+
+                <div class="col-md-4 col-lg-4">
+                    <RadzenFormField Text="Placa" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
+                        @* <Start><RadzenIcon Icon="person" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start> *@
+                        <ChildContent>
+                            <RadzenTextBox @bind-Value="@oParticipante.PartPlaca" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200" 
+                                            @oninput="@((e) => oParticipante.PartPlaca = e.Value.ToString().ToUpper())" />
+
+                        </ChildContent>
+                        <Helper><RadzenText TextStyle="TextStyle.Caption" /></Helper>
+                    </RadzenFormField>
+                    <ValidationMessage For="@(() => oParticipante.PartPlaca)" />
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div> <!-- /div class="row" -->
+
+        </ChildContent>
+        <SummaryTemplate>
+
+        </SummaryTemplate>
+    </RadzenFieldset>
+    </RadzenCard>
+
+
+
+
+
+
     </EditForm>
 
 
 @code {
+
+    [Parameter] public string? ActionAddEdit { get; set; }
+    [Parameter] public string? TipoParticipante { get; set; }
 
     private RequestDTO_Participante? oParticipante = new();
     public Response<List<RequestViewModel_TipoParticipante>>? oTipoParticipante = new();
