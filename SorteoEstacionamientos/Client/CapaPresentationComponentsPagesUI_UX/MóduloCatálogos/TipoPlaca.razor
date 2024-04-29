@@ -1,4 +1,14 @@
 ﻿@page "/tipoPlaca"
+
+<style>
+    .divpadre {
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
 <PageTitle>Tipos de Vehiculo</PageTitle>
 
 <RadzenCard Variant="Variant.Filled" class="rz-background-color-white rz-shadow-5 rz-border-radius-1 rz-py-2 rz-mb-3">
@@ -13,20 +23,30 @@
     </RadzenStack>
 </RadzenCard>
 
-<div class="p-4 rounded-1 bg-white shadow">
-    <RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false"
-                    FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true"
-                    PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
-                    Data="oResponse.Data" TItem="RequestViewModel_TipoPlaca" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or"
-                    SelectionMode="DataGridSelectionMode.Single">
-        <Columns>
-            <RadzenDataGridColumn TItem="RequestViewModel_TipoPlaca" Property="IdTipoPlaca" Title="ID" Frozen="true" Width="20%" TextAlign="TextAlign.Left" />
+@if (oResponse is not null && oResponse.Data != null)
+{
+    <div class="p-4 rounded-1 bg-white shadow">
+        <RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false"
+                        FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true"
+                        PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
+                        Data="oResponse.Data" TItem="RequestViewModel_TipoPlaca" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or"
+                        SelectionMode="DataGridSelectionMode.Single">
+            <Columns>
+                <RadzenDataGridColumn TItem="RequestViewModel_TipoPlaca" Property="IdTipoPlaca" Title="ID" Frozen="true" Width="20%" TextAlign="TextAlign.Left" />
 
-            <RadzenDataGridColumn TItem="RequestViewModel_TipoPlaca" Property="TipoPlaca" Filterable="false" Title="Tipo de Placa" Frozen="true" Width="40%" TextAlign="TextAlign.Left" />
+                <RadzenDataGridColumn TItem="RequestViewModel_TipoPlaca" Property="TipoPlaca" Filterable="false" Title="Tipo de Placa" Frozen="true" Width="40%" TextAlign="TextAlign.Left" />
 
-        </Columns>
-    </RadzenDataGrid>
-</div>
+            </Columns>
+        </RadzenDataGrid>
+    </div>
+}
+else
+{
+    <div class="divpadre">
+        <LoadingComponent />
+    </div>
+}
+
 
 @code {
     Response<List<RequestViewModel_TipoPlaca>> oResponse = new();
