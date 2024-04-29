@@ -1,5 +1,15 @@
 ﻿<!------------------------------------------------------CODIGO HTML---------------------------------->
 @page "/escuelas"
+
+<style>
+	.divpadre {
+		height: 500px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+</style>
+
 <PageTitle>Catálogo Escuelas</PageTitle>
 
 <!--ENCABEZADO-->
@@ -18,9 +28,15 @@
 
 
 <!--TABLA-->
+
+@if (oResponse is not null && oResponse.Data != null)
+{
 <div class="p-4 rounded-1 bg-white shadow">
-	<RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true" TItem="RequestViewModel_Escuela" 
-		Data="@oResponse.Data" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or" SelectionMode="DataGridSelectionMode.Single">
+	<RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" 
+		FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" 
+		PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true" 
+		TItem="RequestViewModel_Escuela" Data="@oResponse.Data" ColumnWidth="300px" 
+		LogicalFilterOperator="LogicalFilterOperator.Or" SelectionMode="DataGridSelectionMode.Single">
 		<Columns>
 			<RadzenDataGridColumn TItem="RequestViewModel_Escuela" Property="IdEscuela" Filterable="false" Title="ID" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
 			<RadzenDataGridColumn TItem="RequestViewModel_Escuela" Property="EscLogo" Filterable="false" Title="LOGO" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
@@ -34,7 +50,13 @@
 	</RadzenDataGrid>
 </div>
 
-
+}
+else
+{
+	<div class="divpadre">
+		<LoadingComponent />
+	</div>
+}
 
 
 <!------------------------------------------------------CODIGO C#---------------------------------->
