@@ -243,6 +243,33 @@
             <div class="row">
 
                 <div class="col-md-4 col-lg-4">
+                    <RadzenFormField Text="Tipo de Vehículo" AllowFloatingLabel="false" Variant="Variant.Outlined" Class="w-100 mt-3" Disabled="false">
+                        <Start><RadzenIcon Icon="tag" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
+                        <ChildContent>
+                            <RadzenDropDown @bind-Value="@oParticipante.PartIdTipoParticipante"
+                                            TValue="int"
+                                            ValueProperty="TipoVehiculo"
+                                            TextProperty="TipoVehiculo"
+                                            Data="@oTipoVehiculo.Data"
+                                            AllowClear="true"
+                                            AllowFiltering="true"
+                                            FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                                            FilterOperator="StringFilterOperator.Contains"
+                                            AllowVirtualization="true"
+                                            Placeholder="Selecciona una opción"
+                                            FilterPlaceholder="Buscar..."
+                                            Multiple="false"
+                                            Chips="true"
+                                            InputAttributes="@(new Dictionary<string,object>(){{ "font-family", "Arial" }})"
+                                            style="border-bottom: 3px solid #026969;" />
+                        </ChildContent>
+                        <Helper><RadzenText TextStyle="TextStyle.Caption" /></Helper>
+                    </RadzenFormField>
+                    <ValidationMessage For="@(() => oParticipante.PartIdTipoVehiculo)" />
+                </div>
+
+
+                <div class="col-md-4 col-lg-4">
                     <RadzenFormField Text="Placa" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
                         @* <Start><RadzenIcon Icon="person" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start> *@
                         <ChildContent>
@@ -255,20 +282,125 @@
                     <ValidationMessage For="@(() => oParticipante.PartPlaca)" />
                 </div>
 
+                <div class="col-md-4 col-lg-4">
+                    <RadzenFormField Text="Estado(Placa)" AllowFloatingLabel="false" Variant="Variant.Outlined" Class="w-100 mt-3" Disabled="false">
+                        <Start><RadzenIcon Icon="tag" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
+                        <ChildContent>
+                            <RadzenDropDown @bind-Value="@oParticipante.PartIdEdoRepMexVehiculo"
+                                            TValue="int"
+                                            ValueProperty="EdoNombre"
+                                            TextProperty="EdoNombre"
+                                            Data="@oEdoRepMex.Data"
+                                            AllowClear="true"
+                                            AllowFiltering="true"
+                                            FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                                            FilterOperator="StringFilterOperator.Contains"
+                                            AllowVirtualization="true"
+                                            Placeholder="Selecciona una opción"
+                                            FilterPlaceholder="Buscar..."
+                                            Multiple="false"
+                                            Chips="true"
+                                            InputAttributes="@(new Dictionary<string,object>(){{ "font-family", "Arial" }})"
+                                            style="border-bottom: 3px solid #026969;" />
+                        </ChildContent>
+                        <Helper><RadzenText TextStyle="TextStyle.Caption" /></Helper>
+                    </RadzenFormField>
+                    <ValidationMessage For="@(() => oParticipante.PartIdEdoRepMexVehiculo)" />
+                </div>
+
+                <div class="col-md-4 col-lg-4">
+                    <RadzenFormField Text="Uso(Tipo de Servicio)" AllowFloatingLabel="false" Variant="Variant.Outlined" Class="w-100 mt-3" Disabled="false">
+                        <Start><RadzenIcon Icon="tag" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
+                        <ChildContent>
+                            <RadzenDropDown @bind-Value="@oParticipante.PartIdTipoPlaca"
+                                            TValue="int"
+                                            ValueProperty="TipoPlaca"
+                                            TextProperty="TipoPlaca"
+                                            Data="@oTipoPlaca.Data"
+                                            AllowClear="true"
+                                            AllowFiltering="true"
+                                            FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                                            FilterOperator="StringFilterOperator.Contains"
+                                            AllowVirtualization="true"
+                                            Placeholder="Selecciona una opción"
+                                            FilterPlaceholder="Buscar..."
+                                            Multiple="false"
+                                            Chips="true"
+                                            InputAttributes="@(new Dictionary<string,object>(){{ "font-family", "Arial" }})"
+                                            style="border-bottom: 3px solid #026969;" />
+                        </ChildContent>
+                        <Helper><RadzenText TextStyle="TextStyle.Caption" /></Helper>
+                    </RadzenFormField>
+                    <ValidationMessage For="@(() => oParticipante.PartIdTipoPlaca)" />
+                </div>
 
 
+                <div class="col-md-4 col-lg-4">
+                    <RadzenFormField Text="Marca" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
+                        @* <Start><RadzenIcon Icon="person" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start> *@
+                        <ChildContent>
+                            <RadzenTextBox @bind-Value="@oParticipante.PartMarca" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200"
+                                            @oninput="@((e) => oParticipante.PartMarca = e.Value.ToString().ToUpper())" />
 
+                        </ChildContent>
+                        <Helper><RadzenText TextStyle="TextStyle.Caption" /></Helper>
+                    </RadzenFormField>
+                    <ValidationMessage For="@(() => oParticipante.PartMarca)" />
+                </div>
 
+                <div class="col-md-4 col-lg-4">
+                    <RadzenFormField Text="Modelo" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
+                        @* <Start><RadzenIcon Icon="person" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start> *@
+                        <ChildContent>
+                            <RadzenTextBox @bind-Value="@oParticipante.PartModelo" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200"
+                                            @oninput="@((e) => oParticipante.PartModelo = e.Value.ToString().ToUpper())" />
 
+                        </ChildContent>
+                        <Helper><RadzenText TextStyle="TextStyle.Caption" /></Helper>
+                    </RadzenFormField>
+                    <ValidationMessage For="@(() => oParticipante.PartModelo)" />
+                </div>
 
+                <div class="col-md-4 col-lg-4">
+                    <RadzenFormField Text="Version" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
+                        @* <Start><RadzenIcon Icon="person" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start> *@
+                        <ChildContent>
+                            <RadzenTextBox @bind-Value="@oParticipante.PartVersion" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200"
+                                            @oninput="@((e) => oParticipante.PartVersion = e.Value.ToString().ToUpper())" />
 
+                        </ChildContent>
+                        <Helper><RadzenText TextStyle="TextStyle.Caption" /></Helper>
+                    </RadzenFormField>
+                    <ValidationMessage For="@(() => oParticipante.PartVersion)" />
+                </div>
 
+                <!--
+                <div class="col-md-4 col-lg-4">
+                    <RadzenFormField Text="Año" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
+                        @* <Start><RadzenIcon Icon="person" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start> *@
+                        <ChildContent>
+                            <RadzenTextBox @bind-Value="@oParticipante.PartAño" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200"
+                                            @oninput="@((e) => oParticipante.PartAño = e.Value.ToString().ToUpper())" />
 
+                        </ChildContent>
+                        <Helper><RadzenText TextStyle="TextStyle.Caption" /></Helper>
+                    </RadzenFormField>
+                    <ValidationMessage For="@(() => oParticipante.PartAño)" />
+                </div> -->
 
+                <div class="col-md-4 col-lg-4">
+                    <RadzenFormField Text="Color" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
+                        @* <Start><RadzenIcon Icon="person" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start> *@
+                        <ChildContent>
+                            <RadzenTextBox @bind-Value="@oParticipante.PartColor" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200"
+                                            @oninput="@((e) => oParticipante.PartColor = e.Value.ToString().ToUpper())" />
 
-
-
-
+                        </ChildContent>
+                        <Helper><RadzenText TextStyle="TextStyle.Caption" /></Helper>
+                    </RadzenFormField>
+                    <ValidationMessage For="@(() => oParticipante.PartColor)" />
+                </div>
+                
             </div> <!-- /div class="row" -->
 
         </ChildContent>
@@ -279,7 +411,13 @@
     </RadzenCard>
 
 
-
+    <div>
+        <RadzenStack Gap="0" class="rz-py-20 rz-px-12">
+            <RadzenAlert Variant="@variant" AlertStyle="@alertStyle" Size="@size" Shade="Shade.Darker" AllowClose=false>
+                ATENCIÓN: Antes de enviar los documentos, asegurate de renombrarlos como se muestran en los siguientes ejemplos.
+            </RadzenAlert>
+        </RadzenStack>
+    </div>
 
 
     <!-- ******************************************************************* Subida de Archivos ******************************************************************* -->
@@ -296,15 +434,23 @@
     public Response<List<RequestViewModel_TipoParticipante>>? oTipoParticipante = new();
     public Response<List<RequestViewModel_Carrera>>? oCarrera = new();
     public Response<List<RequestViewModel_Semestre>>? oSemestre = new();
-
+    public Response<List<RequestViewModel_TipoVehiculo>>? oTipoVehiculo = new();
+    public Response<List<RequestViewModel_EdoRepMex>>? oEdoRepMex = new();
+    public Response<List<RequestViewModel_TipoPlaca>>? oTipoPlaca = new();
 
     protected override async Task OnInitializedAsync()
     {
         oTipoParticipante = await servicioTipoParticipante.GetAllDataByStatusAsync(0);
         oCarrera = await servicioCarrera.GetAllDataByStatusAsync(0);
         oSemestre = await servicioSemestre.GetAllDataByStatusAsync(0);
+        oTipoVehiculo = await servicioTipoVehiculo.GetAllDataByStatusAsync(0);
+        oEdoRepMex = await servicioEdoRepMex.GetAllDataByStatusAsync(0);
+        oTipoPlaca = await servicioTipoPlaca.GetAllDataByStatusAsync(0);
     }
 
+    Variant variant = Variant.Filled;
+    AlertSize size = AlertSize.Medium;
+    AlertStyle alertStyle = AlertStyle.Primary;
 
     public async Task OnValidHandled(){}
 
