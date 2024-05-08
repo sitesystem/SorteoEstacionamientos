@@ -8,11 +8,14 @@
 
     <!-- ******************************************************************* AVISOS DE ALERTA ******************************************************************* -->
     <div>
-        <RadzenStack Gap="0" class="rz-py-20 rz-px-12">
-            <RadzenAlert AllowClose="false" AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter">
+        <RadzenStack Gap="5">
+            <RadzenAlert AllowClose="false" AlertStyle="AlertStyle.Success" Variant="Variant.Filled">
                 Todos los campos son obligatorios.
             </RadzenAlert>
-            <RadzenAlert AllowClose="false" AlertStyle="AlertStyle.Warning" Variant="Variant.Flat" Shade="Shade.Dark">
+        </RadzenStack>
+
+        <RadzenStack Gap="5">
+            <RadzenAlert AllowClose="false" AlertStyle="AlertStyle.Warning" Variant="Variant.Filled" Shade="Shade.Dark">
                 ATENCIÓN: En caso de que se detecte que existe duplicidad de datos de un mismo usuario,
                 se le suspenderá el derecho del uso del estacionamiento.
             </RadzenAlert>
@@ -412,7 +415,7 @@
 
 
     <div>
-        <RadzenStack Gap="0" class="rz-py-20 rz-px-12">
+        <RadzenStack Gap="0">
             <RadzenAlert Variant="@variant" AlertStyle="@alertStyle" Size="@size" Shade="Shade.Darker" AllowClose=false>
                 ATENCIÓN: Antes de enviar los documentos, asegurate de renombrarlos como se muestran en los siguientes ejemplos.
             </RadzenAlert>
