@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components.Forms;
 using SorteoEstacionamientos.Shared.CapaEntities.Response;
+using SorteoEstacionamientos.Shared.CapaTools;
 using SorteoEstacionamientos.Shared.Constantes;
 using System;
 using System.Collections.Generic;
@@ -56,9 +57,30 @@ namespace SorteoEstacionamientos.Shared.CapaServices_BusinessLogic
             return result;
         }
 
-        //public async Task<Response<List<WebUtils.Link>>?> NewFileFromSelection<T>(string extension, string action, List<T> selected)
-        //{
+        public async Task<Response<List<WebUtils.Link>>?> NewFileFromSelection<T>(string extension, string action, List<T> selected)
+        {
+            Response<List<WebUtils.Link>>? result = new Response<List<WebUtils.Link>>();
 
-        //}
+            try
+            {
+                var response = await _httpClient.PostAsJsonAsync($"{url}/{extension}/{action}", selected);
+
+                var content = await response.Content.ReadAsStringAsync();
+                result = JsonSerializer.Deserialize<Response<List<WebUtils.Link>>>(content, options: _options);
+            }
+            catch (Exception ex)
+            {
+                result!.Message = ex.Message + Environment.NewLine + ex.StackTrace;
+            }
+            return result;
+        }
+
+        public async Task<Response<List<string>>?> ArreglarEnlacesRotos()
+        {
+            var response = await _httpClient.GetAsync($"{url}/*/arreglar_rotos");
+            var content = await response.Content.ReadAsStringAsync();
+
+            return JsonSerializer.Deserialize<Response<List<string>>>(content, options: _options);
+        }
     }
 }
