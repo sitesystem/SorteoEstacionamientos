@@ -35,6 +35,7 @@ builder.Services.AddScoped<RSemestreService>();
 builder.Services.AddScoped<RTipoParticipanteService>();
 builder.Services.AddScoped<RTipoPlacaService>();
 builder.Services.AddScoped<RTipoVehiculoService>();
+builder.Services.AddScoped<RArchivosService>();
 builder.Services.AddLogging();
 
 await builder.Build().RunAsync();
