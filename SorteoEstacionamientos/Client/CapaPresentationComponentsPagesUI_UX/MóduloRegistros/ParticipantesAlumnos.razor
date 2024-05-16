@@ -498,6 +498,11 @@
                         </Helper>
                     </RadzenFormField>
                 </div>
+
+                <RadzenStack Gap="5" Orientation="Orientation.Horizontal" AlignItems="AlignItems.End" Wrap="FlexWrap.Wrap">
+                    <RadzenButton Shade="Shade.Light" Click=@(args => OnClick("Success button ")) Text="Enviar Registro" ButtonStyle="ButtonStyle.Success" />
+                </RadzenStack>
+
             </ChildContent>
         </RadzenFieldset>
     </RadzenCard>
@@ -525,6 +530,11 @@
         oTipoVehiculo = await servicioTipoVehiculo.GetAllDataByStatusAsync(0);
         oEdoRepMex = await servicioEdoRepMex.GetAllDataByStatusAsync(0);
         oTipoPlaca = await servicioTipoPlaca.GetAllDataByStatusAsync(0);
+    }
+
+    private void OnClick(string text)
+    {
+        NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "Button Clicked", Detail = text });
     }
 
     Variant variant = Variant.Filled;
