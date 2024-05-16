@@ -377,20 +377,18 @@
                     </RadzenFormField>
                     <ValidationMessage For="@(() => oParticipante.PartVersion)" />
                 </div>
-
-                <!--                
+                               
                 <div class="col-md-4 col-lg-4">
                     <RadzenFormField Text="Año" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
                         @* <Start><RadzenIcon Icon="person" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start> *@
                         <ChildContent>
-                                <RadzenTextBox @bind-Value="@oParticipante.PartAño" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200"
-                                            @oninput="@((e) => oParticipante.PartAño = e.Value.ToString())" />
-
+                                <RadzenTextBox @bind-Value="@año" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200" />
+                                @* <RadzenNumeric ShowUpDown="false" TValue="int?" @bind-Value="@oParticipante.PartAño"/> *@
                         </ChildContent>
                         <Helper><RadzenText TextStyle="TextStyle.Caption" /></Helper>
                     </RadzenFormField>
                     <ValidationMessage For="@(() => oParticipante.PartAño)" />
-                </div> -->
+                </div> 
 
                 <div class="col-md-4 col-lg-4">
                     <RadzenFormField Text="Color" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
@@ -425,7 +423,7 @@
 
 
     <!-- ******************************************************************* Subida de Archivos ******************************************************************* -->
-    <RadzenCard>
+    <RadzenCard Style="margin-bottom:20px">
         <RadzenFieldset AllowCollapse="true" ExpandTitle="DATOS DEL VEHÍCULO" CollapseTitle="DATOS DEL VEHÍCULO" ExpandAriaLabel="" CollapseAriaLabel="" Class="rz-border-base-500 rz-border-radius-1 rz-shadow-3">
             <HeaderTemplate>
                 <span class="d-inline-flex align-items-center align-middle">
@@ -438,51 +436,55 @@
                 </span>
             </HeaderTemplate>
             <ChildContent>
-                <div class="col-md-4 col-lg-4">
-                    <RadzenFormField Text="Credencial" AllowFloatingLabel="false" Variant="Variant.Outlined" class="w-100 mt-3" Disable="false">
-                        <Start><RadzenIcon Icon="picture_as_pdf" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary"/></Start>
-                        <ChildContent>
-                            <RadzenUpload @ref="oUploadFile_Credencial" 
-                                          Url="@($"/api/RespositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameCredencialIpnine}/{oGuid}")" Accept=".pdf"
-                                          Icon="upload" ChooseText="Examinar Archivo" Auto="false" Multiple="false"/>
-                        </ChildContent>
-                        <Helper>
-                            <RadzenText TextStyle="TextStyle.Body1" TagName="TagName.P" TextAlign="TextAlign.JustifyAll">
-                                Subir en este apartado tu pdf de la crendencial del INE o Escolar
-                            </RadzenText>
-                        </Helper>
-                    </RadzenFormField>
-                </div>
-                <div class="col-md-4 col-lg-4">
-                    <RadzenFormField Text="Tarjeta de Circulación" AllowFloatingLabel="false" Variant="Variant.Outlined" class="w-100 mt-3" Disable="false">
-                        <Start><RadzenIcon Icon="picture_as_pdf" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
-                        <ChildContent>
-                            <RadzenUpload @ref="oUploadFile_TarjetaCirculacion"
-                                          Url="@($"/api/RespositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameTarjetaCirculacion}/{oGuid}")" Accept=".pdf"
-                                          Icon="upload" ChooseText="Examinar Archivo" Auto="false" Multiple="false" />
-                        </ChildContent>
-                        <Helper>
-                            <RadzenText TextStyle="TextStyle.Body1" TagName="TagName.P" TextAlign="TextAlign.JustifyAll">
-                                
-                            </RadzenText>
-                        </Helper>
-                    </RadzenFormField>
-                </div>
-                <div class="col-md-4 col-lg-4">
-                    <RadzenFormField Text="Licencia de Conducir" AllowFloatingLabel="false" Variant="Variant.Outlined" class="w-100 mt-3" Disable="false">
-                        <Start><RadzenIcon Icon="picture_as_pdf" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
-                        <ChildContent>
-                            <RadzenUpload @ref="oUploadFile_LicenciaConducir"
-                                          Url="@($"/api/RespositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameLicenciaConducir}/{oGuid}")" Accept=".pdf"
-                                          Icon="upload" ChooseText="Examinar Archivo" Auto="false" Multiple="false" />
-                        </ChildContent>
-                        <Helper>
-                            <RadzenText TextStyle="TextStyle.Body1" TagName="TagName.P" TextAlign="TextAlign.JustifyAll">
+               <div class="row">
+                    <div class="col-md-4 col-lg-4">
+                        <RadzenFormField Text="Credencial" AllowFloatingLabel="false" Variant="Variant.Outlined" class="w-100 mt-3" Disable="false">
+                            <Start><RadzenIcon Icon="picture_as_pdf" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
+                            <ChildContent>
+                                <RadzenUpload @ref="oUploadFile_Credencial"
+                                              Url="@($"/api/RespositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameCredencialIpnine}/{oGuid}")" Accept=".pdf"
+                                              Icon="upload" ChooseText="Examinar Archivo" Auto="false" Multiple="false" />
+                            </ChildContent>
+                            <Helper>
+                                <RadzenText TextStyle="TextStyle.Body1" TagName="TagName.P" TextAlign="TextAlign.JustifyAll" Style="font-size:small">
+                                    Subir credencial INE o Escolar.
+                                </RadzenText>
+                            </Helper>
+                        </RadzenFormField>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <RadzenFormField Text="Tarjeta de Circulación" AllowFloatingLabel="false" Variant="Variant.Outlined" class="w-100 mt-3" Disable="false">
+                            <Start><RadzenIcon Icon="picture_as_pdf" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
+                            <ChildContent>
+                                <RadzenUpload @ref="oUploadFile_TarjetaCirculacion"
+                                              Url="@($"/api/RespositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameTarjetaCirculacion}/{oGuid}")" Accept=".pdf"
+                                              Icon="upload" ChooseText="Examinar Archivo" Auto="false" Multiple="false" />
+                            </ChildContent>
+                            <Helper>
+                                <RadzenText TextStyle="TextStyle.Body1" TagName="TagName.P" TextAlign="TextAlign.JustifyAll">
 
-                            </RadzenText>
-                        </Helper>
-                    </RadzenFormField>
-                </div>
+                                </RadzenText>
+                            </Helper>
+                        </RadzenFormField>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <RadzenFormField Text="Licencia de Conducir" AllowFloatingLabel="false" Variant="Variant.Outlined" class="w-100 mt-3" Disable="false">
+                            <Start><RadzenIcon Icon="picture_as_pdf" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
+                            <ChildContent>
+                                <RadzenUpload @ref="oUploadFile_LicenciaConducir"
+                                              Url="@($"/api/RespositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameLicenciaConducir}/{oGuid}")" Accept=".pdf"
+                                              Icon="upload" ChooseText="Examinar Archivo" Auto="false" Multiple="false" />
+                            </ChildContent>
+                            <Helper>
+                                <RadzenText TextStyle="TextStyle.Body1" TagName="TagName.P" TextAlign="TextAlign.JustifyAll">
+
+                                </RadzenText>
+                            </Helper>
+                        </RadzenFormField>
+                    </div>
+               </div>
+                
+               
                 <div class="col-md-4 col-lg-4">
                     <RadzenFormField Text="Comprobante de Estudios" AllowFloatingLabel="false" Variant="Variant.Outlined" class="w-100 mt-3" Disable="false">
                         <Start><RadzenIcon Icon="picture_as_pdf" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
@@ -498,10 +500,11 @@
                         </Helper>
                     </RadzenFormField>
                 </div>
-
-                <RadzenStack Gap="5" Orientation="Orientation.Horizontal" AlignItems="AlignItems.End" Wrap="FlexWrap.Wrap">
-                    <RadzenButton Shade="Shade.Light" Click=@(args => OnClick("Success button ")) Text="Enviar Registro" ButtonStyle="ButtonStyle.Success" />
-                </RadzenStack>
+                <div style="margin:10px">
+                    <RadzenStack Gap="5" Orientation="Orientation.Horizontal" AlignItems="AlignItems.End" Wrap="FlexWrap.Wrap">
+                        <RadzenButton Shade="Shade.Light" Click=@(args => OnClick("Success button ")) Text="Enviar Registro" ButtonStyle="ButtonStyle.Success" />
+                    </RadzenStack>
+                </div>
 
             </ChildContent>
         </RadzenFieldset>
@@ -513,6 +516,7 @@
 
     [Parameter] public string? ActionAddEdit { get; set; }
     [Parameter] public string? TipoParticipante { get; set; }
+    string año;
 
     private RequestDTO_Participante? oParticipante = new();
     public Response<List<RequestViewModel_TipoParticipante>>? oTipoParticipante = new();
@@ -545,7 +549,13 @@
 
     public async Task OnInvalidHandled_ScrollToTop(){}
 
+    //año
+    DateTime value = DateTime.Now;
 
+    void OnCurrentDateChanged(DateTime args)
+    {
+        value = new DateTime(args.Year, 1, 1);
+    }
     // Subida de Archivos
     private RadzenUpload? oUploadFile_Credencial = new();
     private RadzenUpload? oUploadFile_TarjetaCirculacion = new();
