@@ -19,6 +19,8 @@
 @using System.Text.Json
 
 @using SorteoEstacionamientos.Client
+@using SorteoEstacionamientos.Client.CapaPresentationComponentsPagesUI_UX
+@using SorteoEstacionamientos.Client.CapaPresentationComponentsPagesUI_UX.Login
 @using SorteoEstacionamientos.Client.Shared
 @using SorteoEstacionamientos.Shared.CapaServices_BusinessLogic
 @using SorteoEstacionamientos.Shared.CapaEntities.Request
@@ -37,6 +39,7 @@
 @inject TooltipService TooltipService
 
 @* LogIn / LogOut *@
+@inject ILoginServices loginService
 
 @* Capa Tools Helper *@
 @inject IJSRuntime JSRuntime

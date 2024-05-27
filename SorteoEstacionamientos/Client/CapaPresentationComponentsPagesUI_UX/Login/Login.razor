@@ -1,0 +1,35 @@
+﻿
+
+@attribute [AllowAnonymous]
+
+<PageTitle>SSOE | Inicio de Sesión</PageTitle>
+
+@layout LoginLayout
+
+<AuthorizeView>
+    <Authorized>
+        @{
+            if (context.User.Identity?.IsAuthenticated == true)
+                navigationManager.NavigateTo("/NuevaContraseña");
+        }
+    </Authorized>
+    <NotAuthorized>
+    </NotAuthorized>
+</AuthorizeView>
+
+<RadzenComponents />
+
+<style type="text/css">
+</style>
+
+@code {
+    private RequestDTO_LoginAuth oLoginCredentials = new();
+    private bool busy;
+    private string contentLoginBtn = "Iniciar Sesión";
+    private bool errorMsgVisible = false;
+    private string contentErrorMsg = string.Empty;
+    private bool password = true;
+    //private Response<RequestViewModel_Escuela>? oEscuela = new();
+
+    //protected override async Task OnInitializedAsync() => oEscuela = await servicioEscuela.GetDataByIdAsync(1);
+}

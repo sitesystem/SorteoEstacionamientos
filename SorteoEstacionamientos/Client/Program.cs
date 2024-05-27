@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Radzen;
 
 using SorteoEstacionamientos.Client;
+using SorteoEstacionamientos.Client.CapaPresentationComponentsPagesUI_UX.Login;
+
 using SorteoEstacionamientos.Shared.CapaServices_BusinessLogic;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -15,6 +17,11 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 // Inyección de Dependencias - Módulo de Login
 builder.Services.AddAuthorizationCore();
+builder.Services.ConfigureAuthorizationPolicies();
+
+builder.Services.AddScoped<JwtAuthenticatorProvider>();
+builder.Services.AddScoped<AuthenticationStateProvider, JwtAuthenticatorProvider>(provider => provider.GetRequiredService<JwtAuthenticatorProvider>());
+builder.Services.AddScoped<ILoginServices, JwtAuthenticatorProvider>(provider => provider.GetRequiredService<JwtAuthenticatorProvider>());
 
 // Radzen Components and Services
 builder.Services.AddRadzenComponents();

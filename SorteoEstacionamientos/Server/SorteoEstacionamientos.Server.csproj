@@ -35,7 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CapaDataAccess\Controllers\LoginAuth\" />
     <Folder Include="CapaDataAccess\DBContext\" />
     <Folder Include="wwwroot\Repositorio\" />
   </ItemGroup>
