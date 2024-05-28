@@ -25,6 +25,7 @@ builder.Services.AddScoped<ILoginServices, JwtAuthenticatorProvider>(provider =>
 
 // Radzen Components and Services
 builder.Services.AddRadzenComponents();
+
 // builder.Services.AddScoped<ContextMenuService>();
 // builder.Services.AddScoped<DialogService>();
 // builder.Services.AddScoped<NotificationService>();
@@ -43,6 +44,7 @@ builder.Services.AddScoped<RTipoParticipanteService>();
 builder.Services.AddScoped<RTipoPlacaService>();
 builder.Services.AddScoped<RTipoVehiculoService>();
 builder.Services.AddScoped<RArchivosService>();
+
 builder.Services.AddLogging();
 
 await builder.Build().RunAsync();
