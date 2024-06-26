@@ -195,11 +195,11 @@
 
 
 
-@inherits LayoutComponentBase
 
-<div class="page">
+
+<!-- <div class="page">
     <div class="sidebar">
-        <NavMenu />
+        <Login />
     </div>
 
     <main>
@@ -211,4 +211,25 @@
             @Body
         </article>
     </main>
-</div> 
+</div> -->
+
+
+@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="main">
+        @Body
+    </div>
+</div>
+
+<style>
+    .page {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main {
+        flex: 1;
+        padding: 10px;
+    }
+</style>
