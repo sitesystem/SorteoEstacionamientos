@@ -24,7 +24,11 @@
 
   <ItemGroup>
     <Folder Include="CapaPresentationComponentsPagesUI_UX\MóduloSorteo\" />
+<<<<<<< HEAD
     <Folder Include="CapaPresentationComponentsPagesUI_UX\PantallaInicio\" />
+=======
+    <Folder Include="wwwroot\documentos\" />
+>>>>>>> 9364ba86dea872c8be5e562eb73a38dd1e14714a
   </ItemGroup>
 
 </Project>
