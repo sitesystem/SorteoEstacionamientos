@@ -23,10 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CapaPresentationComponentsPagesUI_UX\MóduloRegistros\" />
     <Folder Include="CapaPresentationComponentsPagesUI_UX\MóduloSorteo\" />
     <Folder Include="CapaPresentationComponentsPagesUI_UX\PantallaInicio\" />
-    <Folder Include="wwwroot\documentos\" />
   </ItemGroup>
 
 </Project>

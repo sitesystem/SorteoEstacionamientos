@@ -1,29 +1,17 @@
 ﻿@page "/ParticipantesAlumnos"
 <PageTitle>SSOE | Regristro Participantes</PageTitle>
 
-
-<!-- Encabezado de Página (Header Fixed-Top) -->
-<header>
-    
-    <div class="d-none d-sm-none d-md-block d-lg-block d-xl-block d-xxl-block">
-        <RadzenHeader class="rz-border-radius-0 rz-py-0 rz-background-color-base-200" Style="border-bottom: 8px solid #076633; position:fixed;">
-            <RadzenImage Path="./cintilloSSOE.png" style="width=100px" AlternateText="SSEO - Sistema de Sorteo de Estacionamiento" class="img-fluid rz-my-0" />
-        </RadzenHeader>
-    </div>
-
-</header>
-<hr class="d-block d-sm-block d-md-none d-lg-none d-xl-none d-xxl-none rz-my-10" />
-
-
-<br /><br />
-<h1 class="Estilo1"><i class="fa fa-dropbox fa-md"></i> Registro para sorteo de estacionamiento</h1>
+<!-- <h1 class="Estilo1"><i class="fa fa-dropbox fa-md"></i> Registro para sorteo de estacionamiento</h1> -->
 
 <EditForm Model="@oParticipante" OnValidSubmit="@OnValidHandled" OnInvalidSubmit="@OnInvalidHandled_ScrollToTop">
+
+    <DataAnnotationsValidator />
 
     <!-- ******************************************************************* AVISOS DE ALERTA ******************************************************************* -->
     <div>
         <RadzenStack Gap="5">
-            <RadzenAlert AllowClose="false" AlertStyle="AlertStyle.Success" Variant="Variant.Filled">
+            <RadzenAlert Title="" AllowClose="false" AlertStyle="AlertStyle.Success" Variant="Variant.Filled"
+                         Visible="@(IdTipoPersonal == 1 || TipoPersonal == "alumno_inscrito" ? true : false)">
                 Todos los campos son obligatorios.
             </RadzenAlert>
         </RadzenStack>
@@ -51,7 +39,7 @@
                     <RadzenFormField Text="Nombre(s)" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
                         @* <Start><RadzenIcon Icon="person" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start> *@
                         <ChildContent>
-                                <RadzenTextBox @bind-Value="@oParticipante.PartNombre" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200" Placeholder="Escribe tu(s) nombre(s)"
+                                <RadzenTextBox Name="@($@"names_{TipoPersonal}")" @bind-Value="@oParticipante.PartNombre" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200" Placeholder="Escribe tu(s) nombre(s)"
                                             @oninput="@((e) => oParticipante.PartNombre = e.Value.ToString().ToUpper())"
                                             onkeypress="return /^[A-Za-z. ]+$/.test(String.fromCharCode(event.keyCode || event.which));" />
                              
@@ -65,7 +53,7 @@
                     <RadzenFormField Text="Primer Apellido" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
                         @* <Start><RadzenIcon Icon="person" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start> *@
                         <ChildContent>
-                            <RadzenTextBox @bind-Value="@oParticipante.PartPrimerApellido" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200" Placeholder="Primer Apellido"
+                            <RadzenTextBox Name="@($@"lastName1_{TipoPersonal}")" @bind-Value="@oParticipante.PartPrimerApellido" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200" Placeholder="Primer Apellido"
                                             @oninput="@((e) => oParticipante.PartPrimerApellido = e.Value.ToString().ToUpper())"
                                             onkeypress="return /^[A-Za-z. ]+$/.test(String.fromCharCode(event.keyCode || event.which));" />
 
@@ -79,7 +67,7 @@
                     <RadzenFormField Text="Segundo Apellido" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
                         @* <Start><RadzenIcon Icon="person" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start> *@
                         <ChildContent>
-                            <RadzenTextBox @bind-Value="@oParticipante.PartSegundoApellido" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200" Placeholder="Segundo Apellido"
+                            <RadzenTextBox Name="@($@"lastName2_{TipoPersonal}")" @bind-Value="@oParticipante.PartSegundoApellido" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200" Placeholder="Segundo Apellido"
                                             @oninput="@((e) => oParticipante.PartSegundoApellido = e.Value.ToString().ToUpper())"
                                             onkeypress="return /^[A-Za-z. ]+$/.test(String.fromCharCode(event.keyCode || event.which));" />
 
@@ -93,7 +81,7 @@
                     <RadzenFormField Text="CURP" AllowFloatingLabel="false" Placeholder="" AllowClear="true" Variant="Variant.Outlined" Class="w-100 mt-3" Disabled="false">
                         <Start><RadzenIcon Icon="document_scanner" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
                         <ChildContent>
-                                <RadzenTextBox  @bind-Value="@oParticipante.PartCurp" style="border-bottom: 3px solid #026969;;" MinLength="0" MaxLength="18"
+                                <RadzenTextBox Name="@($@"curp_{TipoPersonal}")" @bind-Value="@oParticipante.PartCurp" style="border-bottom: 3px solid #026969;;" MinLength="0" MaxLength="18"
                                             @oninput="@((e) => oParticipante.PartCurp = e.Value.ToString().ToUpper())"
                                             onkeypress="return /^[A-Za-z0-9]+$/.test(String.fromCharCode(event.keyCode || event.which));" />
                         </ChildContent>
@@ -110,9 +98,9 @@
                     <RadzenFormField Text="No. de Boleta" AllowFloatingLabel="false" Placeholder="" AllowClear="true" Variant="Variant.Outlined" Class="w-100 mt-3" Disabled="false">
                         <Start><RadzenIcon Icon="dialpad" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
                         <ChildContent>
-                                <RadzenTextBox @bind-Value="@oParticipante.PartBoleta" style="border-bottom: 3px solid #026969;;" MinLength="0" MaxLength="18"
-                                               @oninput="@((e) => oParticipante.PartBoleta = e.Value.ToString().ToUpper())"
-                                               onkeypress="return /^[A-Za-z0-9]+$/.test(String.fromCharCode(event.keyCode || event.which));" />
+                                <RadzenTextBox Name="@($@"boleta_{TipoPersonal}")" @bind-Value="@oParticipante.PartBoleta" style="border-bottom: 3px solid #026969;;" MinLength="0" MaxLength="18"
+                                               Placeholder="@($@"****{oEscuela.Data.EscNoEscuela}****")" aria-label="enter password"
+                                               @oninput="(e => oParticipante.PartBoleta = e.Value.ToString())" @onkeyup="@ValidarBoleta" />
                         </ChildContent>
                         <Helper>
                             <RadzenText TextStyle="TextStyle.Caption"  />
@@ -125,7 +113,7 @@
                     <RadzenFormField Text="Tipo de Solicitante" AllowFloatingLabel="false" Variant="Variant.Outlined" Class="w-100 mt-3" Disabled="false">
                         <Start><RadzenIcon Icon="tag" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
                         <ChildContent>
-                            <RadzenDropDown 
+                            <RadzenDropDown Name="@($@"tipo_personal_{TipoPersonal}")"
                                             @bind-Value="@oParticipante.PartIdTipoParticipante"
                                             TValue="int"
                                             ValueProperty="TipopartNombre"
@@ -152,7 +140,8 @@
                     <RadzenFormField Text="Carrera" AllowFloatingLabel="false" Variant="Variant.Outlined" Class="w-100 mt-3" Disabled="false">
                         <Start><RadzenIcon Icon="tag" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
                         <ChildContent>
-                            <RadzenDropDown @bind-Value="@oParticipante.PartIdCarrera"
+                            <RadzenDropDown Name="@($@"college_career_{TipoPersonal}")"
+                                            @bind-Value="@oParticipante.PartIdCarrera"
                                             TValue="int"
                                                 ValueProperty="CarrNombre"
                                                 TextProperty="CarrNombre"
@@ -178,7 +167,8 @@
                     <RadzenFormField Text="Semestre" AllowFloatingLabel="false" Variant="Variant.Outlined" Class="w-100 mt-3" Disabled="false">
                         <Start><RadzenIcon Icon="tag" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
                         <ChildContent>
-                            <RadzenDropDown @bind-Value="@oParticipante.PartIdSemestre"
+                            <RadzenDropDown Name="@($@"semester_{TipoPersonal}")"
+                                            @bind-Value="@oParticipante.PartIdSemestre"
                                             TValue="int"
                                             ValueProperty="NumSemestre"
                                             TextProperty="NumSemestre"
@@ -531,10 +521,15 @@
     [Parameter] public string? TipoParticipante { get; set; }
     string año;
 
+    @*///////////////////////////////////////////////  OBTENER PARÁMETROS DEL TIPO DE PERSONAL  ///////////////////////////////////////////////*@
+    [Parameter] public int IdTipoPersonal { get; set; }
+    [Parameter] public string? TipoPersonal { get; set; }
+
     private RequestDTO_Participante? oParticipante = new();
     public Response<List<RequestViewModel_TipoParticipante>>? oTipoParticipante = new();
     public Response<List<RequestViewModel_Carrera>>? oCarrera = new();
     public Response<List<RequestViewModel_Semestre>>? oSemestre = new();
+    public Response<List<RequestViewModel_Escuela>>? oEscuela = new();
     public Response<List<RequestViewModel_TipoVehiculo>>? oTipoVehiculo = new();
     public Response<List<RequestViewModel_EdoRepMex>>? oEdoRepMex = new();
     public Response<List<RequestViewModel_TipoPlaca>>? oTipoPlaca = new();
@@ -544,10 +539,16 @@
         oTipoParticipante = await servicioTipoParticipante.GetAllDataByStatusAsync(0);
         oCarrera = await servicioCarrera.GetAllDataByStatusAsync(0);
         oSemestre = await servicioSemestre.GetAllDataByStatusAsync(0);
+        oEscuela = await servicioEscuela.GetAllDataByStatusAsync(0);
         oTipoVehiculo = await servicioTipoVehiculo.GetAllDataByStatusAsync(0);
         oEdoRepMex = await servicioEdoRepMex.GetAllDataByStatusAsync(0);
         oTipoPlaca = await servicioTipoPlaca.GetAllDataByStatusAsync(0);
     }
+
+
+    @*///////////////////////////////////////////////  VALIDAR BOLETA DEL ALUMNO  ///////////////////////////////////////////////*@
+    private bool flagErrorBoletaAlumno = false;
+    private async Task ValidarBoleta() => flagErrorBoletaAlumno = !System.Text.RegularExpressions.Regex.IsMatch(oParticipante.PartBoleta, @"^\d{4}" + oEscuela.Data + @"\d{4}$");
 
     private void OnClick(string text)
     {
