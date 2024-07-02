@@ -1,0 +1,81 @@
+﻿@using System.ComponentModel
+
+@implements IAsyncDisposable
+
+<div id="@UniqueId"></div>
+
+@code
+{
+    [Parameter]
+    public string? SiteKey { get; set; }
+
+    [Parameter]
+    public EventCallback<string> OnSuccess { get; set; }
+
+    [Parameter]
+    public EventCallback OnExpired { get; set; }
+
+    private IJSObjectReference? module;
+
+    private string UniqueId = Guid.NewGuid().ToString();
+
+    private int WidgetId;
+
+    [JSInvokable, EditorBrowsable(EditorBrowsableState.Never)]
+    public void CallbackOnSuccess(string response)
+    {
+        if (OnSuccess.HasDelegate)
+            OnSuccess.InvokeAsync(response);
+    }
+
+    [JSInvokable, EditorBrowsable(EditorBrowsableState.Never)]
+    public void CallbackOnExpired()
+    {
+        if (OnExpired.HasDelegate)
+            OnExpired.InvokeAsync(null);
+    }
+
+    public ValueTask<string> GetResponseAsync()
+    {
+        return JSRuntime.InvokeAsync<string>("My.reCAPTCHA.getResponse", WidgetId);
+    }
+
+    // protected override async Task OnInitializedAsync()
+    // {
+    //     module = await JSRuntime.InvokeAsync<IJSObjectReference>
+    //         (
+    //             "import",
+    //             "./CapaPresentation.ComponentsPages.UI-UX/ReCAPTCHA.razor.js"
+    //         );
+
+    //     await module.InvokeAsync<object>("reCAPTCHA.init");
+
+    //     WidgetId = await module.InvokeAsync<int>("reCAPTCHA.render", DotNetObjectReference.Create(this), UniqueId, SiteKey);
+    // }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+
+        if (firstRender)
+        {
+            module = await JSRuntime.InvokeAsync<IJSObjectReference>
+            (
+                "import",
+                "./CapaPresentationComponentsPagesUI_UX/ReCAPTCHA.razor.js"
+            );
+
+            await module.InvokeAsync<object>("reCAPTCHA.init");
+
+            WidgetId = await module.InvokeAsync<int>("reCAPTCHA.render", DotNetObjectReference.Create(this), UniqueId, SiteKey);
+        }
+    }
+
+    async ValueTask IAsyncDisposable.DisposeAsync()
+    {
+        if (module is not null)
+        {
+            await module.DisposeAsync();
+        }
+    }
+}
