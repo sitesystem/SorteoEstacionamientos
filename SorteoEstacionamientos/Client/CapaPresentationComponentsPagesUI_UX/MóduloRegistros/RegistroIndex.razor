@@ -16,7 +16,7 @@
     <!-- ... Contenido para pantallas grandes ... -->
     <div class="d-none d-sm-none d-md-block d-lg-block d-xl-block d-xxl-block">
         <RadzenHeader class="rz-border-radius-0 rz-py-0 rz-background-color-base-100" Style="border-bottom: 8px solid #076633;">
-            <RadzenImage Path="./cintilloSSOE.png" Style="" AlternateText="SACI - Sistema de Atención para Correos Institucionales" class="img-fluid rz-my-0" />
+            <RadzenImage Path="./cintilloSSOE.png" Style="" AlternateText="SSOE - Sistema de Sorteo de Estacionamiento" class="img-fluid rz-my-0" />
         </RadzenHeader>
     </div>
 </header>
@@ -54,14 +54,12 @@
                         <RadzenTabs TabPosition="TabPosition.Top" RenderMode="TabRenderMode.Client">
                             <Tabs>
                                 <RadzenTabsItem Text="@($@"Alumn@ Inscrit@")" Icon="school" IconColor="@Colors.Base800" Style="font-family:var(--rz-text-font-family);">
-                                    <Alumnos ActionAddEdit="agregar" oEditUsuario="null" IdTipoPersonal="1" TipoPersonal="alumno_inscrito" />   @* Agregar Registro Alumno Inscrito *@
+                                    <ParticipantesAlumnos ActionAddEdit="agregar" oEditParticipante="null" IdTipoParticipante="1" TipoParticipante="alumno_inscrito" />   @* Agregar Registro Alumno Inscrito *@
                                 </RadzenTabsItem>
-                                <RadzenTabsItem Text="@($@"Egresad@")" Icon="school" IconColor="@Colors.Base800" Style="font-family:var(--rz-text-font-family);">
-                                    <Alumnos ActionAddEdit="agregar" oEditUsuario="null" IdTipoPersonal="2" TipoPersonal="egresado" />          @* Agregar Registro Alumno Egresado *@
-                                </RadzenTabsItem>
+                                
                                 <RadzenTabsItem Text="Maestría" Icon="school" IconColor="@Colors.Base800" Style="font-family:var(--rz-text-font-family);">
-                                    <Alumnos ActionAddEdit="agregar" oEditUsuario="null" IdTipoPersonal="3" TipoPersonal="maestria" />          @* Agregar Registro Alumno Maestría *@
-                                </RadzenTabsItem>
+                                    <ParticipantesAlumnos ActionAddEdit="agregar" oEditParticipante="null" IdTipoParticipante="2" TipoParticipante="maestria" />          @* Agregar Registro Alumno Maestría *@
+                                </RadzenTabsItem>       
                             </Tabs>
                         </RadzenTabs>
                     </RadzenTabsItem>
@@ -69,13 +67,13 @@
                         <RadzenTabs RenderMode="TabRenderMode.Client">
                             <Tabs>
                                 <RadzenTabsItem Text="PAAE (Administrativo)" Icon="badge" IconColor="@Colors.Base800" Style="font-family:var(--rz-text-font-family);">
-                                    <Empleados ActionAddEdit="agregar" oEditUsuario="null" IdTipoPersonal="4" TipoPersonal="administrativo" />  @* Agregar Registro Empleado Administrativo *@
+                                    <Empleados ActionAddEdit="agregar" oEditUsuario="null" IdTipoParticipante="4" TipoParticipante="administrativo" />  @* Agregar Registro Empleado Administrativo *@
                                 </RadzenTabsItem>
                                 <RadzenTabsItem Text="Docente" Icon="badge" IconColor="@Colors.Base800" Style="font-family:var(--rz-text-font-family);">
-                                    <Empleados ActionAddEdit="agregar" oEditUsuario="null" IdTipoPersonal="5" TipoPersonal="docente" />         @* Agregar Registro Empleado Docente *@
+                                    <Empleados ActionAddEdit="agregar" oEditUsuario="null" IdTipoParticipante="5" TipoParticipante="docente" />         @* Agregar Registro Empleado Docente *@
                                 </RadzenTabsItem>
                                 <RadzenTabsItem Text="Honorarios" Icon="badge" IconColor="@Colors.Base800" Style="font-family:var(--rz-text-font-family);">
-                                    <Empleados ActionAddEdit="agregar" oEditUsuario="null" IdTipoPersonal="6" TipoPersonal="honorarios" />      @* Agregar Registro Empleado Honorarios *@
+                                    <Empleados ActionAddEdit="agregar" oEditUsuario="null" IdTipoParticipante="6" TipoParticipante="honorarios" />      @* Agregar Registro Empleado Honorarios *@
                                 </RadzenTabsItem>
                             </Tabs>
                         </RadzenTabs>
