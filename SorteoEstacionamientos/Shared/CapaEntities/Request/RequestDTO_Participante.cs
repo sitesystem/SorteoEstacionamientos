@@ -69,9 +69,9 @@ public class RequestDTO_Participante
     /// Número de Teléfono Celular del Participante
     /// </summary>
     [Column("partNoTelCelular")]
-    [StringLength(10)]
+    [StringLength(20)]
     [Required(AllowEmptyStrings = false, ErrorMessage = "Campo No. DE CELULAR requerido.")]
-    [MinLength(14, ErrorMessage = "Verifique el No. DE CELULAR que tenga al menos 10 dígitos.")]
+    [MinLength(14, ErrorMessage = "Verifique que el No. DE CELULAR tenga al menos 10 dígitos.")]
     public string PartNoTelCelular { get; set; } = null!;
 
     /// <summary>
