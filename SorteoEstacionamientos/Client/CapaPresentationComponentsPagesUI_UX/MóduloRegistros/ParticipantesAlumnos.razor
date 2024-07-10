@@ -2,18 +2,22 @@
 
 <PageTitle>SSOE | Regristro Participantes</PageTitle>
 
-<!-- <h1 class="Estilo1"><i class="fa fa-dropbox fa-md"></i> Registro para sorteo de estacionamiento</h1> -->
+<!-- <h1 class="Estilo1"><i class="fa fa-dropbox fa-md"></i> Registro para sorteo de estacionamiento</h1> -->  
 
-<EditForm Model="@oParticipante" OnValidSubmit="@OnValidHandled" OnInvalidSubmit="@OnInvalidHandled_ScrollToTop">
+@if (oCarreras is not null && oCarreras != null)
+{
+
+
+    <EditForm Model="@oParticipante" OnValidSubmit="@OnValidHandled" OnInvalidSubmit="@OnInvalidHandled_ScrollToTop">
 
     <DataAnnotationsValidator />
 
     <!-- ******************************************************************* AVISOS DE ALERTA ******************************************************************* 
     
-   <div>
+    <div>
         <RadzenStack Gap="5">
             <RadzenAlert Title="" AllowClose="false" AlertStyle="AlertStyle.Success" Variant="Variant.Filled"
-                         Visible="@(IdTipoPersonal == 1 || TipoPersonal == "alumno_inscrito" ? true : false)">
+                            Visible="@(IdTipoPersonal == 1 || TipoPersonal == "alumno_inscrito" ? true : false)">
                 Todos los campos son obligatorios.
             </RadzenAlert>
         </RadzenStack>
@@ -24,7 +28,7 @@
                 se le suspenderá el derecho del uso del estacionamiento.
             </RadzenAlert>
         </RadzenStack>
-      </div> -->
+        </div> -->
 
 
     <!-- ******************************************************************* DATOS PERSONALES ******************************************************************* -->
@@ -104,7 +108,7 @@
                             @if (IdTipoParticipante == 1)
                             {
                                 <RadzenTextBox Name="@($@"boleta_{TipoParticipante}")" @bind-Value="@oParticipante.PartBoleta" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="18"
-                                               Placeholder="@($@"****{oEscuela.Data}****")" aria-label="enter password"
+                                                Placeholder="@($@"****{oEscuelas.Data.EscNoEscuela}****")" aria-label="enter password"
                                     @oninput="(e => oParticipante.PartBoleta = e.Value.ToString())" @onkeyup="@ValidarBoleta" />
                             }
                             else if(IdTipoParticipante == 2)
@@ -119,15 +123,15 @@
                     </RadzenFormField>
                     <!-- @if (IdTipoParticipante == 1)
                     {
-                        <ValidationMessage For="@(() => oParticipante.PartBoletaAlumno)" />
-                        <RadzenAlert Title="Ingresa tu Boleta" Text="@($@"Formato Válido: ****{oEscuela.Data.EscNoEscuela}****")" AlertStyle="AlertStyle.Danger" Variant="Variant.Filled" Size="AlertSize.Small" Shade="Shade.Darker"
+                        <ValidationMessage For="@(() => oParticipante.PartBoleta)" />
+                        <RadzenAlert Title="Ingresa tu Boleta" Text="@($@"Formato Válido: ****{oEscuelas.Data.EscNoEscuela}****")" AlertStyle="AlertStyle.Danger" Variant="Variant.Filled" Size="AlertSize.Small" Shade="Shade.Darker"
                                         ShowIcon="true" AllowClose="false" class="mb-0" @bind-Visible="flagErrorBoletaAlumno" />
                     }
-                    else if (IdTipoParticip[ante] == 2)
+                    else if (IdTipoParticipante] == 2)
                     {
-                        <ValidationMessage For="@(() => oParticipante.PartBoletaMaestria)" />
+                        <ValidationMessage For="@(() => oParticipante.PartBoleta)" />
                     }-->
-                </div>
+                </div> 
 
                 <!-- <div class="col-md-4 col-lg-4">
                     <RadzenFormField Text="Tipo de Solicitante" AllowFloatingLabel="false" Variant="Variant.Outlined" Class="w-100 mt-3" Disabled="false">
@@ -203,9 +207,9 @@
                                 <RadzenDropDown Name="@($@"semester_{TipoParticipante}")"
                                                 @bind-Value="@oParticipante.PartIdSemestre"
                                                 TValue="int"
-                                                ValueProperty="NumSemestre"
-                                                TextProperty="NumSemestre"
-                                                Data="@oSemestre.Data"
+                                                ValueProperty="Key"
+                                                TextProperty="Value"
+                                                Data="@oSemestres"
                                                 AllowClear="true"
                                                 AllowFiltering="true"
                                                 FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
@@ -436,7 +440,7 @@
                     <RadzenFormField Text="Marca" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
                         @* <Start><RadzenIcon Icon="person" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start> *@
                         <ChildContent>
-                             <RadzenTextBox Name="@($@"marca_{TipoParticipante}")" @bind-Value="@oParticipante.PartMarca" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200"
+                                <RadzenTextBox Name="@($@"marca_{TipoParticipante}")" @bind-Value="@oParticipante.PartMarca" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200"
                                             @oninput="@((e) => oParticipante.PartMarca = e.Value.ToString().ToUpper())" />
 
                         </ChildContent>
@@ -449,7 +453,7 @@
                     <RadzenFormField Text="Modelo" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
                         @* <Start><RadzenIcon Icon="person" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start> *@
                         <ChildContent>
-                             <RadzenTextBox Name="@($@"modelo_{TipoParticipante}")" @bind-Value="@oParticipante.PartModelo" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200"
+                                <RadzenTextBox Name="@($@"modelo_{TipoParticipante}")" @bind-Value="@oParticipante.PartModelo" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200"
                                             @oninput="@((e) => oParticipante.PartModelo = e.Value.ToString().ToUpper())" />
 
                         </ChildContent>
@@ -495,6 +499,19 @@
                     </RadzenFormField>
                     <ValidationMessage For="@(() => oParticipante.PartColor)" />
                 </div>
+
+                <div class="col-md-4 col-lg-4">
+                    <RadzenFormField Text="No. de Empleado" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
+                        @* <Start><RadzenIcon Icon="person" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start> *@
+                        <ChildContent>
+                            <RadzenTextBox Name="@($@"no_empleado_{TipoParticipante}")" @bind-Value="@oParticipante.PartNoEmpleado" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200"
+                                            @oninput="@((e) => oParticipante.PartNoEmpleado = e.Value.ToString().ToUpper())" />
+
+                        </ChildContent>
+                        <Helper><RadzenText TextStyle="TextStyle.Caption" /></Helper>
+                    </RadzenFormField>
+                    <ValidationMessage For="@(() => oParticipante.PartNoEmpleado)" />
+                </div>
                 
             </div> <!-- /div class="row" -->
 
@@ -529,14 +546,20 @@
                 </span>
             </HeaderTemplate>
             <ChildContent>
-               <div class="row">
+                <div class="row">
                     <div class="col-md-4 col-lg-4">
                         <RadzenFormField Text="Credencial" AllowFloatingLabel="false" Variant="Variant.Outlined" class="w-100 mt-3" Disable="false">
                             <Start><RadzenIcon Icon="picture_as_pdf" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
                             <ChildContent>
                                 <RadzenUpload @ref="oUploadFile_CredencialIpnIne"
-                                              Url="@($"/api/RespositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameCredencialIpnine}/{oGuid}")" Accept=".pdf"
-                                              Icon="upload" ChooseText="Examinar Archivo" Auto="false" Multiple="false" />
+                                                Url="@($"/api/RespositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameCredencialIpnine}/{oGuid}")" 
+                                                Accept=".pdf" Icon="upload" ChooseText="Examinar Archivo" 
+                                                Auto="false" Multiple="false" 
+                                                Change=@(args => OnChangeFiles(args, Credencial_Ipn_Ine))
+                                                Error=@(args => OnErrorFiles(args, "FileInput"))
+                                                InputAttributes="@(new Dictionary<string, object>() { { "cursor", "pointer" } })"
+                                                Progress="@(args => OnProgressFiles(args, "Manual Upload"))"
+                                                Complete="@(args => OnCompleteFiles(args))" />
                             </ChildContent>
                             <Helper>
                                 <RadzenText TextStyle="TextStyle.Body1" TagName="TagName.P" TextAlign="TextAlign.JustifyAll" Style="font-size:small">
@@ -544,14 +567,23 @@
                                 </RadzenText>
                             </Helper>
                         </RadzenFormField>
+                        <ValidationMessage For="@(() => oParticipante.PartFileNameCredencialIpnine)" />
+                        <ValidationMessage For="@(() => oParticipante.PartFileSizeCredencialIpnine)" />
                     </div>
+
                     <div class="col-md-4 col-lg-4">
                         <RadzenFormField Text="Tarjeta de Circulación" AllowFloatingLabel="false" Variant="Variant.Outlined" class="w-100 mt-3" Disable="false">
                             <Start><RadzenIcon Icon="picture_as_pdf" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
                             <ChildContent>
                                 <RadzenUpload @ref="oUploadFile_TarjetaCirculacion"
-                                              Url="@($"/api/RespositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameTarjetaCirculacion}/{oGuid}")" Accept=".pdf"
-                                              Icon="upload" ChooseText="Examinar Archivo" Auto="false" Multiple="false" />
+                                                Url="@($"/api/RespositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameTarjetaCirculacion}/{oGuid}")" 
+                                                Accept=".pdf" Icon="upload" ChooseText="Examinar Archivo" 
+                                                Auto="false" Multiple="false" 
+                                                Change=@(args => OnChangeFiles(args, Tarjeta_Circulacion))
+                                                Error=@(args => OnErrorFiles(args, "FileInput"))
+                                                InputAttributes="@(new Dictionary<string, object>() { { "cursor", "pointer" } })"
+                                                Progress="@(args => OnProgressFiles(args, "Manual Upload"))"
+                                                Complete="@(args => OnCompleteFiles(args))" />
                             </ChildContent>
                             <Helper>
                                 <RadzenText TextStyle="TextStyle.Body1" TagName="TagName.P" TextAlign="TextAlign.JustifyAll">
@@ -559,14 +591,23 @@
                                 </RadzenText>
                             </Helper>
                         </RadzenFormField>
+                        <ValidationMessage For="@(() => oParticipante.PartFileNameTarjetaCirculacion)" />
+                        <ValidationMessage For="@(() => oParticipante.PartFileSizeTarjetaCirculacion)" />
                     </div>
+
                     <div class="col-md-4 col-lg-4">
                         <RadzenFormField Text="Licencia de Conducir" AllowFloatingLabel="false" Variant="Variant.Outlined" class="w-100 mt-3" Disable="false">
                             <Start><RadzenIcon Icon="picture_as_pdf" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
                             <ChildContent>
                                 <RadzenUpload @ref="oUploadFile_LicenciaConducir"
-                                              Url="@($"/api/RespositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameLicenciaConducir}/{oGuid}")" Accept=".pdf"
-                                              Icon="upload" ChooseText="Examinar Archivo" Auto="false" Multiple="false" />
+                                                Url="@($"/api/RespositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameLicenciaConducir}/{oGuid}")" 
+                                                Accept=".pdf" Icon="upload" ChooseText="Examinar Archivo" 
+                                                Auto="false" Multiple="false"
+                                                Change=@(args => OnChangeFiles(args, Licencia_Conducir))
+                                                Error=@(args => OnErrorFiles(args, "FileInput"))
+                                                InputAttributes="@(new Dictionary<string, object>() { { "cursor", "pointer" } })"
+                                                Progress="@(args => OnProgressFiles(args, "Manual Upload"))"
+                                                Complete="@(args => OnCompleteFiles(args))" />
                             </ChildContent>
                             <Helper>
                                 <RadzenText TextStyle="TextStyle.Body1" TagName="TagName.P" TextAlign="TextAlign.JustifyAll">
@@ -574,8 +615,10 @@
                                 </RadzenText>
                             </Helper>
                         </RadzenFormField>
+                        <ValidationMessage For="@(() => oParticipante.PartFileNameLicenciaConducir)" />
+                        <ValidationMessage For="@(() => oParticipante.PartFileSizeLicenciaConducir)" />
                     </div>
-               </div>
+                </div>
                 
                
                 <div class="col-md-4 col-lg-4">
@@ -583,8 +626,14 @@
                         <Start><RadzenIcon Icon="picture_as_pdf" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start>
                         <ChildContent>
                             <RadzenUpload @ref="oUploadFile_ComprobanteEstudios"
-                                          Url="@($"/api/RespositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileSizeComprobanteEstudiosHorario}/{oGuid}")" Accept=".pdf"
-                                          Icon="upload" ChooseText="Examinar Archivo" Auto="false" Multiple="false" />
+                                            Url="@($"/api/RespositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileSizeComprobanteEstudiosHorario}/{oGuid}")" 
+                                            Accept=".pdf" Icon="upload" ChooseText="Examinar Archivo" 
+                                            Auto="false" Multiple="false" 
+                                            Change=@(args => OnChangeFiles(args, Comprobante_Estudios))
+                                            Error=@(args => OnErrorFiles(args, "FileInput"))
+                                            InputAttributes="@(new Dictionary<string, object>() { { "cursor", "pointer" } })"
+                                            Progress="@(args => OnProgressFiles(args, "Manual Upload"))"
+                                            Complete="@(args => OnCompleteFiles(args))" />
                         </ChildContent>
                         <Helper>
                             <RadzenText TextStyle="TextStyle.Body1" TagName="TagName.P" TextAlign="TextAlign.JustifyAll">
@@ -592,13 +641,9 @@
                             </RadzenText>
                         </Helper>
                     </RadzenFormField>
+                    <ValidationMessage For="@(() => oParticipante.PartFileNameComprobanteEstudiosHorario)" />
+                    <ValidationMessage For="@(() => oParticipante.PartFileSizeComprobanteEstudiosHorario)" />
                 </div>
-                <div style="margin:10px">
-                    <RadzenStack Gap="5" Orientation="Orientation.Horizontal" AlignItems="AlignItems.End" Wrap="FlexWrap.Wrap">
-                        <RadzenButton Shade="Shade.Light" Click=@(args => OnClick("Success button ")) Text="Enviar Registro" ButtonStyle="ButtonStyle.Success" />
-                    </RadzenStack>
-                </div>
-
             </ChildContent>
         </RadzenFieldset>
     </RadzenCard>
@@ -611,7 +656,7 @@
             <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween" Wrap="FlexWrap.NoWrap" Gap="0px" Class="" Style="font-family:var(--rz-text-font-family);">
                 <RadzenCheckBox Name="@($@"aviso_privacidad_{TipoParticipante}")" TValue="bool" @bind-Value="@aceptar_aviso_privacidad" TriState="false" Change="@(args => aceptar_aviso_privacidad = args)" Disabled="false" ReadOnly="false" />
                 <RadzenLabel Text="He leído y acepto los términos y condiciones del" Component="@($@"aviso_privacidad_{TipoParticipante}")" Style="margin-left: 8px; vertical-align: middle;" />&ensp;
-                <a style="cursor:pointer;" @onclick="@(() => ShowDialogModal_iFrame("./documentos/saci_aviso_privacidad_integral.pdf", "Aviso de Privacidad para la Protección de Datos Personales"))" class="icon-link icon-link-hover">
+                <a style="cursor:pointer;" @onclick="@(() => ShowDialogModal_iFrame("./documentos/COMPROBANTE-ESTUDIO.pdf", "Aviso de Privacidad para la Protección de Datos Personales"))" class="icon-link icon-link-hover">
                     <b>Aviso</b> de <strong>Privacidad</strong>
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
@@ -622,22 +667,26 @@
         }
         <ValidationSummary class="rz-my-0" />
         <RadzenButton Text="@TextButton"
-                      BusyText="@BusyTextButton"
-                      ButtonStyle="ButtonStyle.Success"
-                      ButtonType="ButtonType.Submit"
-                      IsBusy="@busyLoading"
-                      Icon="@IconButton"
-                      class="w-100 rz-ripple"
-                      Shade="Shade.Default"
-                      Disabled="@DisablePostButton"
-                      Size="ButtonSize.Large"
-                      Variant="Variant.Filled" />
-    </RadzenStack>
-
+                        BusyText="@BusyTextButton"
+                        ButtonStyle="ButtonStyle.Success"
+                        ButtonType="ButtonType.Submit"
+                        IsBusy="@busyLoading"
+                        Icon="@IconButton"
+                        class="w-100 rz-ripple"
+                        Shade="Shade.Default"
+                        Disabled="@DisablePostButton"
+                        Size="ButtonSize.Large"
+                        Variant="Variant.Filled" />
+        </RadzenStack>
 
     </EditForm>
 
     <ButtonScrollToTop />
+}
+else
+{
+    <LoadingComponent />
+}
 
 
 @code {
@@ -663,15 +712,19 @@
     public Response<List<RequestViewModel_TipoVehiculo>>? oTipoVehiculo = new();
     public Response<List<RequestViewModel_EdoRepMex>>? oEdoRepMex = new();
     public Response<List<RequestViewModel_TipoPlaca>>? oTipoPlaca = new();
-    private string srcCURP = string.Empty;
-    private string srcComprobanteInscripcion = string.Empty;
+    private Response<RequestViewModel_Escuela> oEscuelas = new();
+    private string srcCredencialIpnine = string.Empty;
+    private string srcTarjetaCirculacion = string.Empty;
+    private string srcLicenciaConducir = string.Empty;
+    private string srcComprobanteEstudiosHorario = string.Empty;
 
     protected override async Task OnInitializedAsync()
     {
         oTipoParticipante = await servicioTipoParticipante.GetAllDataByStatusAsync(0);
         oCarrera = await servicioCarrera.GetAllDataByStatusAsync(0);
         oSemestre = await servicioSemestre.GetAllDataByStatusAsync(0);
-        oEscuela = await servicioEscuela.GetAllDataByStatusAsync(1);
+        oEscuela = await servicioEscuela.GetAllDataByStatusAsync(0);
+        oEscuelas = await servicioEscuela.GetDataByIdAsync(1);
         oTipoVehiculo = await servicioTipoVehiculo.GetAllDataByStatusAsync(0);
         oEdoRepMex = await servicioEdoRepMex.GetAllDataByStatusAsync(0);
         oTipoPlaca = await servicioTipoPlaca.GetAllDataByStatusAsync(0);
@@ -688,16 +741,16 @@
             oParticipante.PartSegundoApellido = "";             // Segundo Apellido del Participante Solicitante o Administrador
             oParticipante.PartCurp = "";                        // CURP con 18 caracteres como mínimo
             oParticipante.PartNoTelCelular = "";                // Número de Celular 
+            oParticipante.PartNoEmpleado = "";
             @* DATOS ACADÉMICOS *@
-            if (IdTipoParticipante == 1)     // Número de Boleta del Participante (Alumno Inscrito)
+            if (IdTipoParticipante == 1)                        // Número de Boleta del Participante (Alumno Inscrito)
             {
                 oParticipante.PartBoleta = "";
-                oParticipante.PartBoleta = "B000000";
             }
             else if (IdTipoParticipante == 2)                   // Número de Boleta del Participante (Alumno de Maestria)
             {
                 //oParticipante.PartBoleta = $@"0000{oEscuela?.Data?}0000";
-                oParticipante.PartBoleta = "";
+                oParticipante.PartBoleta = "B000000";
             }
             if (IdTipoParticipante == 1)
             {
@@ -711,21 +764,94 @@
             }
             @* DATOS DE LAS CREDENCIALES DE LA CUENTA EN LA APP *@
             oParticipante.PartContraseña = "";                  // Contraseña en la PLataforma del Participante Solicitante o Administrador
-            //oParticipante.PartRecuperarContraseña = false;    // Contraseña Temporal que se le proporciona al Participante Solicitante
+                                                                //oParticipante.PartRecuperarContraseña = false;    // Contraseña Temporal que se le proporciona al Participante Solicitante
             @* OTROS DATOS *@
             // oUsuario.UsuFechaHoraAlta = DateTime.Parse(DateTime.Now.ToString()).Year; // Fecha y Hora de Alta del Participante
-            oParticipante.PartStatus = 1;                       // Participante (1 - Activo / 0 - Inactivo)
+            oParticipante.PartFileNameCredencialIpnine = "";            // Nombre del archivo de la credencial del participante
+            oParticipante.PartFileSizeCredencialIpnine = 0l;            // Tamaño del archivo de la credencial del participante
+            oParticipante.PartFileNameTarjetaCirculacion = "";          // Nombre del archivo de la tarjeta de circulación del participante
+            oParticipante.PartFileSizeTarjetaCirculacion = 0l;          // Tamaño del archivo de la tarjeta de circulación del participante
+            oParticipante.PartFileNameLicenciaConducir = "";            // Nombre del archivo de la licencia de conducir del participante
+            oParticipante.PartFileSizeLicenciaConducir = 0l;            // Tamaño del archivo de la licencia de concudir del participante
+            oParticipante.PartFileNameComprobanteEstudiosHorario = "";  // Nombre del archivo del comprobante de estudios del participante
+            oParticipante.PartFileSizeComprobanteEstudiosHorario = 0l;  // Tamaño del archivo del comprobante de estudios del participante
+            oParticipante.PartStatus = 1;                               // Participante (1 - Activo / 0 - Inactivo)
+
+            @* DATOS FK NAVIGATION *@
+            oParticipante.PartIdCarreraNavigation = null;
+            oParticipante.PartIdRolNavigation = null;
+            oParticipante.PartIdTipoParticipanteNavigation = null;
 
             IconButton = "send";
             TextButton = "Enviar Registro";
             BusyTextButton = "Enviando Registro ...";
         }
+        else if (ActionAddEdit == "actualizar")
+        {
+            @* DATOS ID DEL USUARIO *@
+            oParticipante.IdParticipante = oEditParticipante.IdParticipante;
+            oParticipante.PartIdRol = oEditParticipante.PartIdRol;                          // FK ID del Rol (Participante del Sorteo, 2 - Administrador del Sorteo)
+            oParticipante.PartIdTipoParticipante = oEditParticipante.PartIdTipoParticipante;// FK ID del Tipo de Participante ([1 - Alumno Inscrito], [2 - Maestria], [3 - Administrativo], [4 - Docente], [5 - Honorarios])
+            @* DATOS PERSONALES *@
+            oParticipante.PartNombre = oEditParticipante.PartNombre;                        // Nombre del Participante Solicitante o Administrador
+            oParticipante.PartPrimerApellido = oEditParticipante.PartPrimerApellido;        // Primer Apellido del Participante Solicitante o Administrador
+            oParticipante.PartSegundoApellido = oEditParticipante.PartSegundoApellido;      // Segundo Apellido del Participante Solicitante o Administrador
+            oParticipante.PartCurp = oEditParticipante.PartCurp;                            // CURP con 18 caracteres como mínimo
+            oParticipante.PartNoTelCelular = oEditParticipante.PartNoTelCelular;            // Número de Celular del Participante
+            @* DATOS ACADÉMICOS *@
+            oParticipante.PartBoleta = oEditParticipante.PartBoleta;                        // Número de Boleta del Participante
+            oParticipante.PartIdCarrera = oEditParticipante.PartIdCarrera;                  // FK ID de la Carrera del Alumno
+            oParticipante.PartIdSemestre = oEditParticipante.PartIdSemestre;                // Semestre que cursa el Alumno Inscrito 
+            @* DATOS LABORALES *@
+            oParticipante.PartNoEmpleado = oEditParticipante.PartNoEmpleado;                // Número del Empleado del Participante (Administrador o Docente)
+            @* OTROS DATOS *@
+            //oUsuario.UsuFechaHoraAlta = oEditUsuario.UsuFechaHoraAlta;                    // Fecha y Hora de Alta del Participante
+            oParticipante.PartFileNameCredencialIpnine = oEditParticipante.PartFileNameCredencialIpnine;        // Nombre del Archivo en .pdf de la Credencial Ipn o Ine
+            srcCredencialIpnine = oParticipante.PartFileNameCredencialIpnine != "Credencial-Ipn-Ine.pdf" ? $"/repositorio/{folder}/{oParticipante.IdParticipante}/{oParticipante.IdParticipante}_{oParticipante.PartFileNameCredencialIpnine}" : $"/repositorio/Credencial-Ipn-Ine.pdf";
+            oParticipante.PartFileSizeCredencialIpnine = oEditParticipante.PartFileSizeCredencialIpnine;        // Tamaño del Archivo en .pdf de la Credencial Ipn o Ine
+            
+            oParticipante.PartFileNameLicenciaConducir = oEditParticipante.PartFileNameLicenciaConducir;        // Nombre del Archivo en .pdf de la Licencia de Conducir 
+            srcLicenciaConducir = oParticipante.PartFileNameLicenciaConducir != "Licencia-Conducir.pdf" ? $"/repositorio/{folder}/{oParticipante.IdParticipante}/{oParticipante.IdParticipante}_{oParticipante.PartFileNameLicenciaConducir}" : $"/repositorio/Licencia-Conducir.pdf";
+            oParticipante.PartFileSizeLicenciaConducir = oEditParticipante.PartFileSizeLicenciaConducir;        // Tamaño del Archivo en .pdf de la Licencia de Conducir 
+       
+            oParticipante.PartFileNameTarjetaCirculacion = oEditParticipante.PartFileNameTarjetaCirculacion;    // Nombre del Archivo en .pdf de la Tarjeta de Circulación
+            srcTarjetaCirculacion = oParticipante.PartFileNameTarjetaCirculacion != "Tarjeta-Circulación.pdf" ? $"/repositorio/{folder}/{oParticipante.IdParticipante}/{oParticipante.IdParticipante}_{oParticipante.PartFileNameTarjetaCirculacion}" : $"/repositorio/Tarjeta-Circulación.pdf";
+            oParticipante.PartFileSizeTarjetaCirculacion = oEditParticipante.PartFileSizeTarjetaCirculacion;    // Tamaño del Archivo en .pdf de la Tarjeta de Circulación
 
+            oParticipante.PartFileNameComprobanteEstudiosHorario = oEditParticipante.PartFileNameComprobanteEstudiosHorario;    // Nombre del Archivo en .pdf del Comprobante de Estudios (Tira de Materias)
+            srcComprobanteEstudiosHorario = oParticipante.PartFileNameComprobanteEstudiosHorario != "Comprobante-Estudios.pdf" ? $"/repositorio/{folder}/{oParticipante.IdParticipante}/{oParticipante.IdParticipante}_{oParticipante.PartFileNameComprobanteEstudiosHorario}" : $"/repositorio/Comprobante-Estudios.pdf";
+            oParticipante.PartFileSizeComprobanteEstudiosHorario = oEditParticipante.PartFileSizeComprobanteEstudiosHorario;    // Tamaño del Archivo en .pdf del Comprobante de Estudios (Tira de Materias)
+            oParticipante.PartStatus = oEditParticipante.PartStatus;                        // Usuario (1 - Activo / 0 - Inactivo)
+            @* DATOS FK NAVIGATION *@
+            oParticipante.PartIdCarreraNavigation = null;
+            oParticipante.PartIdRolNavigation = null;
+            oParticipante.PartIdTipoParticipanteNavigation = null;
 
-
-
-
+            IconButton = "save_as";
+            TextButton = "Editar Datos";
+            BusyTextButton = "Actualizando Datos ...";
+        }
     }
+
+
+    @*///////////////////////////////////////////////  INICIALIZAR LISTA DE SEMESTRES  ///////////////////////////////////////////////*@
+    public class Semestres
+    {
+        public string Key { get; set; }
+        public string Value { get; set; }
+    }
+
+    private List<Semestres> oSemestres = new List<Semestres>
+    {
+        new Semestres() { Key = "1", Value = "1ro semestre" },
+        new Semestres() { Key = "2", Value = "2do semestre" },
+        new Semestres() { Key = "3", Value = "3ro semestre" },
+        new Semestres() { Key = "4", Value = "4to semestre" },
+        new Semestres() { Key = "5", Value = "5to semestre" },
+        new Semestres() { Key = "6", Value = "6to semestre" },
+        new Semestres() { Key = "7", Value = "7mo semestre" },
+        new Semestres() { Key = "8", Value = "8vo semestre" },
+    };
 
 
     @*///////////////////////////////////////////////  VALIDAR CAMPOS CONTRASEÑA Y CONFIRMAR CONTRASEÑA  ///////////////////////////////////////////////*@
@@ -752,12 +878,20 @@
 
     @*///////////////////////////////////////////////  VALIDAR BOLETA DEL ALUMNO  ///////////////////////////////////////////////*@
     private bool flagErrorBoletaAlumno = false;
-    private async Task ValidarBoleta() => flagErrorBoletaAlumno = !System.Text.RegularExpressions.Regex.IsMatch(oParticipante.PartBoleta, @"^\d{4}" + oEscuela.Data + @"\d{4}$");
+    private async Task ValidarBoleta() => flagErrorBoletaAlumno = !System.Text.RegularExpressions.Regex.IsMatch(oParticipante.PartBoleta, @"^\d{4}" + oEscuelas.Data.EscNoEscuela + @"\d{4}$");
 
     private void OnClick(string text)
     {
         NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "Button Clicked", Detail = text });
     }
+
+    @*///////////////////////////////////////////////  VALIDAR CAMPOS DEL FORMULARIO CON DATA_NOTATIONS  ///////////////////////////////////////////////*@
+    private async Task OnInvalidHandled_ScrollToTop()
+    {
+        await JSRuntime.InvokeVoidAsync("window.scrollTo", 0, 0);
+        await JSRuntime.InvokeVoidAsync("eval", $@"document.getElementById('names_{TipoParticipante}').select()");
+    }
+
 
     @*///////////////////////////////////////////////  VALIDAR ReCAPTCHA  ////////////////////////////////////////////////////////////////////////*@
     private ReCAPTCHA oReCAPTCHAComponent;
@@ -776,27 +910,39 @@
     private RadzenUpload? oUploadFile_ComprobanteEstudios = new();
     private RadzenUpload? oUploadFile_LicenciaConducir = new();
     private RadzenUpload? oUploadFile_TarjetaCirculacion = new();
-    private IEnumerable<FileInfo>? oFileCredencialIpnIne { get; set; }
-    private IEnumerable<FileInfo>? oFileComprobanteEstudiosHorario { get; set; }
-    private IEnumerable<FileInfo>? oFileLicenciaConducir { get; set; }
-    private IEnumerable<FileInfo>? oFileTarjetaCirculacion { get; set; }
+    private IEnumerable<FileInfo>? oFileInfoCredencialIpnIne { get; set; }
+    private IEnumerable<FileInfo>? oFileInfoComprobanteEstudiosHorario { get; set; }
+    private IEnumerable<FileInfo>? oFileInfoLicenciaConducir { get; set; }
+    private IEnumerable<FileInfo>? oFileInfoTarjetaCirculacion { get; set; }
 
 
     async Task OnChangeFiles(UploadChangeEventArgs args, string name)
     {
         foreach (var file in args.Files)
         {
-            if (name == CURP)
+            if (name == Credencial_Ipn_Ine)
             {
-                //oParticipante.PartF = $"{CURP}_{oGuid}{Path.GetExtension(file.Name).ToLower()}";
-                //oParticipante.PartFileNameCredencialIpnine = file.Size; // bytes
-                //oFileInfoCURP = args.Files;
+                oParticipante.PartFileNameCredencialIpnine = $"{Credencial_Ipn_Ine}_{oGuid}{Path.GetExtension(file.Name).ToLower()}";
+                oParticipante.PartFileSizeCredencialIpnine = file.Size; // bytes
+                oFileInfoCredencialIpnIne = args.Files;
             }
-            else if (name == Comprobante_Inscripción)
+            else if (name == Comprobante_Estudios)
             {
-                //oParticipante.UsuFileNameComprobanteInscripcion = $"{Comprobante_Inscripción}_{oGuid}{Path.GetExtension(file.Name).ToLower()}";
-                //oParticipante.UsuFileSizeComprobanteInscripcion = file.Size; // bytes
-                //oFileInfoComprobanteInscripcion = args.Files;
+                oParticipante.PartFileNameComprobanteEstudiosHorario = $"{Comprobante_Estudios}_{oGuid}{Path.GetExtension(file.Name).ToLower()}";
+                oParticipante.PartFileSizeComprobanteEstudiosHorario = file.Size; // bytes
+                oFileInfoComprobanteEstudiosHorario = args.Files;
+            }
+            else if (name == Licencia_Conducir)
+            {
+                oParticipante.PartFileNameLicenciaConducir = $"{Licencia_Conducir}_{oGuid}{Path.GetExtension(file.Name).ToLower()}";
+                oParticipante.PartFileSizeLicenciaConducir = file.Size; // bytes
+                oFileInfoLicenciaConducir = args.Files;
+            }
+            else if (name == Tarjeta_Circulacion)
+            {
+                oParticipante.PartFileNameTarjetaCirculacion = $"{Tarjeta_Circulacion}_{oGuid}{Path.GetExtension(file.Name).ToLower()}";
+                oParticipante.PartFileSizeTarjetaCirculacion = file.Size; // bytes
+                oFileInfoTarjetaCirculacion = args.Files;
             }
         }
     }
@@ -826,8 +972,10 @@
     private string BusyTextButton = string.Empty;
     private string IconButton = string.Empty;
     private string folder = "participantes";
-    private string CURP = "CURP";
-    private string Comprobante_Inscripción = "Comprobante-Inscripción";
+    private string Credencial_Ipn_Ine = "Credencial-Ipn-Ine";
+    private string Comprobante_Estudios = "Comprobante-Estudios";
+    private string Licencia_Conducir = "Licencia-Conducir";
+    private string Tarjeta_Circulacion = "Tarjeta-Circulación";
     private int idResponse = 0;
     private Guid oGuid = Guid.NewGuid();
     private Response<RequestViewModel_TipoParticipante> oTipoParticipantes = new();
@@ -869,23 +1017,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
     Variant variant = Variant.Filled;
     AlertSize size = AlertSize.Medium;
     AlertStyle alertStyle = AlertStyle.Primary;
 
     public async Task OnValidHandled(){}
 
-    public async Task OnInvalidHandled_ScrollToTop(){}
 
     //año
     DateTime value = DateTime.Now;
@@ -895,19 +1032,17 @@
         value = new DateTime(args.Year, 1, 1);
     }
  
-   
-
 
     @*///////////////////////////////////////////////  SHOW DIALOG MODAL iFRAME  //////////////////////////////////////////////////////////////////////*@
     private async Task ShowDialogModal_iFrame(string srciFrame, string title)
     {
         await DialogModalService.OpenAsync($@"<span style='font-variant: small-caps; font-size:18px;'>{title}<span>", ds =>
-    @<RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceEvenly" Gap="5px" class="w-100">
-        <RadzenCard class="rz-shadow-0 rz-border-radius-0 rz-m-0 rz-p-0 w-100">
-            <iframe src="@srciFrame" frameborder="1" scrolling="yes" class="w-100" style="height:500px;" />
-        </RadzenCard>
-        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween" Wrap="FlexWrap.NoWrap" Gap="5px" class="w-100">
-            <RadzenButton Text="Cerrar"
+        @<RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceEvenly" Gap="5px" class="w-100">
+            <RadzenCard class="rz-shadow-0 rz-border-radius-0 rz-m-0 rz-p-0 w-100">
+                <iframe src="@srciFrame" frameborder="1" scrolling="yes" class="w-100" style="height:500px;" />
+            </RadzenCard>
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween" Wrap="FlexWrap.NoWrap" Gap="5px" class="w-100">
+                <RadzenButton Text="Cerrar"
                           BusyText=""
                           ButtonStyle="ButtonStyle.Warning"
                           ButtonType="ButtonType.Button"
@@ -916,8 +1051,8 @@
                           class="rz-color-white rz-ripple rz-my-0 w-100"
                           Shade="Shade.Darker"
                           Click="@(() => ds.Close(false))" />
-            <a href="@srciFrame" target="_blank" class="w-100">
-                <RadzenButton Text="Descargar"
+                <a href="@srciFrame" target="_blank" class="w-100">
+                    <RadzenButton Text="Descargar"
                               BusyText=""
                               ButtonStyle="ButtonStyle.Secondary"
                               ButtonType="ButtonType.Button"
@@ -925,9 +1060,9 @@
                               Icon="download"
                               class="rz-ripple rz-my-0 w-100"
                               Shade="Shade.Dark" />
-            </a>
-        </RadzenStack>
-    </RadzenStack>,
+                </a>
+            </RadzenStack>
+        </RadzenStack>,
     new DialogOptions()
             {
                 CloseDialogOnOverlayClick = true,

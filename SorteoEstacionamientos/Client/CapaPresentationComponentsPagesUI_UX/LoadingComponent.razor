@@ -1,67 +1,32 @@
-﻿@* @page "/loadingComponent" *@
-<style>
-    *{
-        box-sizing: border-box;
+﻿<RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" Wrap="FlexWrap.Wrap" Class="rz-m-12" Gap="20px">
+    <RadzenImage Path="./logo_SSOE.png" Style="height:100px;" AlternateText="logo ssoe" />
+    <RadzenProgressBarCircular ProgressBarStyle="ProgressBarStyle.Secondary" Value="100" Min="0" Max="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" Size="ProgressBarCircularSize.Medium" />
+    <RadzenText TextStyle="TextStyle.Subtitle1" TagName="TagName.Auto" TextAlign="TextAlign.Center">Cargando <strong>...</strong></RadzenText>
+</RadzenStack>
+
+@code
+{
+    protected override async Task OnInitializedAsync()
+    {
+        // await DialogModalService.OpenAsync("Cargando", ds =>
+        //     @<div>
+        //         <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" Wrap="FlexWrap.Wrap" Class="rz-m-12" Gap="2rem">
+        //             <RadzenProgressBarCircular ProgressBarStyle="ProgressBarStyle.Secondary" Value="100" Min="0" Max="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" Size="ProgressBarCircularSize.Medium" />
+        //             <RadzenText TextStyle="TextStyle.Subtitle1" TagName="TagName.Auto" TextAlign="TextAlign.Center">Cargando <strong>...</strong></RadzenText>
+        //         </RadzenStack>
+        //     </div>,
+        //     new DialogOptions()
+        //     {
+        //         CloseDialogOnOverlayClick = false,
+        //         CloseDialogOnEsc = false,
+        //         Width = "Auto",
+        //         Height = "Auto",
+        //         Resizable = true,
+        //         ShowTitle = false,
+        //         ShowClose = true,
+        //         Draggable = true,
+        //         CssClass = "custom-dialog-class",
+        //         WrapperCssClass = "custom-dialog-wrapper-class"
+        //     });
     }
-
-    .loader-container{
-        position: relative;
-        width: 60px;
-        height: 60px;
-        margin: 10px;
-    }
-
-    .loader-container .loader{
-        position: absolute;
-        top:50%;
-        left:50%;
-        width: 150%;
-        height: 150%;
-        border: solid 6px transparent;
-        border-top-color: #990000;
-        border-left-color:#990000;
-        border-radius: 50%;
-        animation: loader 1.4s linear infinite;
-
-    }
-
-    .loader-container .loader2{
-        position: absolute;
-        top:50%;
-        left:50%;
-        width: 120%;
-        height: 120%;
-        border: solid 6px transparent;
-        border-top-color: #EF9A9A;
-        border-left-color: #EF9A9A;
-        border-radius: 50%;
-        animation: loader2 1.2s linear infinite;
-    }
-
-    @@keyframes loader{
-        0%{
-            transform: translate(-50%, -50%) rotate(0deg);
-        }
-
-        100% {
-            transform: translate(-50%, -50%) rotate(360deg);
-        }
-    }
-
-    @@keyframes loader2 {
-        0% {
-            transform: translate(-50%, -50%) rotate(0deg);
-        }
-
-        100% {
-            transform: translate(-50%, -50%) rotate(-360deg);
-        }
-    }
-</style>
-
-
-<div class="loader-container">
-    <div class="loader"></div>
-    <div class="loader2"></div>
-</div>
-
+}
