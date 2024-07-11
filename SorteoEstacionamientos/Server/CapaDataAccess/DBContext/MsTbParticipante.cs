@@ -162,7 +162,7 @@ public partial class MsTbParticipante
     /// Año del Vehículo
     /// </summary>
     [Column("partAño")]
-    public short PartAño { get; set; }
+    public short? PartAño { get; set; }
 
     /// <summary>
     /// Color del Vehículo

@@ -79,6 +79,7 @@ public class RequestDTO_Participante
     /// </summary>
     [Column("partEmail")]
     [StringLength(100)]
+    [Required(AllowEmptyStrings = false, ErrorMessage = "Campo CORREO ELECTRÓNICO requerido.")]
     [RegularExpression("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", ErrorMessage = "CORREO ELECTRÓNICO inválido. (Formato: xxxxxx@xxx.xx)")]
     //[RegularExpression("^(?!.*@(?:ipn\\.mx|alumno\\.ipn\\.mx|egresado\\.ipn\\.mx)$)[\\w\\.-]+@([\\w-]+\\.)+[\\w-]{2,}$", ErrorMessage = "CORREO PERSONAL inválido. (Formato correcto: xxxxxx@xxx.xx)")]
     //[RegularExpression("^[\\w-\\.]+@ipn\\.mx$|^[\\w-\\.]+@alumno\\.ipn\\.mx$|^[\\w-\\.]+@egresado\\.ipn\\.mx$", ErrorMessage = "CORREO INSTITUCIONAL inválido. (Formato: xxxxxx@ipn.mx ó @alumno.ipn.mx ó @egresado.ipn.mx)")]
@@ -168,6 +169,7 @@ public class RequestDTO_Participante
     /// </summary>
     [Column("partModelo")]
     [StringLength(50)]
+    [Required(AllowEmptyStrings = false, ErrorMessage = "Campo MODELO requerido.")]
     public string? PartModelo { get; set; }
 
     /// <summary>
@@ -175,13 +177,16 @@ public class RequestDTO_Participante
     /// </summary>
     [Column("partVersion")]
     [StringLength(50)]
+    [Required(AllowEmptyStrings = false, ErrorMessage = "Campo VERSIÓN requerido.")]
     public string? PartVersion { get; set; }
 
     /// <summary>
     /// Año del Vehículo
     /// </summary>
     [Column("partAño")]
-    public short PartAño { get; set; }
+    [Required(AllowEmptyStrings = false, ErrorMessage = "Campo AÑO requerido.")]
+    [Range(1000, 9999, ErrorMessage = "Verifique que el AÑO tenga al menos 4 dígitos.")]
+    public short? PartAño { get; set; }
 
     /// <summary>
     /// Color del Vehículo

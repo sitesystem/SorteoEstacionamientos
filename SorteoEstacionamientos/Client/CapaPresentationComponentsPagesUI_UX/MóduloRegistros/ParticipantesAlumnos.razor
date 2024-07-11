@@ -479,8 +479,8 @@
                     <RadzenFormField Text="Año" AllowFloatingLabel="false" Variant="Variant.Flat" Class="w-100 mt-3" Disabled="false">
                         @* <Start><RadzenIcon Icon="person" IconColor="@Colors.Base400" IconStyle="IconStyle.Secondary" /></Start> *@
                         <ChildContent>
-                                <RadzenTextBox Name="@($@"año{TipoParticipante}")" @bind-Value="@año" style="border-bottom: 3px solid #026969;" MinLength="0" MaxLength="200" />
-                                @* <RadzenNumeric ShowUpDown="false" TValue="int?" @bind-Value="@oParticipante.PartAño"/> *@
+                               <RadzenMask @bind-Value="partAñoString" MinLength="4" MaxLength="4" style="border-bottom: 3px solid #026969;"
+                                                Mask="****" CharacterPattern="[0-9]" Placeholder="AAAA" @onchange="@(args => OnYearChanged(args.Value?.ToString()))" />
                         </ChildContent>
                         <Helper><RadzenText TextStyle="TextStyle.Caption" /></Helper>
                     </RadzenFormField>
@@ -705,6 +705,7 @@ else
     private RequestDTO_Participante? oParticipante = new();
 
     @*///////////////////////////////////////////////  INICIALIZAR OBJETOS Y OBTENER DATA ASYNC  ///////////////////////////////////////////////*@
+    public Response<object>? oRespuesta = new();
     public Response<List<RequestViewModel_TipoParticipante>>? oTipoParticipante = new();
     public Response<List<RequestViewModel_Carrera>>? oCarrera = new();
     public Response<List<RequestViewModel_Semestre>>? oSemestre = new();
@@ -892,6 +893,35 @@ else
         await JSRuntime.InvokeVoidAsync("eval", $@"document.getElementById('names_{TipoParticipante}').select()");
     }
 
+    @*///////////////////////////////////////////////  VALIDAR CAMPO DE AÑO DEL VEHÍVULO  ///////////////////////////////////////////////*@
+    private string partAñoString
+    {
+        get => oParticipante.PartAño.HasValue ? oParticipante.PartAño.Value.ToString() : string.Empty;
+        set
+        {
+            if (short.TryParse(value, out short result))
+            {
+                oParticipante.PartAño = result;
+            }
+            else
+            {
+                oParticipante.PartAño = null;
+            }
+        }
+    }
+
+    private void OnYearChanged(string year)
+    {   
+        // La función permite cambiar el valor input de RadzenMask, convirtiendo la cadena a short y asignando el valor a PartAño
+        if (short.TryParse(year, out short result))
+        {
+            oParticipante.PartAño = result;
+        }
+        else
+        {
+            oParticipante.PartAño = null;
+        }
+    }
 
     @*///////////////////////////////////////////////  VALIDAR ReCAPTCHA  ////////////////////////////////////////////////////////////////////////*@
     private ReCAPTCHA oReCAPTCHAComponent;
@@ -990,28 +1020,330 @@ else
             oTipoParticipantes = await servicioTipoParticipante.GetDataByIdAsync(oParticipante.PartIdTipoParticipante);
             oCarreras = await servicioCarrera.GetDataByIdAsync(oParticipante.PartIdCarrera);
             string boleta = (IdTipoParticipante == 1 || IdTipoParticipante == 2 ? oParticipante.PartBoleta : oParticipante.PartBoleta);
-            //string carrera = (IdTipoParticipante == 1 || IdTipoParticipante == 2 ? oCarrera?.Data?.CarrNombre : "N/A");
-            //string semestre = (IdTipoParticipante == 1 || IdTipoParticipante == 2 ? oParticipante.PartIdSemestre : "N/A");
+            string carrera = (IdTipoParticipante == 1 || IdTipoParticipante == 2 ? oCarreras?.Data?.CarrNombre : "N/A");
+            string semestre = (IdTipoParticipante == 1 || IdTipoParticipante == 2 ? oParticipante.PartIdSemestre.ToString() : "N/A");
             string fecha_hora_alta = ActionAddEdit == "agregar" ? DateTime.Now.ToString("dddd',' dd 'de' MMMM 'del' yyyy 'a las' HH:mm:ss 'hrs.'") : oParticipante.PartFechaHoraAlta.ToString("dddd',' dd 'de' MMMM 'del' yyyy 'a las' HH:mm:ss 'hrs.'");
             string agregar_actualizar = ActionAddEdit == "agregar" ? "registro" : "actualización de datos";
-            string entrega_credenciales_acceso = !string.IsNullOrEmpty(PartContraseña) ? "<br>Por este medio se le hace entrega de sus <b>credenciales de acceso:</b><br>" : "";
+            //string entrega_credenciales_acceso = !string.IsNullOrEmpty(PartContraseña) ? "<br>Por este medio se le hace entrega de sus <b>credenciales de acceso:</b><br>" : "";
             //string credenciales_acceso = !string.IsNullOrEmpty(PartContraseña) || ActionAddEdit == "agregar" ?
 
-            @if (ActionAddEdit == "agregar")
+            if (ActionAddEdit == "agregar")
             {
-                //var verificacion = await servicioParticipante
+                var verification = await servicioParticipante.ValidateByEmailCURP(oParticipante.PartEmail, oParticipante.PartCurp);
+
+                if (ValidReCAPTCHA && verification?.Success == 1)
+                {
+                    var respuesta = await servicioParticipante.AddDataAsync(oParticipante);
+                    oRespuesta = respuesta.Content.ReadFromJsonAsync<Response<object>>().Result;
+
+                    if (oRespuesta.Success == 1)
+                    {
+                        idResponse = int.Parse(oRespuesta.Message);
+
+                        @*//  UPLOAD FILES  //*@
+                        oParticipante.PartFileNameCredencialIpnine = $"{Credencial_Ipn_Ine}{Path.GetExtension(oParticipante.PartFileNameCredencialIpnine).ToLower()}";
+                        oUploadFile_CredencialIpnIne.Url = $"/api/RepositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameCredencialIpnine}/{oGuid}";
+                        await oUploadFile_CredencialIpnIne.Upload();
+
+                        oParticipante.PartFileNameComprobanteEstudiosHorario = $"{Comprobante_Estudios}{Path.GetExtension(oParticipante.PartFileNameComprobanteEstudiosHorario).ToLower()}";
+                        oUploadFile_ComprobanteEstudios.Url = $"/api/RepositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameComprobanteEstudiosHorario}/{oGuid}";
+                        await oUploadFile_ComprobanteEstudios.Upload();
+
+                        oParticipante.PartFileNameLicenciaConducir = $"{Licencia_Conducir}{Path.GetExtension(oParticipante.PartFileNameLicenciaConducir).ToLower()}";
+                        oUploadFile_LicenciaConducir.Url = $"/api/RepositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameLicenciaConducir}/{oGuid}";
+                        await oUploadFile_LicenciaConducir.Upload();
+
+                        oParticipante.PartFileNameTarjetaCirculacion = $"{Tarjeta_Circulacion}{Path.GetExtension(oParticipante.PartFileNameTarjetaCirculacion).ToLower()}";
+                        oUploadFile_TarjetaCirculacion.Url = $"/api/RepositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameTarjetaCirculacion}/{oGuid}";
+                        await oUploadFile_TarjetaCirculacion.Upload();
+
+                        @*//  NOTIFICATION TOAST REGISTRO EXITOSO  //*@
+                        NotificationService.Notify(
+                            new NotificationMessage
+                                {
+                                    Severity = NotificationSeverity.Success,
+                                    Duration = 3000,
+                                    Summary = "¡Registro Exitoso!",
+                                    Detail = "Se guardaron sus datos y se notificará por las vías de comunicación."
+                                });
+
+                        @*//  DIALOG MESSAGE REGISTRO EXITOSO  //*@
+                        await DialogModalService.OpenAsync($@"<span style='font-variant: small-caps; font-size:18px;'>Mensaje<span>", ds =>
+                            @<div>
+                                <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" Wrap="FlexWrap.Wrap" Gap="5px" Class="">
+                                    <span class="circle-border">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16" style="color: green; font-weight: bold;">
+                                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                                        </svg>
+                                    </span>
+                                    <RadzenText TextStyle="TextStyle.Body1" class="text-success"><b>¡Registro Exitoso del Participante!</b></RadzenText>
+                                </RadzenStack>
+                                <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Normal" JustifyContent="JustifyContent.SpaceBetween" Wrap="FlexWrap.NoWrap" Gap="5px" Class="">
+                                    <RadzenStack Gap="0px">
+                                        <RadzenText TextStyle="TextStyle.Overline" class="rz-mb-0 rz-p-0">@(oParticipante.PartIdRol == 2 ? "Participante" : "Administrador"):</RadzenText>
+                                        <RadzenText TextStyle="TextStyle.Body1"><b>@oTipoParticipantes.Data.TipopartNombre</b></RadzenText>
+                                    </RadzenStack>
+                                    <RadzenStack Gap="0px">
+                                        <RadzenText TextStyle="TextStyle.Overline" class="rz-mb-0 rz-p-0">Nombre Completo:</RadzenText>
+                                        <RadzenText TextStyle="TextStyle.Body1"><b>@oParticipante.PartNombre @oParticipante.PartPrimerApellido @oParticipante.PartSegundoApellido</b></RadzenText>
+                                    </RadzenStack>
+                                    <RadzenStack Gap="0px">
+                                        <RadzenText TextStyle="TextStyle.Overline" class="rz-mb-0 rz-p-0">CURP:</RadzenText>
+                                        <RadzenText TextStyle="TextStyle.Body1"><b>@oParticipante.PartCurp</b></RadzenText>
+                                    </RadzenStack>
+                                    <RadzenStack Gap="0px">
+                                        <RadzenText TextStyle="TextStyle.Overline" class="rz-mb-0 rz-p-0">Boleta:</RadzenText>
+                                        <RadzenText TextStyle="TextStyle.Body1"><b>@(IdTipoParticipante == 1 || IdTipoParticipante == 2 ? oParticipante.PartBoleta : oParticipante.PartBoleta)</b></RadzenText>
+                                    </RadzenStack>
+                                    <RadzenStack Gap="0px">
+                                        <RadzenText TextStyle="TextStyle.Overline" class="rz-mb-0 rz-p-0">Carrera:</RadzenText>
+                                        <RadzenText TextStyle="TextStyle.Body1"><b>@(IdTipoParticipante == 1 || IdTipoParticipante == 2 ? oCarreras?.Data?.CarrNombre : "N/A")</b></RadzenText>
+                                    </RadzenStack>
+                                    <RadzenStack Gap="0px">
+                                        <RadzenText TextStyle="TextStyle.Overline" class="rz-mb-0 rz-p-0">Semestre:</RadzenText>
+                                        <RadzenText TextStyle="TextStyle.Body1"><b>@(IdTipoParticipante == 1 || IdTipoParticipante == 2 ? oParticipante.PartIdSemestre : "N/A")</b></RadzenText>
+                                    </RadzenStack>
+                                    <RadzenStack Gap="0px">
+                                        <RadzenText TextStyle="TextStyle.Overline" class="rz-mb-0 rz-p-0">Correo Electrónico:</RadzenText>
+                                        <RadzenText TextStyle="TextStyle.Body1"><b>@oParticipante.PartEmail</b></RadzenText>
+                                    </RadzenStack>
+                                    <RadzenButton Text="Cerrar"
+                                                  BusyText=""
+                                                  ButtonStyle="ButtonStyle.Warning"
+                                                  ButtonType="ButtonType.Button"
+                                                  IsBusy="false"
+                                                  Icon="cancel"
+                                                  class="rz-color-white rz-ripple rz-my-0 w-100"
+                                                  Shade="Shade.Darker"
+                                                  Click="@(() => navigationManager.NavigateTo("/"))" />
+                                </RadzenStack>
+                            </div>,
+                            new DialogOptions()
+                            {
+                                        CloseDialogOnOverlayClick = false,
+                                        CloseDialogOnEsc = false,
+                                        Width = "Auto",
+                                        Height = "Auto",
+                                        Resizable = true,
+                                        ShowTitle = true,
+                                        ShowClose = true,
+                                        Draggable = true,
+                                        CssClass = "custom-dialog-class",
+                                        WrapperCssClass = "custom-dialog-wrapper-class"
+                            });
+
+                        navigationManager.NavigateTo("/login");
+                    }
+                }
+                else
+                {
+                    await DialogModalService.OpenAsync($@"<span style='font-variant: small-caps; font-size:18px;'>Validación de Datos<span>", ds =>
+                        @<RadzenStack AlignItems="AlignItems.Center" Gap="2rem" Class="">
+                            <RadzenAlert Title="Error" AlertStyle="AlertStyle.Danger" Variant="Variant.Filled" Size="AlertSize.Small" Shade="Shade.Darker" ShowIcon="true" AllowClose="false"
+                                            Visible="true" Class="rz-border-radius-1">
+                                El <strong>Correo Electrónico Personal y/o CURP</strong> ya están registrados por lo que <b>NO</b> puede volverse a registrar con estos datos.
+                            </RadzenAlert>
+                        </RadzenStack>,
+                        new DialogOptions()
+                        {
+                                    CloseDialogOnOverlayClick = true,
+                                    CloseDialogOnEsc = true,
+                                    Width = "500px",
+                                    Height = "Auto",
+                                    Resizable = true,
+                                    ShowTitle = true,
+                                    ShowClose = true,
+                                    Draggable = true,
+                                    CssClass = "custom-dialog-class",
+                                    WrapperCssClass = "custom-dialog-wrapper-class"
+                        });
+                }
             }
+            else if (ActionAddEdit == "actualizar")
+            {
+                var verification = await servicioParticipante.ValidateByEmailCURP(oParticipante.PartEmail, oParticipante.PartCurp);
 
+                if (ValidReCAPTCHA)
+                {
+                    var respuesta = await servicioParticipante.EditDataAsync(oParticipante);
+                    oRespuesta = respuesta.Content.ReadFromJsonAsync<Response<object>>().Result;
 
+                    if (oRespuesta.Success == 1)
+                    {
+                        @*//  UPLOAD FILES  //*@
+                        idResponse = oParticipante.IdParticipante;
 
+                        oParticipante.PartFileNameCredencialIpnine = $"{Credencial_Ipn_Ine}{Path.GetExtension(oParticipante.PartFileNameCredencialIpnine).ToLower()}";
+                        oUploadFile_CredencialIpnIne.Url = $"/api/RepositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameCredencialIpnine}/{oGuid}";
+                        await oUploadFile_CredencialIpnIne.Upload();
 
+                        oParticipante.PartFileNameComprobanteEstudiosHorario = $"{Comprobante_Estudios}{Path.GetExtension(oParticipante.PartFileNameComprobanteEstudiosHorario).ToLower()}";
+                        oUploadFile_ComprobanteEstudios.Url = $"/api/RepositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameComprobanteEstudiosHorario}/{oGuid}";
+                        await oUploadFile_ComprobanteEstudios.Upload();
 
+                        oParticipante.PartFileNameLicenciaConducir = $"{Licencia_Conducir}{Path.GetExtension(oParticipante.PartFileNameLicenciaConducir).ToLower()}";
+                        oUploadFile_LicenciaConducir.Url = $"/api/RepositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameLicenciaConducir}/{oGuid}";
+                        await oUploadFile_LicenciaConducir.Upload();
 
-    }
-        catch (Exception)
+                        oParticipante.PartFileNameTarjetaCirculacion = $"{Tarjeta_Circulacion}{Path.GetExtension(oParticipante.PartFileNameTarjetaCirculacion).ToLower()}";
+                        oUploadFile_TarjetaCirculacion.Url = $"/api/RepositoryFiles/UploadSingleFile/{folder}/{idResponse}/{oParticipante.PartFileNameTarjetaCirculacion}/{oGuid}";
+                        await oUploadFile_TarjetaCirculacion.Upload();
+
+                        @*//  NOTIFICATION TOAST ACTUALIZACIÓN DE DATOS EXITOSO  //*@
+                        NotificationService.Notify(
+                            new NotificationMessage
+                            {
+                                Severity = NotificationSeverity.Success,
+                                Duration = 3000,
+                                Summary = "¡Actualización Correcta!",
+                                Detail = "Se guardaron los cambios."
+                            });
+
+                        @*//  DIALOG MESSAGE ACTUALIZACIÓN DE DATOS EXITOSA  //*@
+                        await DialogModalService.OpenAsync($@"<span style='font-variant: small-caps; font-size:18px;'>Mensaje<span>", ds =>
+                            @<div>
+                                <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" Wrap="FlexWrap.Wrap" Gap="5px" Class="">
+                                    <span class="circle-border">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16" style="color: green; font-weight: bold;">
+                                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                                        </svg>
+                                    </span>
+                                    <RadzenText TextStyle="TextStyle.Body1" class="text-success"><b>Se actualizaron correctamente los datos.</b></RadzenText>
+                                </RadzenStack>
+                                <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Normal" JustifyContent="JustifyContent.SpaceBetween" Wrap="FlexWrap.NoWrap" Gap="5px" Class="">
+                                    <RadzenStack Gap="0px">
+                                        <RadzenText TextStyle="TextStyle.Overline" class="rz-mb-0 rz-p-0">@(oParticipante.PartIdRol == 2 ? "Participante" : "Administrador"):</RadzenText>
+                                        <RadzenText TextStyle="TextStyle.Body1"><b>@oTipoParticipantes.Data.TipopartNombre</b></RadzenText>
+                                    </RadzenStack>
+                                    <RadzenStack Gap="0px">
+                                        <RadzenText TextStyle="TextStyle.Overline" class="rz-mb-0 rz-p-0">Nombre Completo:</RadzenText>
+                                        <RadzenText TextStyle="TextStyle.Body1"><b>@oParticipante.PartNombre @oParticipante.PartPrimerApellido @oParticipante.PartSegundoApellido</b></RadzenText>
+                                    </RadzenStack>
+                                    <RadzenStack Gap="0px">
+                                        <RadzenText TextStyle="TextStyle.Overline" class="rz-mb-0 rz-p-0">CURP:</RadzenText>
+                                        <RadzenText TextStyle="TextStyle.Body1"><b>@oParticipante.PartCurp</b></RadzenText>
+                                    </RadzenStack>
+                                    <RadzenStack Gap="0px">
+                                        <RadzenText TextStyle="TextStyle.Overline" class="rz-mb-0 rz-p-0">Boleta:</RadzenText>
+                                        <RadzenText TextStyle="TextStyle.Body1"><b>@(IdTipoParticipante == 1 || IdTipoParticipante == 2 ? oParticipante.PartBoleta : oParticipante.PartBoleta)</b></RadzenText>
+                                    </RadzenStack>
+                                    <RadzenStack Gap="0px">
+                                        <RadzenText TextStyle="TextStyle.Overline" class="rz-mb-0 rz-p-0">Carrera:</RadzenText>
+                                        <RadzenText TextStyle="TextStyle.Body1"><b>@oCarreras.Data.CarrNombre</b></RadzenText>
+                                    </RadzenStack>
+                                    <RadzenStack Gap="0px">
+                                        <RadzenText TextStyle="TextStyle.Overline" class="rz-mb-0 rz-p-0">Semestre:</RadzenText>
+                                        <RadzenText TextStyle="TextStyle.Body1"><b>@oParticipante.PartIdSemestre</b></RadzenText>
+                                    </RadzenStack>
+                                    <RadzenStack Gap="0px">
+                                        <RadzenText TextStyle="TextStyle.Overline" class="rz-mb-0 rz-p-0">Correo Electrónico:</RadzenText>
+                                        <RadzenText TextStyle="TextStyle.Body1"><b>@oParticipante.PartEmail</b></RadzenText>
+                                    </RadzenStack>
+                                    <RadzenAlert Title="Atención:" Text="" AlertStyle="AlertStyle.Info" Variant="Variant.Filled" Size="AlertSize.Small" Shade="Shade.Light"
+                                                 ShowIcon="true" AllowClose="false" class="mb-0" Visible="@(!string.IsNullOrEmpty(PartContraseña))">
+                                                 <ul>
+                                                     @if (!string.IsNullOrEmpty(PartContraseña))
+                                                     {
+                                                        <li>Se le notificará por las vías de comunicación con la nueva contraseña y actualización de sus datos.</li>
+                                                     }
+                                                     <li>Se cerrará la sesión.</li>
+                                                 </ul>
+                                    </RadzenAlert>
+                                    <RadzenButton Text="Cerrar"
+                                                  BusyText=""
+                                                  ButtonStyle="ButtonStyle.Warning"
+                                                  ButtonType="ButtonType.Button"
+                                                  IsBusy="false"
+                                                  Icon="cancel"
+                                                  class="rz-color-white rz-ripple rz-my-0 w-100"
+                                                  Shade="Shade.Darker"
+                                                  Click="@(() => ds.Close(false))" />
+                                </RadzenStack>
+                            </div>,
+                            new DialogOptions()
+                            {
+                                CloseDialogOnOverlayClick = false,
+                                CloseDialogOnEsc = false,
+                                Width = "Auto",
+                                Height = "Auto",
+                                Resizable = true,
+                                ShowTitle = true,
+                                ShowClose = true,
+                                Draggable = true,
+                                CssClass = "custom-dialog-class",
+                                WrapperCssClass = "custom-dialog-wrapper-class"
+                            });
+
+                        if (!string.IsNullOrEmpty(PartContraseña))
+                        {
+                            @*//  NOTIFICATION TOAST ACTUALIZACIÓN EXITOSA  //*@
+                            NotificationService.Notify(
+                                new NotificationMessage
+                                {
+                                    Severity = NotificationSeverity.Success,
+                                    Duration = 3000,
+                                    Summary = "¡Actualización Correcta!",
+                                    Detail = "Se guardaron los cambios y se cerrará la sesión."
+                                });
+
+                            @*//  DIALOG MODAL MESSAGE ACTUALIZACIÓN EXITOSA  //*@
+                            DialogModalService.Open($@"<span style='font-variant: small-caps; font-size:18px;'>Cerrando Sesión...<span>", ds =>
+                                @<div>
+                                    <LoadingComponent />
+                                </div>,
+                                new DialogOptions()
+                                    {
+                                        CloseDialogOnOverlayClick = false,
+                                        CloseDialogOnEsc = false,
+                                        Width = "Auto",
+                                        Height = "Auto",
+                                        Resizable = true,
+                                        ShowTitle = true,
+                                        ShowClose = true,
+                                        Draggable = true,
+                                        CssClass = "custom-dialog-class",
+                                        WrapperCssClass = "custom-dialog-wrapper-class"
+                                    });
+
+                            await loginService.Logout();
+                            navigationManager.NavigateTo("/");
+                        }
+                    }
+                }
+                else
+                {
+                    await DialogModalService.OpenAsync($@"<span style='font-variant: small-caps; font-size:18px;'>Validación de Datos<span>", ds =>
+                        @<RadzenStack AlignItems="AlignItems.Center" Gap="2rem" Class="">
+                            <RadzenAlert Title="Error" AlertStyle="AlertStyle.Danger" Variant="Variant.Filled" Size="AlertSize.Small" Shade="Shade.Darker" ShowIcon="true" AllowClose="true"
+                                         Visible="true" Class="rz-border-radius-1">
+                                         El <strong>Correo Electrónico y/o CURP</strong> ya están registrados por lo que <b>NO</b> puede volverse a registrar con estos datos.
+                            </RadzenAlert>
+                        </RadzenStack>,
+                        new DialogOptions()
+                        {
+                            CloseDialogOnOverlayClick = true,
+                            CloseDialogOnEsc = true,
+                            Width = "500px",
+                            Height = "Auto",
+                            Resizable = true,
+                            ShowTitle = true,
+                            ShowClose = true,
+                            Draggable = true,
+                            CssClass = "custom-dialog-class",
+                            WrapperCssClass = "custom-dialog-wrapper-class"
+                        });
+                }
+            }
+        }
+        catch (HttpRequestException e)
         {
-            
-            throw;
+            await JSRuntime.InvokeAsync<object>("alert", e.Message);
+        }
+        finally
+        {
+            busyLoading = false;
+            if (ActionAddEdit == "actualizar" && (oFileInfoCredencialIpnIne is not null || oFileInfoComprobanteEstudiosHorario is not null))
+               navigationManager.Refresh(true);
         }
     }
 
