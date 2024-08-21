@@ -33,7 +33,9 @@ namespace SorteoEstacionamientos.Shared.CapaEntities.Request
         /// <summary>
         /// Estado (1 = Activo, 0 = Inactivo)
         /// </summary>
-        [Column("linkStatus", TypeName = "bit(1)")]
+        //[Column("linkStatus", TypeName = "bit(1)")]
+        [Required]
+        [Column("linkStatus")]
         public sbyte LinkStatus { get; set; }
     }
 }

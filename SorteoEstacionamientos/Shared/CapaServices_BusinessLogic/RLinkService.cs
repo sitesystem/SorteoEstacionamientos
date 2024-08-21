@@ -30,6 +30,12 @@ namespace SorteoEstacionamientos.Shared.CapaServices_BusinessLogic
             return result;
         }
 
+        public async Task<Response<RequestViewModel_Link>?> GetDataByNameAsync(string name)
+        {
+            var result = await _httpClient.GetFromJsonAsync<Response<RequestViewModel_Link>>($"{url}/filterByName/{name}", options: _options);
+            return result;
+        }
+
         public async Task<HttpResponseMessage> AddDataAsync(RequestViewModel_Link oLink)
         {
             //var json = JsonSerializer.Serialize(oLink);

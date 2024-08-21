@@ -94,7 +94,13 @@
                         </ChildContent>
                         <Helper>
                             <RadzenText TextStyle="TextStyle.Body1" TagName="TagName.P" TextAlign="TextAlign.Justify">
-                               
+                                <a href="@oLinkCURP.Data.LinkEnlace" target="_blank" class="icon-link icon-link-hover">
+                                    ¿Olvidaste tu <strong>CURP?</strong>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+                                    </svg>
+                                </a>
                             </RadzenText>
                         </Helper>
                     </RadzenFormField>
@@ -497,7 +503,7 @@
                                             @oninput="@((e) => oParticipante.PartColor = e.Value.ToString().ToUpper())" />
                                 *@
                             <RadzenAutoComplete @bind-Value="@oParticipante.PartColor" 
-                                Data="@colors"
+                                Data="@colores"
                                 Placeholder="Seleccione un color"
                                 MinLength="1"
                                 MaxLength="50"
@@ -727,12 +733,15 @@ else
     public Response<List<RequestViewModel_TipoPlaca>>? oTipoPlaca = new();
     public Response<List<RequestViewModel_Color>>? oColor = new();
     private Response<RequestViewModel_Escuela> oEscuelas = new();
+    public Response<RequestViewModel_Link>? oLinkCURP = new();
+    public Response<RequestViewModel_Link>? oLinkSAES = new();
+    public Response<RequestViewModel_Link>? oLinkReducirTamañoArchivo = new();
     private string srcCredencialIpnine = string.Empty;
     private string srcTarjetaCirculacion = string.Empty;
     private string srcLicenciaConducir = string.Empty;
     private string srcComprobanteEstudiosHorario = string.Empty;
 
-    private List<string> colors = new List<string>();
+    private List<string> colores = new List<string>();
 
     protected override async Task OnInitializedAsync()
     {
@@ -745,10 +754,14 @@ else
         oEdoRepMex = await servicioEdoRepMex.GetAllDataByStatusAsync(0);
         oTipoPlaca = await servicioTipoPlaca.GetAllDataByStatusAsync(0);
         oColor = await servicioColores.GetAllDataByStatusAsync(0);
+        oLinkCURP = await servicioLink.GetDataByNameAsync("CURP");
+        oLinkSAES = await servicioLink.GetDataByNameAsync("SAES");
+        oLinkReducirTamañoArchivo = await servicioLink.GetDataByNameAsync("REDUCIR TAMAÑO ARCHIVO");
+
 
         @if (oColor != null && oColor.Data != null)
         {
-            colors = oColor.Data.Select(c => c.ColorNombre).ToList();
+            colores = oColor.Data.Select(c => c.ColorNombre).ToList();
         }
 
         @if (ActionAddEdit == "agregar")
