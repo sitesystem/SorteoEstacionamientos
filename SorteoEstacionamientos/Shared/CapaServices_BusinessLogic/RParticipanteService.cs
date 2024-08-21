@@ -54,7 +54,18 @@ namespace SorteoEstacionamientos.Shared.CapaServices_BusinessLogic
 			return response;
 		}
 
-		public async Task<HttpResponseMessage> EnableDisableDataByIdAsync(int id, short isActivate)
+        public async Task<HttpResponseMessage> ResetPassword(string correoInstitucional, string curp)
+        {
+            var response = await _httpClient.PutAsJsonAsync($"{url}/resetPassword/{correoInstitucional}/{curp}",
+                 new JsonSerializerOptions()
+                 {
+                     PropertyNameCaseInsensitive = true
+                 });
+
+            return response;
+        }
+
+        public async Task<HttpResponseMessage> EnableDisableDataByIdAsync(int id, short isActivate)
 		{
 			var response = await _httpClient.PutAsJsonAsync($"{url}/editByIdStatus/{id}/{isActivate}",
 				new JsonSerializerOptions()

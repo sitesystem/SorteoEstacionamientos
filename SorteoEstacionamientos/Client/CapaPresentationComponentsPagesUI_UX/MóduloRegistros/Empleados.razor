@@ -1,5 +1,11 @@
 ﻿<h3>Empleados</h3>
 
 @code {
+    @*///////////////////////////////////////////////  OBTENER PARÁMETROS PARA AGREGAR O ACTUALIZAR DATA  ///////////////////////////////////////////////*@
+    [Parameter] public string? ActionAddEdit { get; set; }
+    [Parameter] public RequestDTO_Participante? oEditEmpleado { get; set; }
 
+    @*///////////////////////////////////////////////  OBTENER PARÁMETROS DEL TIPO DE PARTICIPANTE  ///////////////////////////////////////////////*@
+    [Parameter] public string? TipoParticipante { get; set; }
+    [Parameter] public int IdTipoParticipante { get; set; }
 }

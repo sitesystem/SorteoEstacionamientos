@@ -104,6 +104,48 @@
                                 </EditForm>
                             </RadzenTabsItem>
                             
+                            <RadzenTabsItem Text="Recuperar Contraseña" Icon="lock_reset" IconColor="@Colors.Base900">
+                                <EditForm Model="@oLoginCredentials" OnValidSubmit="@RecuperarContraseña" OnInvalidSubmit="@OnInvalidSubmit">
+
+                                    <DataAnnotationsValidator />
+
+                                    <RadzenFormField Text="Correo Electrónico Institucional" Placeholder="Email" AllowClear="true" Variant="Variant.Outlined" class="w-100 mt-3" MaxLength="100" MinLength="0" Disabled="false">
+                                        <Start><RadzenIcon Icon="email" /></Start>
+                                        <ChildContent>
+                                            <RadzenTextBox Name="email_reset" @bind-Value="@oRecuperarContraseñaCorreo.CorreoElectronicoPersonal" />
+                                        </ChildContent>
+                                        <Helper><RadzenText TextStyle="Radzen.Blazor.TextStyle.Caption" /></Helper>
+                                    </RadzenFormField>
+
+                                    <RadzenFormField Text="CURP" Placeholder="" AllowClear="true" Variant="Variant.Outlined" class="w-100 mt-4" Disabled="false">
+                                        <Start><RadzenIcon Icon="document_scanner" /></Start>
+                                        <ChildContent>
+                                            <RadzenTextBox Name="curp_reset" @bind-Value="@oRecuperarContraseñaCorreo.Curp" MinLength="0" MaxLength="18"
+                                                           @oninput="@((e) => oRecuperarContraseñaCorreo.Curp = e.Value.ToString().ToUpper())"
+                                                           onkeypress="return /^[A-Za-z0-9]+$/.test(String.fromCharCode(event.keyCode || event.which));" />
+                                        </ChildContent>
+                                        <Helper><RadzenText TextStyle="Radzen.Blazor.TextStyle.Caption" /></Helper>
+                                    </RadzenFormField>
+
+                                    <div class="row">
+                                        <div class="col-md-12 mt-4">
+                                            <ReCAPTCHA @ref="oReCAPTCHAComponent" SiteKey="6Ld6058pAAAAACiEYq0Khine3FWbHZpfyEraTlOX" OnSuccess="OnSuccess" OnExpired="OnExpired" />
+                                        </div>
+                                        <div class="col-md-12 d-grid gap-2 text-center">
+                                            <button type="submit" class="btn btn-success mt-4 mb-3" disabled="@DisablePostButton">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-send-plus-fill" viewBox="0 0 16 16">
+                                                    <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 1.59 2.498C8 14 8 13 8 12.5a4.5 4.5 0 0 1 5.026-4.47L15.964.686Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
+                                                    <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5" />
+                                                </svg>&nbsp;
+                                                <span role="status">@contentRecuperarContraseñaBtn</span>
+                                                <span class="spinner-border spinner-border-sm" aria-hidden="true" hidden="@isSpinningHidden"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                
+                                </EditForm>
+                            </RadzenTabsItem>
+
                         </Tabs>
                     </RadzenTabs>
 
@@ -256,6 +298,125 @@
             busy = false;
         }
     }
+
+
+    @*///////////////////////////////////////////////  RECUPERAR CONTRASEÑA  ////////////////////////////////////////////////////////////////////////*@
+    @*///////////////////////////////////////////////  VALIDAR ReCAPTCHA  ////////////////////////////////////////////////////////////////////////*@
+    private ReCAPTCHA oReCAPTCHAComponent;
+    // private bool ServerVerificatiing = false;
+    private bool ValidReCAPTCHA = false;
+    private bool DisablePostButton => !ValidReCAPTCHA || string.IsNullOrEmpty(oRecuperarContraseñaCorreo.CorreoElectronicoPersonal) || string.IsNullOrEmpty(oRecuperarContraseñaCorreo.Curp) || !isSpinningHidden;
+    private void OnSuccess() => ValidReCAPTCHA = true;
+    private void OnExpired() => ValidReCAPTCHA = false;
+
+    @*///////////////////////////////////////////////  INICIALIZAR OBJETOS Y VARIABLES  ///////////////////////////////////////////////*@
+    public RecuperarContraseñaCorreo oRecuperarContraseñaCorreo = new();
+    public Response<RequestDTO_Participante>? oRespuesta = new();
+    public string contentRecuperarContraseñaBtn = "Recuperar Contraseña";
+    public bool isSpinningHidden = true;
+
+    public Response<RequestViewModel_Link>? oLinkCURP = new();
+    private string srcCURP = string.Empty;
+
+    public class RecuperarContraseñaCorreo
+    {
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Campo requerido.")]
+        public string CorreoElectronicoPersonal { get; set; } = null!;
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Campo requerido.")]
+        public string Curp { get; set; } = null!;
+    }
+
+    public async Task RecuperarContraseña()
+    {
+        if (ValidReCAPTCHA)
+        {
+            // var response = await reCAPTCHAComponent.GetResponseAsync();
+            try
+            {
+                contentRecuperarContraseñaBtn = "Recuperando Contraseña...";
+                isSpinningHidden = false;
+
+                var respuesta = await servicioParticipante.ResetPassword(oRecuperarContraseñaCorreo.CorreoElectronicoPersonal, oRecuperarContraseñaCorreo.Curp);
+                oRespuesta = respuesta.Content.ReadFromJsonAsync<Response<RequestDTO_Participante>>().Result;
+
+                errorMsgVisible = false;
+
+                if (oRespuesta.Success == 1)
+                {
+                    @*//  NOTIFICATION TOAST RECUPERACIÓN DE CONTRASEÑA TEMPORAL EXITOSA  //*@
+                    NotificationService.Notify(
+                        new NotificationMessage
+                        {
+                            Severity = NotificationSeverity.Success,
+                            Duration = 3000,
+                            Summary = "¡Recuperación de Contraseña Exitoso!",
+                            Detail = "Se le notificará por las vías de comunicación con su Contraseña Temporal Generada."
+                        });
+
+                    @*//  DIALOG MESSAGE RECUPERACIÓN DE CONTRASEÑA TEMPORAL EXITOSA  //*@
+                    DialogModalService.Open($@"<span style='font-variant: small-caps; font-size:18px;'>Mensaje<span>", ds =>
+                        @<div>
+                            <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" Wrap="FlexWrap.Wrap" Gap="5px" Class="">
+                                <span class="circle-border">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16" style="color: green; font-weight: bold;">
+                                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                                    </svg>
+                                </span>
+                                <RadzenText TextStyle="TextStyle.Body1" class="text-success"><b>¡Recuperación de Contraseña Exitosa!</b></RadzenText>
+                            </RadzenStack>
+                            <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Normal" JustifyContent="JustifyContent.SpaceBetween" Wrap="FlexWrap.NoWrap" Gap="5px" Class="">
+                                <RadzenStack Gap="0px">
+                                    <RadzenText TextStyle="TextStyle.Overline" class="rz-mb-0 rz-p-0">Nombre Completo:</RadzenText>
+                                    <RadzenText TextStyle="TextStyle.Body1"><b>@($@"{oRespuesta.Data.PartNombre} {oRespuesta.Data.PartPrimerApellido} {oRespuesta.Data.PartSegundoApellido}")</b></RadzenText>
+                                </RadzenStack>
+                                <RadzenAlert Title="Atención:" Text="Se le notificará por las vías de comunicación con la nueva contraseña temporal." AlertStyle="AlertStyle.Info" Variant="Variant.Filled" Size="AlertSize.Small" Shade="Shade.Darker" ShowIcon="true" AllowClose="false" class="my-2" />
+                                <RadzenButton Text="Cerrar"
+                                              BusyText=""
+                                              ButtonStyle="ButtonStyle.Warning"
+                                              ButtonType="ButtonType.Button"
+                                              IsBusy="false"
+                                              Icon="cancel"
+                                              Class="rz-ripple rz-my-0 w-100 text-white"
+                                              Shade="Shade.Darker"
+                                              Click="@(() => navigationManager.NavigateTo("/"))" />
+                            </RadzenStack>
+                        </div>,
+                        new DialogOptions()
+                        {
+                            CloseDialogOnOverlayClick = false,
+                            CloseDialogOnEsc = false,
+                            AutoFocusFirstElement = true,
+                            Width = "Auto",
+                            Height = "Auto",
+                            Resizable = true,
+                            Draggable = true,
+                            ShowTitle = true,
+                            ShowClose = true,
+                            CssClass = "custom-dialog-class",
+                            WrapperCssClass = "custom-dialog-wrapper-class"
+                        });
+                }
+                else
+                {
+                    errorMsgVisible = true;
+                    contentErrorMsg = oRespuesta.Message;
+                }
+            }
+            catch (HttpRequestException e)
+            {
+                await JSRuntime.InvokeAsync<object>("alert", e.Message);
+            }
+            finally
+            {
+                contentRecuperarContraseñaBtn = "Recuperar Contraseña";
+                isSpinningHidden = true;
+            }
+        }
+    }
+
+
+
+
 
     private void OnInvalidSubmit()
     {

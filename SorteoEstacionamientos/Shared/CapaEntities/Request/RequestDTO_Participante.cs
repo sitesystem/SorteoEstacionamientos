@@ -79,10 +79,9 @@ public class RequestDTO_Participante
     /// </summary>
     [Column("partEmail")]
     [StringLength(100)]
-    [Required(AllowEmptyStrings = false, ErrorMessage = "Campo CORREO ELECTRÓNICO requerido.")]
-    [RegularExpression("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", ErrorMessage = "CORREO ELECTRÓNICO inválido. (Formato: xxxxxx@xxx.xx)")]
-    //[RegularExpression("^(?!.*@(?:ipn\\.mx|alumno\\.ipn\\.mx|egresado\\.ipn\\.mx)$)[\\w\\.-]+@([\\w-]+\\.)+[\\w-]{2,}$", ErrorMessage = "CORREO PERSONAL inválido. (Formato correcto: xxxxxx@xxx.xx)")]
-    //[RegularExpression("^[\\w-\\.]+@ipn\\.mx$|^[\\w-\\.]+@alumno\\.ipn\\.mx$|^[\\w-\\.]+@egresado\\.ipn\\.mx$", ErrorMessage = "CORREO INSTITUCIONAL inválido. (Formato: xxxxxx@ipn.mx ó @alumno.ipn.mx ó @egresado.ipn.mx)")]
+    [Required(AllowEmptyStrings = false, ErrorMessage = "Campo CORREO INSTITUCIONAL requerido.")]
+    //[RegularExpression("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", ErrorMessage = "CORREO ELECTRÓNICO inválido. (Formato: xxxxxx@xxx.xx)")]
+    [RegularExpression("^[\\w-\\.]+@alumno\\.ipn\\.mx$", ErrorMessage = "CORREO inválido. (Formato: xxxxxx@alumno.ipn.mx)")]
     public string PartEmail { get; set; } = null!;
 
     /// <summary>
@@ -99,7 +98,7 @@ public class RequestDTO_Participante
     /// </summary>
     [Column("partNoEmpleado")]
     [StringLength(15)]
-    [Required(AllowEmptyStrings = false, ErrorMessage = "Campo No. DE EMPLEADO requerido.")]
+    //[Required(AllowEmptyStrings = false, ErrorMessage = "Campo No. DE EMPLEADO requerido.")]
     public string? PartNoEmpleado { get; set; }
 
     /*******************************  DATOS ACADÉMICOS  *******************************/
@@ -109,7 +108,7 @@ public class RequestDTO_Participante
     [Column("partBoleta")]
     [StringLength(10, ErrorMessage = "La BOLETA introducida debe ser máximo de 10 dígitos.")]
     [Required(AllowEmptyStrings = false, ErrorMessage = "Campo BOLETA requerido.")]
-    [MinLength(10, ErrorMessage = "La BOLETA introducida debe ser mínimo de 10 dígitos.")]
+    [RegularExpression(@"^\d{4}60\d{4}$", ErrorMessage = "NO. DE BOLETA inválido. (Formato: xxxx60xxxx)")]
     public string? PartBoleta { get; set; }
 
     /// <summary>
@@ -153,6 +152,7 @@ public class RequestDTO_Participante
     /// </summary>
     [Column("partPlaca")]
     [StringLength(50)]
+    [RegularExpression(@"^[a-zA-Z0-9]+$", ErrorMessage = "El campo PLACA solo puede contener letras y números.")]
     [Required(AllowEmptyStrings = false, ErrorMessage = "Campo PLACA requerido.")]
     public string PartPlaca { get; set; } = null!;
 
@@ -161,6 +161,7 @@ public class RequestDTO_Participante
     /// </summary>
     [Column("partMarca")]
     [StringLength(50)]
+    [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "El campo MARCA solo puede contener letras.")]
     [Required(AllowEmptyStrings = false, ErrorMessage = "Campo MARCA requerido.")]
     public string PartMarca { get; set; } = null!;
 
@@ -193,6 +194,7 @@ public class RequestDTO_Participante
     /// </summary>
     [Column("partColor")]
     [StringLength(50)]
+    [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "El campo COLOR solo puede contener letras.")]
     [Required(AllowEmptyStrings = false, ErrorMessage = "Campo COLOR requerido.")]
     public string PartColor { get; set; } = null!;
 
