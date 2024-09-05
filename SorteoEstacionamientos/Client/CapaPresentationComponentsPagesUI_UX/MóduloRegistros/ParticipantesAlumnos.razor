@@ -94,6 +94,7 @@
                         </ChildContent>
                         <Helper>
                             <RadzenText TextStyle="TextStyle.Body1" TagName="TagName.P" TextAlign="TextAlign.Justify">
+                                
                                 <a href="@oLinkCURP.Data.LinkEnlace" target="_blank" class="icon-link icon-link-hover">
                                     ¿Olvidaste tu <strong>CURP?</strong>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
@@ -101,6 +102,7 @@
                                         <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
                                     </svg>
                                 </a>
+                                    
                             </RadzenText>
                         </Helper>
                     </RadzenFormField>
@@ -655,7 +657,13 @@
                         </ChildContent>
                         <Helper>
                             <RadzenText TextStyle="TextStyle.Body1" TagName="TagName.P" TextAlign="TextAlign.JustifyAll">
-
+                                    <a href="@oLinkSAES.Data.LinkEnlace" target="_blank" class="icon-link icon-link-hover">
+                                        Consulta tu <br /><strong>Comprobante de Horario (Tira de Materias)</strong>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                                            <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+                                        </svg>
+                                    </a>
                             </RadzenText>
                         </Helper>
                     </RadzenFormField>
@@ -867,26 +875,6 @@ else
             BusyTextButton = "Actualizando Datos ...";
         }
     }
-
-
-    @*///////////////////////////////////////////////  INICIALIZAR LISTA DE SEMESTRES  ///////////////////////////////////////////////
-    public class Semestres
-    {
-        public string Key { get; set; }
-        public string Value { get; set; }
-    }
-
-    private List<Semestres> oSemestres = new List<Semestres>
-    {
-        new Semestres() { Key = "1", Value = "1ro semestre" },
-        new Semestres() { Key = "2", Value = "2do semestre" },
-        new Semestres() { Key = "3", Value = "3ro semestre" },
-        new Semestres() { Key = "4", Value = "4to semestre" },
-        new Semestres() { Key = "5", Value = "5to semestre" },
-        new Semestres() { Key = "6", Value = "6to semestre" },
-        new Semestres() { Key = "7", Value = "7mo semestre" },
-        new Semestres() { Key = "8", Value = "8vo semestre" },
-    };*@
 
     @*///////////////////////////////////////////////  CAMBIO DE COLOR DE LOS CAMPOS OBLIGATORIOS  ///////////////////////////////////////////////*@
     private string GetBorderStyle(string fieldValue) => $"border-bottom: 3px solid {(string.IsNullOrEmpty(fieldValue) ? "red" : "#026969")};";
